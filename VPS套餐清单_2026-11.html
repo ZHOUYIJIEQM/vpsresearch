@@ -16,6 +16,7 @@
   --star:#2563eb; --star-soft:#e8f0fe;
 }
 html{scroll-behavior:smooth}
+[id]{scroll-margin-top:72px}
 body{
   margin:0; background:var(--bg); color:var(--ink);
   font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
@@ -64,18 +65,15 @@ h2.group{
 h2.group::before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:4px;border-radius:2px;background:linear-gradient(180deg,var(--brand),#8b5cf6)}
 h2.group:first-of-type{margin-top:14px}
 h3.merchant{font-size:17.5px;margin:30px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line);letter-spacing:-.1px}
-.ixp-req{color:#dc2626;font-weight:700}.rec-badge{display:inline-block;padding:1px 8px;border-radius:999px;background:#dc2626;color:#fff;font-size:11px;font-weight:700;line-height:1.7;vertical-align:middle;white-space:nowrap}
+.ixp-req{color:#dc2626;font-weight:700}
+th.col-rec{color:var(--bad);font-weight:800;background:#fff1f2}
+tr.price-row td{color:var(--bad);font-weight:600}
+tr.price-row td:first-child{font-weight:800}
+tr.price-row strong{color:var(--bad)}
+.rec-badge{display:inline-block;padding:1px 8px;border-radius:999px;background:#dc2626;color:#fff;font-size:11px;font-weight:700;line-height:1.7;vertical-align:middle;white-space:nowrap}
 tr.rec-row td{background:#fff1f2!important;border-top:1px solid #fecdd3;border-bottom:1px solid #fecdd3}
 tr.rec-row td:first-child{box-shadow:inset 3px 0 0 #dc2626}
 tr.rec-row:hover td{background:#ffe4e6!important}
-.toc-page{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px 20px;margin:20px 0 30px;box-shadow:0 1px 2px rgba(21,29,46,.04)}
-.toc-title{font-size:13px;font-weight:700;color:var(--sub);letter-spacing:.08em;margin-bottom:10px}
-.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px 26px}
-.toc-grid a{display:block;padding:5px 8px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:13.5px;transition:background .15s}
-.toc-grid a:hover{background:var(--brand-soft);color:var(--brand)}
-.toc-grid a.lv1{grid-column:1/-1;font-weight:700;margin-top:12px;border-left:3px solid var(--brand);padding-left:10px;background:linear-gradient(90deg,var(--brand-soft),transparent 65%)}
-.toc-grid a.lv1:first-child{margin-top:0}
-.toc-grid a.lv2{padding-left:22px;color:var(--sub)}
 h4.step{font-size:16px;margin:26px 0 10px;color:var(--ink);font-weight:700;padding-left:10px;border-left:3px solid var(--brand);background:linear-gradient(90deg,var(--brand-soft),transparent 70%)}h4.step:first-of-type{margin-top:20px}h4.sub{font-size:14px;margin:22px 0 10px;color:var(--sub);font-weight:650}
 p{margin:10px 0}
 ul{margin:10px 0;padding-left:22px}
@@ -124,11 +122,14 @@ td:first-child{color:var(--ink)}
 #top:hover{color:var(--brand);border-color:var(--brand)}
 .hide{display:none!important}
 .count{font-size:12.5px;color:#93a1b6;margin-left:4px}
-.rec-hero{border:1px solid #fecdd3;border-left:4px solid var(--bad);background:linear-gradient(135deg,#fff1f2,#fffafa);border-radius:12px;padding:15px 20px;margin:18px 0 24px}
+.rec-hero{border:1px solid #fecdd3;border-left:4px solid var(--bad);background:#fff;border-radius:12px;padding:15px 20px;margin:18px 0 24px}
+.rec-hero h4.sub{color:var(--ink);font-weight:800;font-size:15.5px;margin:26px 0 9px;padding-top:14px;border-top:1px dashed #f3d3d8}
 .rec-hero-h{font-size:15px;font-weight:800;color:var(--bad);margin-bottom:5px}
 .rec-hero-b{font-size:14.5px;line-height:1.78;color:var(--ink)}
-.rec-link{color:inherit;text-decoration:none;border-bottom:2px solid rgba(220,38,38,.3);transition:.15s}
-.rec-link:hover{border-bottom-color:var(--bad);text-decoration:none;background:#fff5f6}
+.rec-hero .tw{margin:12px 0 4px;border-radius:10px;border-color:#f7d9dd}
+.rec-hero .tw table{min-width:900px}
+.rec-link{color:inherit;text-decoration:none;border-bottom:2px solid rgba(220,38,38,.35);transition:.15s}
+.rec-link:hover{border-bottom-color:var(--bad);text-decoration:none}
 .rec-arrow{display:inline-block;margin-left:4px;font-weight:700;color:var(--bad)}
 .rec-hero-b strong{color:var(--bad);font-weight:700}
 @media(max-width:1100px){
@@ -156,8 +157,8 @@ td:first-child{color:var(--ink)}
 @media(max-width:760px){
   html,body{max-width:100%}
   .wrap,main{min-width:0}
-  .mnav{display:none}
-  .toc-page{display:none}
+  [id]{scroll-margin-top:104px}
+.mnav{display:none}
   .bar{justify-content:space-between;padding:9px 14px}
   .mtoc{display:flex;gap:6px;overflow-x:auto;padding:0 14px 9px;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
   .mtoc::-webkit-scrollbar{display:none}
@@ -166,7 +167,6 @@ td:first-child{color:var(--ink)}
   .mtoc a.cur{background:var(--brand-soft);border-color:var(--brand);color:var(--brand);font-weight:700}
   .mtoc .all{position:sticky;right:-1px;flex:0 0 auto;white-space:nowrap;font:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer;box-shadow:-9px 0 12px 2px #fff}
   .mtoc{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 78px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 78px),transparent 100%)}
-  .toc-page{display:none}
   .wrap{width:100%;max-width:100%}
   main{width:100%;min-width:0;max-width:100%}
   .tw{width:100%;max-width:100%}
@@ -179,9 +179,6 @@ td:first-child{color:var(--ink)}
   .wrap{padding:16px 12px 68px;gap:22px}
   .doc-title{font-size:18px;letter-spacing:0;line-height:1.4}
   .tw{border-radius:10px}
-  .toc-page{padding:12px 14px 14px;margin:14px 0 22px}
-  .toc-grid{grid-template-columns:1fr}
-  .toc-grid a.lv1{margin-top:9px}
   h2.group{font-size:17px;padding-left:10px}
   h3.merchant{font-size:15px}
   table{min-width:700px;font-size:12.4px}
@@ -190,6 +187,8 @@ td:first-child{color:var(--ink)}
   pre{font-size:11.5px;padding:11px 12px}
   ul{padding-left:19px}
   .rec-hero{padding:13px 15px;margin:14px 0 20px}
+  .rec-hero .tw{margin:10px 0 4px;border-radius:9px}
+  .rec-hero .tw table{min-width:700px}
   .rec-hero-b{font-size:13.5px}
   #top{right:12px;bottom:12px;width:38px;height:38px}
 }
@@ -205,8 +204,8 @@ td:first-child{color:var(--ink)}
     </button>
     <div class="spacer"></div>
   </div>
-  <div class="mtoc" id="mtoc"><a class="lv2" href="#rec">推荐</a>
-    <a class="lv2" href="#g1">线路优先级（好 → 差）</a>
+  <div class="mtoc" id="mtoc"><a class="lv2" href="#g0">线路优先级（好 → 差）</a>
+    <a class="lv2" href="#rec">推荐</a>
     <a class="lv2" href="#g2">怎么用这份清单</a>
     <a class="lv1" href="#g3">一、按线路选</a>
     <a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
@@ -246,8 +245,8 @@ td:first-child{color:var(--ink)}
 <div class="wrap">
   <nav id="toc">
     <p class="nlabel">目录</p>
+    <a class="" href="#g0">线路优先级（好 → 差）</a>
     <a class="" href="#rec">推荐</a>
-    <a class="" href="#g1">线路优先级（好 → 差）</a>
     <a class="" href="#g2">怎么用这份清单</a>
     <a class="grp" href="#g3">一、按线路选（先看这里）</a>
     <a class="" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
@@ -257,7 +256,7 @@ td:first-child{color:var(--ink)}
     <a class="" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
     <a class="" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
     <a class="grp" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
-    <a class="" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
+    <a class="" href="#g11">1. 搬瓦工 BandwagonHost — 两条产品线，KVM $99.99/年 起</a>
     <a class="" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
     <a class="" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
     <a class="" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
@@ -284,10 +283,8 @@ td:first-child{color:var(--ink)}
   </nav>
   <main id="main">
 <h1 class="doc-title">高性价比 VPS 套餐清单（科学上网向）</h1>
-<p>数据核实日期：<strong>2026-11-26</strong>　｜　币种：下表「价格」列保留原标价，「≈USD/月」是折算后便于横向比（CAD≈5.2 CNY、USD≈7.2 CNY，季付÷3、年付÷12）</p>
-<div class="rec-hero" id="rec"><div class="rec-hero-h">推荐</div>
-<div class="rec-hero-b"><a class="rec-link" href="#g5"><strong>推荐使用 CN2 GIA 线路</strong><span class="rec-arrow">↓</span></a>，性价比较高 —— 它是晚高峰最稳的常规线路（香港 12–45ms、美西 150–190ms，丢包 &lt;1%），$10–40/月就能买到真 GIA。比 IEPL 专线便宜一个数量级，比普通国际 BGP 稳得多，属于「加钱不多、体验跨度最大」的一档。预算再低就往下看 9929 / CMIN2，不想折腾就直接上专线。</div></div>
-<h3 class="merchant" id="g1">线路优先级（好 → 差）</h3>
+<p>数据核实日期：<strong>2026-11-26</strong></p>
+<h3 class="merchant" id="g0">线路优先级（好 → 差）</h3>
 <p><strong>一句话排序</strong>：IPLC / IEPL 专线　<strong>&gt;</strong>　三网回程优化（CN2 GIA / AS9929 / CMIN2）　<strong>&gt;</strong>　单网精品线　<strong>&gt;</strong>　优质普通直连（AS4837 / CMI）　<strong>&gt;</strong>　普通国际绕路（163 骨干网 / NTT / Cogent）</p>
 <p>决定晚高峰稳不稳、绕不绕路的是线路档位，跟配置和带宽大小无关。往下越便宜越飘，往上越贵越稳。</p>
 <div class="tw" data-tid="1"><table>
@@ -358,45 +355,117 @@ td:first-child{color:var(--ink)}
 <p><strong>怎么用这条排序</strong></p>
 <ul><li>① 专线：只有 Mkcloud。<strong>¥158 那款 IXP 要自备一台国内云服务器当前置</strong>（家宽连不上），不想多买机器就直接看广港 IEPL ¥358 或沪港 IPLC ¥288 —— 这两种运营商直连款，家宽和手机能直接连。</li><li>预算够、要长期用：② 里香港 GIA 是「真优化」的入口，再往下就得赌运营商对不对得上了。</li><li>预算 $5–20：③ 或 ④。联通/移动用户走 9929 / CMIN2 / 4837，往往比电信用户挤普通国际线舒服得多。</li><li>⑤ 只能当备份或下载机；住宅 IP 是「解锁维度」不是「线路档次」，买它通常还得另配一台线路机中转。</li></ul>
 <hr>
-<div class="toc-page">
-<div class="toc-title">目录</div>
-<div class="toc-grid">
-<a class="lv2" href="#rec">推荐</a>
-<a class="lv2" href="#g1">线路优先级（好 → 差）</a>
-<a class="lv2" href="#g2">怎么用这份清单</a>
-<a class="lv1" href="#g3">一、按线路选（先看这里）</a>
-<a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
-<a class="lv2" href="#g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></a>
-<a class="lv2" href="#g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</a>
-<a class="lv2" href="#g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</a>
-<a class="lv2" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
-<a class="lv2" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
-<a class="lv1" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
-<a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
-<a class="lv2" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
-<a class="lv2" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
-<a class="lv2" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
-<a class="lv2" href="#g15">5. DIYVM — 香港 CN2 GIA 不限流量</a>
-<a class="lv2" href="#g16">6. VMISS — 加拿大商家，线路切得最细</a>
-<a class="lv2" href="#g17">7. AkileCloud — 大带宽大流量，价格屠夫</a>
-<a class="lv2" href="#g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</a>
-<a class="lv2" href="#g19">9. OneTechCloud — 香港 1Gbps 大带宽</a>
-<a class="lv2" href="#g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</a>
-<a class="lv2" href="#g21">11. RackNerd — 年付白菜价之王</a>
-<a class="lv2" href="#g22">12. CloudCone — 和 RackNerd 同级，稍好一点</a>
-<a class="lv2" href="#g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</a>
-<a class="lv2" href="#g24">14. Hostwinds — 流量给得多</a>
-<a class="lv2" href="#g25">15. InterServer — 10Gbps 端口，按切片计价</a>
-<a class="lv2" href="#g26">16. 丽萨主机 — 原生 IP，解锁最全</a>
-<a class="lv2" href="#g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</a>
-<a class="lv2" href="#g28">18. Mkcloud — 真专线，官网起价最便宜的一档</a>
-<a class="lv1" href="#g29">三、海外大厂 / 避雷 / 速查</a>
-<a class="lv2" href="#g30">19. 大厂基线价对照</a>
-<a class="lv2" href="#g31">20. 避雷清单（已验证有问题）</a>
-<a class="lv2" href="#g32">21. 按需求的速查结论</a>
-<a class="lv2" href="#g33">附：库存核查（2026-11-26 实测）</a>
-<a class="lv2" href="#g34">附：图例与购买链接说明</a>
-</div></div>
+
+<div class="rec-hero" id="rec"><div class="rec-hero-h">推荐</div>
+<div class="rec-hero-b"><a class="rec-link" href="#g5"><strong>推荐使用 CN2 GIA 线路</strong><span class="rec-arrow">↓</span></a>，性价比较高 —— 它是晚高峰最稳的常规线路（香港 12–45ms、美西 150–190ms，丢包 &lt;1%）</div>
+<div class="tw" data-tid="2"><table>
+<thead><tr>
+<th></th>
+<th>方案 A · 最便宜</th>
+<th>方案 B · 搬瓦工 1Gbps</th>
+<th>方案 C · 低速的 CN2 GIA</th>
+<th class="col-rec">方案 D · 大带宽+大流量(推荐)</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><strong>买什么</strong></td>
+<td><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=968" target="_blank" rel="noopener">RackNerd 1G KVM<span class="ext">↗</span></a></td>
+<td><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=45" target="_blank" rel="noopener">搬瓦工 40G KVM<span class="ext">↗</span></a></td>
+<td><a href="https://lumovps.com/go/hostdare-5b2bcc/" target="_blank" rel="noopener">HostDare CSSD2<span class="ext">↗</span></a></td>
+<td><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=88" target="_blank" rel="noopener">搬瓦工 SPECIAL 40G<span class="ext">↗</span></a></td>
+</tr>
+<tr>
+<td class="name"><strong>线路</strong></td>
+<td>国际 BGP</td>
+<td>普通线路（163 骨干）</td>
+<td>CN2 GIA</td>
+<td>CN2 GIA</td>
+</tr>
+<tr>
+<td class="name"><strong>配置</strong></td>
+<td>1核 / 1G / 20G</td>
+<td>3核 / 2G / 40G SSD</td>
+<td>2核 / 2G</td>
+<td>3核 / 2G / 40G</td>
+</tr>
+<tr class="price-row">
+<td class="name"><strong>价格</strong></td>
+<td><strong>$15.98/年</strong><br>≈ ¥115/年、¥9.6/月</td>
+<td><strong>$99.99/年</strong><br>≈ $8.33/月（半年付 $52.99）</td>
+<td><strong>$115.99/年</strong><br>≈ $9.67/月</td>
+<td><strong>$299.99/年</strong><br>≈ $25/月，季付 $90/季</td>
+</tr>
+<tr>
+<td class="name"><strong>月流量</strong></td>
+<td>3 TB（单向）</td>
+<td>2 TB（<strong>双向</strong>，实际约 1 TB）</td>
+<td>1000 GB（官网未写方向）</td>
+<td>2 TB（<strong>双向</strong>，实际约 1 TB）</td>
+</tr>
+<tr>
+<td class="name"><strong>带宽</strong></td>
+<td>1 Gbps<br>≈ 125 MB/s</td>
+<td>1 Gbps<br>≈ 125 MB/s</td>
+<td>60 Mbps<br>≈ 7.5 MB/s</td>
+<td>2.5 Gbps<br>≈ 312.5 MB/s</td>
+</tr>
+<tr>
+<td class="name"><strong>延迟</strong></td>
+<td>150–200 ms（洛杉矶）</td>
+<td>150–250 ms（洛杉矶 DC2）</td>
+<td>150–200 ms（洛杉矶）</td>
+<td>150–200 ms（洛杉矶）</td>
+</tr>
+<tr>
+<td class="name"><strong>晚高峰</strong></td>
+<td><span class="tag warn">⚠️ 会卡，1080p 勉强，4K 别想</span></td>
+<td><span class="tag warn">⚠️ 会绕路，1080p 可以，明显掉速</span></td>
+<td><span class="tag ok">✅ 稳，60M 够 1080p</span></td>
+<td><span class="tag ok">✅ 稳，4K 无压力</span></td>
+</tr>
+<tr>
+<td class="name"><strong>IP 被封</strong></td>
+<td>$3/次换</td>
+<td>$7.39–8.79/次换</td>
+<td>按商家政策</td>
+<td>$7.39–8.79/次</td>
+</tr>
+<tr>
+<td class="name"><strong>适合</strong></td>
+<td>落地 / 中转 / 备份，不当主力</td>
+<td>要配置、能接受晚高峰掉速，不当主力</td>
+<td>只求线路稳、能忍慢速，不当主力</td>
+<td>主力机，网速快流量多</td>
+</tr>
+</tbody></table></div>
+<h4 class="sub">方案 A · 最便宜 —— RackNerd 1G KVM</h4>
+<div class="rec-hero-b"><strong>配置</strong>：1核 / 1G 内存 / 20G SSD / 3TB 流量（<strong>单向</strong>，只算出站）/ 1Gbps 端口<br><strong>线路</strong>：洛杉矶，国际 BGP（普通 163 骨干），国内 150–200ms<br><strong>价格</strong>：$15.98/年，折合 ¥115/年、¥9.6/月，续费同价</div>
+<div class="rec-hero-b"><strong>优点</strong></div>
+<ul><li>全清单最便宜，一年 $15.98 折合每月不到 10 块</li><li><strong>单向流量</strong>，3TB 就是实打实 3TB，不像双向计费那样打对折</li><li>RackNerd 是 2012 年就开张的老商家，续费同价不涨价，跑路风险低</li><li>封 IP 后 $3/次就能换，试错成本极低</li><li>支持支付宝付款，也支持 IPv6</li></ul>
+<div class="rec-hero-b"><strong>缺点</strong></div>
+<ul><li>晚高峰明显掉速，1080p 勉强能看，4K 基本别想</li><li>1核 1G 只能跑轻量代理，两三台设备还行，一家人共享会崩</li><li>没有 CN2 / 9929 优化，国内访问绕美国，延迟 150–200ms</li><li>工单响应慢，出问题要等</li></ul>
+<div class="rec-hero-b"><strong>适合谁</strong>：备用机、落地节点、中转跳板、给不常用的人分担流量。<strong>不适合当唯一主力</strong>。</div>
+<h4 class="sub">方案 B · 搬瓦工 1Gbps —— 40G KVM</h4>
+<div class="rec-hero-b"><strong>配置</strong>：3核 / 2G 内存 / 40G SSD（RAID-10）/ 2TB 流量（<strong>双向</strong>，实际约 1TB）/ 1Gbps 端口<br><strong>线路</strong>：普通线路（163 骨干），下单页可选洛杉矶 DC2 / 弗里蒙特 / 纽约 / 温哥华 / 阿姆斯特丹，开通后可<strong>免费互迁</strong><br><strong>价格</strong>：$99.99/年（$52.99/半年），折合 $8.33/月，<strong>没有月付和季付</strong></div>
+<div class="rec-hero-b"><strong>优点</strong></div>
+<ul><li>同价位里配置最高：3核 2G 40G，比方案 A 整整翻一倍多</li><li>1Gbps 大带宽，峰值 125 MB/s，跑多线程下载很快</li><li>搬瓦工是行业里最老牌的，KiwiVM 面板好用，免费快照、免费备份、免费换机房</li><li>99.95% 可用性承诺，机房挂了能自助迁</li><li>封 IP 后 $7.39–8.79/次换</li></ul>
+<div class="rec-hero-b"><strong>缺点</strong></div>
+<ul><li><strong>它不是 CN2 GIA</strong>，走的还是 163 骨干，晚高峰一样会绕路掉速</li><li><strong>也不能切 CN2 GT 机房</strong>——网上那些「买 $99 再迁到 CN2 GT 机房」的教程已经过期，下单页只有那 5 个普通机房</li><li><strong>双向计费</strong>，2TB 实际只有约 1TB 可用</li><li>最短周期是半年付，想先试一个月不行</li></ul>
+<div class="rec-hero-b"><strong>适合谁</strong>：要大配置大带宽、能接受晚高峰波动的人；或者需要美国/加拿大/荷兰多机房切换的人。<strong>想要晚高峰稳，得加钱上方案 D</strong>。</div>
+<h4 class="sub">方案 C · 低速的 CN2 GIA —— HostDare CSSD2</h4>
+<div class="rec-hero-b"><strong>配置</strong>：2核 / 2G 内存 / 1000GB 流量 / <strong>60 Mbps</strong>（约 7.5 MB/s）<br><strong>线路</strong>：洛杉矶，<strong>CN2 GIA</strong>（电信 AS4809 直达）<br><strong>价格</strong>：$115.99/年，折合 $9.67/月</div>
+<div class="rec-hero-b"><strong>优点</strong></div>
+<ul><li><strong>$10/月买到真 CN2 GIA</strong>，这是全清单里最便宜的 GIA 入场券</li><li>晚高峰稳，60Mbps 足够一个人看 1080p</li><li>比方案 B 只贵 $16/年，但线路等级完全不同——买的就是这条 GIA</li><li>单人建站、看流媒体、远程办公够用（多人或 4K 不够）</li></ul>
+<div class="rec-hero-b"><strong>缺点</strong></div>
+<ul><li><strong>带宽只有 60Mbps（7.5 MB/s）</strong>，这是它最大的短板。4K 需要至少 15 MB/s，它带不动；多人同时看也会卡</li><li>流量 1000GB 且<strong>官网没写方向</strong>，如果按双向算就只有约 500GB</li><li>2核 2G 配置一般，别指望跑重负载</li><li>HostDare 是小商家，工单和稳定性都不如搬瓦工，出了问题响应慢</li></ul>
+<div class="rec-hero-b"><strong>适合谁</strong>：一个人用、主要看 1080p 和刷网页、预算卡在 $10/月、把「晚高峰稳」排在「跑得快」前面的人。<strong>但它扛不了主力</strong>——60 Mbps 是全表倒数第一的带宽，只有方案 A、B 的 1/16，多人共享、看 4K、或者白天要传大文件就会立刻见底。它卖的是「花最少的钱买到 GIA 这条线」，不是「一台搞定所有事」。</div>
+<h4 class="sub">方案 D · 大带宽+大流量（推荐）—— 搬瓦工 SPECIAL 40G</h4>
+<div class="rec-hero-b"><strong>配置</strong>：3核 / 2G 内存 / 40G SSD / 2TB 流量（<strong>双向</strong>，实际约 1TB）/ <strong>2.5Gbps</strong> 端口<br><strong>线路</strong>：洛杉矶，<strong>CN2 GIA</strong>（电信 AS4809 直达）<br><strong>价格</strong>：$299.99/年（季付 $90/季），折合 $25/月</div>
+<div class="rec-hero-b"><strong>优点</strong></div>
+<ul><li><strong>线路和带宽同时拉满</strong>：CN2 GIA + 2.5Gbps，峰值 312.5 MB/s，4K 无压力</li><li>晚高峰稳，丢包低于 1%，这是它比方案 B、C 都贵 $200 的理由</li><li>搬瓦工的品牌和售后，出问题能找得到人</li><li>可季付（$90/季），不用一次压一年</li><li>双向计费但基数大，2TB 双向也有约 1TB 实际可用，比方案 C 的 1000GB 不差</li></ul>
+<div class="rec-hero-b"><strong>缺点</strong></div>
+<ul><li><strong>全场最贵</strong>，$25/月，是方案 C 的 2.6 倍、方案 A 的 26 倍</li><li>香港 / 东京 CN2 GIA 的价格是它的 3 倍（$89.99/月），要低延迟只能再加钱</li><li>双向计费，标称 2TB 实际打对折</li><li>如果只是偶尔看视频，这笔钱花得不值</li></ul>
+<div class="rec-hero-b"><strong>适合谁</strong>：把它当主力、天天用、要 4K、多人共享、或者对晚高峰体验零容忍的人。<strong>这是本清单的首选</strong>——一次性把钱花在「线路 + 带宽」两个最影响体验的地方。</div>
+</div>
 <h3 class="merchant" id="g2">怎么用这份清单</h3>
 <p>1. <strong>先看「一、按线路选」</strong>——每张表就是一个线路档次，从最好往下排；表里只放<strong>有货且值得买</strong>的套餐，同一家最多列 2 款，有货的排在前面。<br>2. <strong>再看「二、按商家看」</strong>——同一家的所有套餐合在一张表里，机房在第二列，按价格从低到高。<br>3. <strong>图例</strong>　<code>✅ 有货</code>＝2026-11-26 实测能下单　<code>⚠️ 以链接页为准</code>＝官网有 Cloudflare/跳转页，抓不到实时库存，点链接自己确认（不等于没货）　<code>❌ 缺货</code>＝实测 Out of Stock，已从汇总表剔除<br>4. <strong>流量计费</strong>　<code>双向</code>＝上传+下载合并计额度，跑代理时标称 1TB 实际能用约 500GB；<code>单向</code>＝只计出站，标称值就是可用值；<code>未明确</code>＝官网产品页+TOS+AUP 都没写方向，按「标称÷2」预留</p>
 <hr>
@@ -405,7 +474,7 @@ td:first-child{color:var(--ink)}
 <p>纯内网出境，晚高峰也不受国际出口影响；缺点是贵、按带宽卖，适合当主力的少数人。</p>
 <blockquote><strong>这一组只有 Mkcloud</strong>，独享独立 IPv4，可选流量计费或独享带宽计费。</blockquote>
 <h4 class="sub">两种计费方式，买错多花钱</h4>
-<div class="tw" data-tid="2"><table>
+<div class="tw" data-tid="3"><table>
 <thead><tr>
 <th></th>
 <th><strong>流量计费</strong>（共享带宽）</th>
@@ -459,7 +528,7 @@ td:first-child{color:var(--ink)}
 </tbody></table></div>
 <blockquote>表里所有「¥xx/TB」都是<strong>按标称流量算的</strong>，双向计之后实际单价翻倍。但各家一起翻，横向比价结论不变。  同一条线路通常<strong>两种计费都卖</strong>，可以互相换算着挑。流量款超量后 Mkcloud 支持<strong>另买流量包</strong>或补差价升档，不是只能等下月。</blockquote>
 <blockquote><strong>但入口分两种，买错要多花钱</strong>：标 ⚠️ 需前置机的是<strong>云厂 BGP 互联款（IXP）</strong>，官方明文只允许阿里云/腾讯云/百度云/华为云/火山云等国内云节点连入，你家宽和手机都连不上，必须先买一台国内云服务器做前置；标 ✅ 直连的是<strong>运营商入口款（IPLC/IEPL）</strong>，开通后你所在省的家宽和手机能直接连。</blockquote>
-<div class="tw" data-tid="3"><table>
+<div class="tw" data-tid="4"><table>
 <thead><tr>
 <th>商家</th>
 <th>产品（入口 → 出口）</th>
@@ -554,7 +623,7 @@ td:first-child{color:var(--ink)}
 <blockquote>上表 9 条产品<strong>全部有货</strong>。配置随档位递增：深港 / 沪日 / 沪美 IXP 从 <strong>2核4G/40G</strong> 起，运营商直连款从 <strong>1核2G/20G</strong> 起，独享款从 <strong>2核4G/40G</strong> 起。档位和总价以官网产品页为准。</blockquote>
 <h4 class="sub">专线怎么接成梯子</h4>
 <p>专线跟普通 VPS 的结构不一样，买之前先分清你拿到的是什么：</p>
-<div class="tw" data-tid="4"><table>
+<div class="tw" data-tid="5"><table>
 <thead><tr>
 <th>形态</th>
 <th>你拿到什么</th>
@@ -578,7 +647,7 @@ td:first-child{color:var(--ink)}
 </tbody></table></div>
 <h4 class="sub">先搞清一件事：要不要额外买台前置机</h4>
 <p>Mkcloud 的专线入口分两种，这是最容易踩的坑：</p>
-<div class="tw" data-tid="5"><table>
+<div class="tw" data-tid="6"><table>
 <thead><tr>
 <th>接入方式</th>
 <th>对应产品</th>
@@ -623,7 +692,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></h3>
 <blockquote>电信 AS4809 全程直连，联通移动回程也好；价格是普通线路的 5–10 倍。</blockquote>
-<div class="tw" data-tid="6"><table>
+<div class="tw" data-tid="7"><table>
 <thead><tr>
 <th>商家</th>
 <th>套餐</th>
@@ -781,7 +850,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 </tbody></table></div>
 <h3 class="merchant" id="g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</h3>
 <blockquote>联通 AS9929 或移动 CMIN2 回程，电信走 163；比 GIA 便宜一半，晚高峰略逊。</blockquote>
-<div class="tw" data-tid="7"><table>
+<div class="tw" data-tid="8"><table>
 <thead><tr>
 <th>商家</th>
 <th>套餐</th>
@@ -884,7 +953,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 </tbody></table></div>
 <h3 class="merchant" id="g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</h3>
 <blockquote>物理距离近，延迟 20–50ms；线路不保证对大陆优化，便宜大碗，晚高峰可能绕。</blockquote>
-<div class="tw" data-tid="8"><table>
+<div class="tw" data-tid="9"><table>
 <thead><tr>
 <th>商家</th>
 <th>套餐</th>
@@ -987,7 +1056,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 </tbody></table></div>
 <h3 class="merchant" id="g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</h3>
 <blockquote>纯国际出口，白天够用、晚上 8–11 点掉速是老问题；适合备用、下载、非实时用途。</blockquote>
-<div class="tw" data-tid="9"><table>
+<div class="tw" data-tid="10"><table>
 <thead><tr>
 <th>商家</th>
 <th>套餐</th>
@@ -1200,7 +1269,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 </tbody></table></div>
 <h3 class="merchant" id="g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</h3>
 <blockquote>机房 IP 被 Netflix / TikTok 认出来时的替代品，价格按 IP 稀缺度走，速度一般。</blockquote>
-<div class="tw" data-tid="10"><table>
+<div class="tw" data-tid="11"><table>
 <thead><tr>
 <th>商家</th>
 <th>套餐</th>
@@ -1239,10 +1308,99 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <p>CN2 GT（AS4809 的 Global Transit 档）是搬瓦工早期的 DC3 线路，现在搬瓦工全系已切 CN2 GIA，其余做 GT 的商家也基本停售，所以这里没有可列的表。如果你在别处看到「CN2 GT 便宜货」，大概率是把普通 163 线路包装成 GT 卖——认准 <strong>GIA</strong> 三个字母再掏钱。</p>
 <hr>
 <h2 class="group" id="g10"><span>二、按商家看（同一家的所有套餐，按价格排序）</span></h2>
-<h3 class="merchant" id="g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</h3>
-<p>线路：洛杉矶 CN2 GIA（电信回程 AS4809 直连）、香港 CN2 GIA、东京/大阪 CN2 GIA、新加坡 CN2 GIA。<br>搬瓦工全线走 CN2 GIA，是目前国内用户基数最大的一家，缺点是<strong>便宜档都已缺货</strong>。</p>
-<blockquote><strong>点评</strong>：搬瓦工当前在售最低 $299.99/年。黑五历年只是补货不发新券，别指望更便宜。真正值钱的只有 <strong>40G 年付 $299.99</strong> 这一档；香港/东京的价格已经脱离"科学上网"的性价比区间，那是给企业做跨境办公用的。在售共 52 款，<strong>全系双向计费</strong>——KiwiVM 里入站出站一起扣，代理场景 1TB 只能当 500GB 用。</blockquote>
-<div class="tw" data-tid="11"><table>
+<h3 class="merchant" id="g11">1. 搬瓦工 BandwagonHost — 两条产品线，KVM $99.99/年 起</h3>
+<p>线路：<strong>KVM 系列</strong>走普通线路（洛杉矶 DC2 / 弗里蒙特 / 纽约 / 温哥华 / 阿姆斯特丹，163 骨干，无 CN2）；<strong>CN2 GIA 系列</strong>走洛杉矶 / 香港 / 东京 / 大阪 / 新加坡 CN2 GIA（电信回程 AS4809 直连）。<br>搬瓦工是两条产品线：<strong>KVM 系列</strong>（普通线路，最便宜 $99.99/年）和 <strong>CN2 GIA 系列</strong>（线路最好也最贵）。国内用户基数最大的一家。</p>
+<blockquote><strong>点评</strong>：搬瓦工有两条线——<strong>KVM 系列</strong>（普通线路，40G $99.99/年，最便宜）和 <strong>CN2 GIA 系列</strong>（下面这张表，40G $299.99/年）。要 CN2 GIA 当前在售最低 $299.99/年。黑五历年只是补货不发新券，别指望更便宜。真正值钱的只有 <strong>40G 年付 $299.99</strong> 这一档；香港/东京的价格已经脱离"科学上网"的性价比区间，那是给企业做跨境办公用的。在售共 52 款，<strong>全系双向计费</strong>——KiwiVM 里入站出站一起扣，代理场景 1TB 只能当 500GB 用。</blockquote>
+<h4 class="sub">KVM 系列（普通线路，最便宜的一档）</h4>
+<div class="tw" data-tid="12"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=45" target="_blank" rel="noopener">搬瓦工 40G KVM<span class="ext">↗</span></a></td>
+<td>洛杉矶 DC2 等 5 个</td>
+<td>普通线路</td>
+<td>3核/2G</td>
+<td>40G SSD</td>
+<td>2T</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
+<td><strong>$99.99/年</strong>（半年付 $52.99）</td>
+<td>$8.33</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>🔥 最便宜的搬瓦工，1Gbps 大带宽</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=46" target="_blank" rel="noopener">80G KVM PROMO<span class="ext">↗</span></a></td>
+<td>洛杉矶 DC2 等 5 个</td>
+<td>普通线路</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>3T</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
+<td>$19.99/月<br>$199.99/年</td>
+<td>$16.67</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 大盘鸡里最便宜一档</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=47" target="_blank" rel="noopener">160G KVM PROMO<span class="ext">↗</span></a></td>
+<td>洛杉矶 DC2 等 5 个</td>
+<td>普通线路</td>
+<td>5核/8G</td>
+<td>160G SSD</td>
+<td>4T</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
+<td>$39.99/月<br>$399.99/年</td>
+<td>$33.33</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=48" target="_blank" rel="noopener">320G KVM PROMO<span class="ext">↗</span></a></td>
+<td>洛杉矶 DC2 等 5 个</td>
+<td>普通线路</td>
+<td>6核/16G</td>
+<td>320G SSD</td>
+<td>5T</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
+<td>$79.99/月<br>$799.99/年</td>
+<td>$66.67</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=49" target="_blank" rel="noopener">480G KVM PROMO<span class="ext">↗</span></a></td>
+<td>洛杉矶 DC2 等 5 个</td>
+<td>普通线路</td>
+<td>7核/24G</td>
+<td>480G SSD</td>
+<td>6T</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
+<td>$119.99/月<br>$1199.99/年</td>
+<td>$100.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<p>上表机房是下单页可选的全部 5 个（<code>USCA_2</code> / <code>USCA_FMT</code> / <code>USNY_6</code> / <code>CABC_1</code> / <code>EUNL_2</code>），开通后可免费互迁。<strong>这几个机房都不是 CN2 GIA，也没有 CN2 GT 可切</strong>——国内访问走 163 骨干，150–250ms，晚高峰会绕路。要 GIA 得买下面的 CN2 GIA 系列。</p>
+<h4 class="sub">CN2 GIA 系列（香港 / 东京 / 新加坡 / 洛杉矶，线路好但贵）</h4>
+<div class="tw" data-tid="13"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -1264,7 +1422,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>3核/2G</td>
 <td>40G SSD</td>
 <td>2T</td>
-<td>2.5Gbps</td>
+<td>2.5Gbps<br>≈ 312.5 MB/s</td>
 <td><strong>$299.99/年</strong>（约 $25/月）<br>季付 $90/季</td>
 <td>$25.00</td>
 <td>✅ 有货</td>
@@ -1278,7 +1436,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>3T</td>
-<td>2.5Gbps</td>
+<td>2.5Gbps<br>≈ 312.5 MB/s</td>
 <td><strong>$549.99/年</strong>（约 $45.8/月）<br>月付 $57/月</td>
 <td>$45.83</td>
 <td>✅ 有货</td>
@@ -1292,7 +1450,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$50/月</td>
 <td>$50.00</td>
 <td>✅ 有货</td>
@@ -1306,7 +1464,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/8G</td>
 <td>160G SSD</td>
 <td>5T</td>
-<td>5Gbps</td>
+<td>5Gbps<br>≈ 625 MB/s</td>
 <td>$86.99/月</td>
 <td>$86.99</td>
 <td>✅ 有货</td>
@@ -1320,7 +1478,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>1T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$87/月</td>
 <td>$87.00</td>
 <td>✅ 有货</td>
@@ -1334,7 +1492,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$89.99/月</td>
 <td>$89.99</td>
 <td>✅ 有货</td>
@@ -1348,7 +1506,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$90/月</td>
 <td>$90.00</td>
 <td>✅ 有货</td>
@@ -1362,7 +1520,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>1T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$155.99/月</td>
 <td>$155.99</td>
 <td>✅ 有货</td>
@@ -1376,7 +1534,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>1T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$156/月</td>
 <td>$156.00</td>
 <td>✅ 有货</td>
@@ -1390,7 +1548,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>8核/16G</td>
 <td>320G SSD</td>
 <td>8T</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td>$160/月</td>
 <td>$160.00</td>
 <td>✅ 有货</td>
@@ -1404,7 +1562,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/8G</td>
 <td>160G SSD</td>
 <td>2T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$166/月</td>
 <td>$166.00</td>
 <td>✅ 有货</td>
@@ -1418,7 +1576,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>10核/32G</td>
 <td>640G SSD</td>
 <td>10T</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td>$290/月</td>
 <td>$290.00</td>
 <td>✅ 有货</td>
@@ -1432,7 +1590,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/8G</td>
 <td>160G SSD</td>
 <td>2T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$299.99/月</td>
 <td>$299.99</td>
 <td>✅ 有货</td>
@@ -1446,7 +1604,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/8G</td>
 <td>160G SSD</td>
 <td>2T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$300/月</td>
 <td>$300.00</td>
 <td>✅ 有货</td>
@@ -1454,13 +1612,13 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>—</td>
 </tr>
 <tr>
-<td class="name">SPECIAL 20G KVM PROMO V5</td>
+<td class="name">SPECIAL 20G KVM PROMO V5 - CN2 GIA ECOMMERCE</td>
 <td>洛杉矶</td>
 <td>CN2 GIA</td>
 <td>2核/1G</td>
 <td>20G SSD</td>
 <td>1T</td>
-<td>2.5Gbps</td>
+<td>2.5Gbps<br>≈ 312.5 MB/s</td>
 <td>$49.99/季（$169.99/年）</td>
 <td>$16.66</td>
 <td>❌ 缺货</td>
@@ -1473,7 +1631,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <p>线路分三档，<strong>买之前务必确认买的是哪一档</strong>：</p>
 <ul><li><strong>Pro (Premium)</strong>：CN2 GIA AS23764，真优化。香港实测 广州约 12ms / 上海约 31ms / 北京约 45ms，晚高峰单线程仍能跑满</li><li><strong>EB (Eyeball)</strong>：Tier1 + CMIN2 尽力优化，香港 EB 仍在 Beta</li><li><strong>T1 (Tier1)</strong>：普通国际线路，<strong>不保证 IP 可用</strong>，最便宜但别当主力</li><li><strong>线路写在哪</strong>：DMIT 把线路挂在<a href="https://www.dmit.io/pages/pricing" target="_blank" rel="noopener">定价页<span class="ext">↗</span></a>的 <strong>Network Series</strong> 筛选（Premium / Eyeball / Tier 1）上，购物车配置页只列配置、不重复标线路。所以看代号即可——<code>Pro</code> = Premium = CN2 GIA，<code>EB</code> = Eyeball，<code>T1</code> = Tier 1</li></ul>
 <blockquote><strong>点评</strong>：DMIT 是"交钱就给你真 GIA"的代表，Pro 系列几乎从不掺水，代价是常年缺货。<strong>2026-11-26 实测库存：只有香港全线有货</strong>——<code>HKG.AS3.EB.WEE $24.90/月</code> 是入门最划算的一档，<code>HKG.AS3.Pro.TINY $39.90/月</code> 是真 GIA 的地板价，<code>HKG.AS3.T1.WEE $36.90/年</code> 折合每月 3 美元可以当纯落地。洛杉矶和东京的小额款<strong>全部缺货</strong>，洛杉矶只剩 AN5 的建站款在卖，东京一个都没补上，想买只能蹲补货。  <strong>关于链接</strong>：DMIT 官网对爬虫有 Cloudflare 拦截，公开页面拿不到 cart 直链。表里每一行的链接都是通过 <a href="https://vpsoso.com/vps/dmit" target="_blank" rel="noopener">vpsoso 的 DMIT 库存监控<span class="ext">↗</span></a> 反查出的<strong>真实 pid</strong>（格式 <code>cart.php?a=add&amp;pid=NNN</code>），点进去就是该套餐的加购页，不是首页。</blockquote>
-<div class="tw" data-tid="12"><table>
+<div class="tw" data-tid="14"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -1787,7 +1945,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</h3>
 <p>线路：CSSD 系列 = CN2 GIA（AS4809）、ASSD 系列 = 联通 9929（AMD 平台）、CAMD = CMIN2。</p>
 <blockquote><strong>点评</strong>：HostDare 的 CSSD0（$40.99/年 GIA）是唯一敢把 GIA 卖到两百多块一年的，所以<strong>开卖即空</strong>，蹲点。带宽只有 30–80Mbps，别指望跑 4K 多线程。9929 系列（ASSD）带宽和流量给得大方，联通用户晚高峰比 GIA 稍差但价格低一个量级。</blockquote>
-<div class="tw" data-tid="13"><table>
+<div class="tw" data-tid="15"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -1809,7 +1967,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>50G NVMe</td>
 <td>1000GB</td>
-<td>60Mbps</td>
+<td>60Mbps<br>≈ 7.5 MB/s</td>
 <td>$115.99/年</td>
 <td>$9.67</td>
 <td>✅ 有货</td>
@@ -1851,7 +2009,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>3核/4G</td>
 <td>100G NVMe</td>
 <td>1500GB</td>
-<td>80Mbps</td>
+<td>80Mbps<br>≈ 10 MB/s</td>
 <td>$90.99/季</td>
 <td>$30.33</td>
 <td>✅ 有货</td>
@@ -1893,7 +2051,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/768M</td>
 <td>10G NVMe</td>
 <td>250GB</td>
-<td>30Mbps</td>
+<td>30Mbps<br>≈ 3.75 MB/s</td>
 <td>$40.99/年</td>
 <td>$3.42</td>
 <td>❌ 缺货</td>
@@ -1907,7 +2065,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/756M</td>
 <td>35G</td>
 <td>600GB</td>
-<td>50Mbps</td>
+<td>50Mbps<br>≈ 6.25 MB/s</td>
 <td>$49.99/年</td>
 <td>$4.17</td>
 <td>❌ 缺货</td>
@@ -1921,7 +2079,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>25G NVMe</td>
 <td>500GB</td>
-<td>50Mbps</td>
+<td>50Mbps<br>≈ 6.25 MB/s</td>
 <td>$60.99/年</td>
 <td>$5.08</td>
 <td>❌ 缺货</td>
@@ -1935,7 +2093,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/1.5G</td>
 <td>75G</td>
 <td>1000GB</td>
-<td>60Mbps</td>
+<td>60Mbps<br>≈ 7.5 MB/s</td>
 <td>$76.99/年</td>
 <td>$6.42</td>
 <td>❌ 缺货</td>
@@ -1946,7 +2104,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</h3>
 <blockquote><strong>点评</strong>：实测（2026 年）洛杉矶 CN2 GIA 三网回程<strong>全部走电信 CN2</strong>，全国平均延迟 163ms（电信 157 / 联通 175 / 移动 158），丢包约 0.5%，苏州实测上传 379 / 下载 509 Mbps，Netflix + Disney+ 双解锁，ChatGPT/Claude 可用（Gemini 不可用）。原生 IP。<strong>香港 LITE $12/年</strong> 是这套里最离谱的价格，缺点是 5G 硬盘太小、LITE 线路不保证回国优化。</blockquote>
-<div class="tw" data-tid="14"><table>
+<div class="tw" data-tid="16"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -1968,7 +2126,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/512M</td>
 <td>5G NVMe</td>
 <td>1.5TB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td><strong>$12/年</strong></td>
 <td>$1.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -1982,7 +2140,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G SSD</td>
 <td>5TB</td>
-<td>600Mbps</td>
+<td>600Mbps<br>≈ 75 MB/s</td>
 <td>$2.50/月</td>
 <td>$2.50</td>
 <td>⚠️ 以链接页为准</td>
@@ -1996,7 +2154,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/512M</td>
 <td>15G SSD</td>
 <td>500GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td><strong>$66/年</strong></td>
 <td>$5.50</td>
 <td>⚠️ 以链接页为准</td>
@@ -2010,7 +2168,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>1TB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>$12/月</td>
 <td>$12.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -2024,7 +2182,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>2TB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>$24/月</td>
 <td>$24.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -2035,7 +2193,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g15">5. DIYVM — 香港 CN2 GIA 不限流量</h3>
 <blockquote><strong>点评</strong>：5Mbps 带宽是关键限制——够 2–3 人日常刷网页和 1080p，跑不了 4K 多开。但<strong>不计量</strong>意味着再也不用算着流量用，挂机党优选。三网回程 CN2。</blockquote>
-<div class="tw" data-tid="15"><table>
+<div class="tw" data-tid="17"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -2057,7 +2215,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>50G NVMe</td>
 <td><strong>不限</strong></td>
-<td>5Mbps</td>
+<td>5Mbps<br>≈ 0.62 MB/s</td>
 <td>¥50/月</td>
 <td>$6.94</td>
 <td>⚠️ 以链接页为准</td>
@@ -2071,7 +2229,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>60G NVMe</td>
 <td>不限</td>
-<td>5Mbps</td>
+<td>5Mbps<br>≈ 0.62 MB/s</td>
 <td>¥100/月</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -2085,7 +2243,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/8G</td>
 <td>70G NVMe</td>
 <td>不限</td>
-<td>10Mbps</td>
+<td>10Mbps<br>≈ 1.25 MB/s</td>
 <td>¥200/月</td>
 <td>$27.78</td>
 <td>⚠️ 以链接页为准</td>
@@ -2099,7 +2257,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>8核/32G</td>
 <td>100G NVMe</td>
 <td>不限</td>
-<td>15Mbps</td>
+<td>15Mbps<br>≈ 1.88 MB/s</td>
 <td>¥800/月</td>
 <td>$111.11</td>
 <td>⚠️ 以链接页为准</td>
@@ -2111,7 +2269,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g16">6. VMISS — 加拿大商家，线路切得最细</h3>
 <p>三网档今年<strong>全线涨价</strong>，TRI 涨 60%+，9929 涨 20–27%，CN2 GIA 持平（说明 GIA 档被压着不能涨）。</p>
 <blockquote><strong>点评</strong>：VMISS 今年把三个三网档调成同价（6 CAD），等于告诉你"选哪个都行、但都别指望更低价格"。<strong>TRI 系列彻底劝退</strong>（涨 60% 还砍了赠送 IPv6）。真正还值得买的只有两个：<code>US.LA.9929.Basic</code>（联通用户 6 加元）和 <code>JP.TKY.IIJ.Basic</code>（500Mbps 大带宽 5 加元）。香港 STD 那套官网价比聚合站标价高 2.4 倍，以官网为准。</blockquote>
-<div class="tw" data-tid="16"><table>
+<div class="tw" data-tid="18"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -2133,7 +2291,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>300GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>5 CAD/月</td>
 <td>$3.61</td>
 <td>⚠️ 以链接页为准</td>
@@ -2147,7 +2305,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>500GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td><strong>5 CAD/月</strong></td>
 <td>$3.61</td>
 <td>⚠️ 以链接页为准</td>
@@ -2161,7 +2319,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>500GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td><strong>6 CAD/月</strong></td>
 <td>$4.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2175,7 +2333,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>300GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td><strong>6 CAD/月</strong></td>
 <td>$4.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2189,7 +2347,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>500GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>8 CAD/月</td>
 <td>$5.78</td>
 <td>⚠️ 以链接页为准</td>
@@ -2203,7 +2361,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>15G</td>
 <td>600GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>10 CAD/月</td>
 <td>$7.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -2217,7 +2375,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>15G</td>
 <td>800GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>10 CAD/月</td>
 <td>$7.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -2231,7 +2389,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>15G</td>
 <td>1000GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>12 CAD/月</td>
 <td>$8.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2245,7 +2403,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>15G</td>
 <td>600GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>12 CAD/月</td>
 <td>$8.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2259,7 +2417,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>300GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>12 CAD/月</td>
 <td>$8.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2273,7 +2431,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>10G</td>
 <td>400GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>12 CAD/月</td>
 <td>$8.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2287,7 +2445,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>15G</td>
 <td>1000GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>16 CAD/月</td>
 <td>$11.56</td>
 <td>⚠️ 以链接页为准</td>
@@ -2301,7 +2459,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>20G</td>
 <td>1000GB</td>
-<td>150Mbps</td>
+<td>150Mbps<br>≈ 18.75 MB/s</td>
 <td>16 CAD/月</td>
 <td>$11.56</td>
 <td>⚠️ 以链接页为准</td>
@@ -2315,7 +2473,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>20G</td>
 <td>1500GB</td>
-<td>750Mbps</td>
+<td>750Mbps<br>≈ 93.75 MB/s</td>
 <td>16 CAD/月</td>
 <td>$11.56</td>
 <td>⚠️ 以链接页为准</td>
@@ -2329,7 +2487,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>20G</td>
 <td>1500GB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>20 CAD/月</td>
 <td>$14.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2343,7 +2501,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>20G</td>
 <td>1000GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>20 CAD/月</td>
 <td>$14.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2357,7 +2515,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/1G</td>
 <td>15G</td>
 <td>600GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>24 CAD/月</td>
 <td>$17.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2371,7 +2529,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>15G</td>
 <td>800GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>24 CAD/月</td>
 <td>$17.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2385,7 +2543,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/3G</td>
 <td>20G</td>
 <td>1500GB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>26 CAD/月</td>
 <td>$18.78</td>
 <td>⚠️ 以链接页为准</td>
@@ -2399,7 +2557,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>1600GB</td>
-<td>150Mbps</td>
+<td>150Mbps<br>≈ 18.75 MB/s</td>
 <td>30 CAD/月</td>
 <td>$21.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2413,7 +2571,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>2500GB</td>
-<td>750Mbps</td>
+<td>750Mbps<br>≈ 93.75 MB/s</td>
 <td>30 CAD/月</td>
 <td>$21.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -2427,7 +2585,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>2500GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>38 CAD/月</td>
 <td>$27.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2441,7 +2599,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>1600GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>38 CAD/月</td>
 <td>$27.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2455,7 +2613,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/2G</td>
 <td>20G</td>
 <td>1000GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>38 CAD/月</td>
 <td>$27.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2469,7 +2627,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1C/3G</td>
 <td>20G</td>
 <td>1200GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>38 CAD/月</td>
 <td>$27.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -2483,7 +2641,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>2500GB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>50 CAD/月</td>
 <td>$36.11</td>
 <td>⚠️ 以链接页为准</td>
@@ -2497,7 +2655,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>3000GB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>60 CAD/月</td>
 <td>$43.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2511,7 +2669,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>4000GB</td>
-<td>1000Mbps</td>
+<td>1000Mbps<br>≈ 125 MB/s</td>
 <td>60 CAD/月</td>
 <td>$43.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2525,7 +2683,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>4000GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>75 CAD/月</td>
 <td>$54.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -2539,7 +2697,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>2800GB</td>
-<td>1000Mbps</td>
+<td>1000Mbps<br>≈ 125 MB/s</td>
 <td>75 CAD/月</td>
 <td>$54.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -2553,7 +2711,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2C/4G</td>
 <td>40G</td>
 <td>1600GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>75 CAD/月</td>
 <td>$54.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -2567,7 +2725,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>4000GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>98 CAD/月</td>
 <td>$70.78</td>
 <td>⚠️ 以链接页为准</td>
@@ -2581,7 +2739,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4C/8G</td>
 <td>80G</td>
 <td>3000GB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>150 CAD/月</td>
 <td>$108.33</td>
 <td>⚠️ 以链接页为准</td>
@@ -2593,7 +2751,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g17">7. AkileCloud — 大带宽大流量，价格屠夫</h3>
 <p>线路：香港（NetLab 上游，BGP 回程）、日本、新加坡、美国洛杉矶。<strong>特色是带宽夸张</strong>（2.5–5Gbps），代价是线路不保证回国优化。</p>
 <blockquote><strong>点评</strong>：Akile 是这套清单里<strong>单位价格买到带宽/流量最多</strong>的一家，2.5–5Gbps 端口 ¥15–40/月真的离谱。代价：LITE 系列走的是 BGP/国际线路，<strong>晚高峰国内直连速度不保证</strong>，适合配合中转或当落地机。香港 HKLite-Mini ¥24.99 是甜点档；JPHyper-Lite ¥14.99 是全场最低价的 2核2G。</blockquote>
-<div class="tw" data-tid="17"><table>
+<div class="tw" data-tid="19"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -2615,7 +2773,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>10G SSD</td>
 <td>1TB</td>
-<td>2.5Gbps</td>
+<td>2.5Gbps<br>≈ 312.5 MB/s</td>
 <td><strong>¥14.99/月</strong></td>
 <td>$2.08</td>
 <td>⚠️ 以链接页为准</td>
@@ -2629,7 +2787,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>10G SSD</td>
 <td>2TB</td>
-<td>5Gbps</td>
+<td>5Gbps<br>≈ 625 MB/s</td>
 <td><strong>¥15.99/月</strong></td>
 <td>$2.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -2643,7 +2801,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>10G SSD</td>
 <td>2.5TB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td><strong>¥24.99/月</strong></td>
 <td>$3.47</td>
 <td>⚠️ 以链接页为准</td>
@@ -2657,7 +2815,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>5G SSD</td>
 <td>1TB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>¥24.99/月</td>
 <td>$3.47</td>
 <td>⚠️ 以链接页为准</td>
@@ -2671,7 +2829,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>30G SSD</td>
 <td>2.5TB</td>
-<td>5Gbps</td>
+<td>5Gbps<br>≈ 625 MB/s</td>
 <td>¥39.99/月</td>
 <td>$5.55</td>
 <td>⚠️ 以链接页为准</td>
@@ -2685,7 +2843,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>10G SSD</td>
 <td>5TB</td>
-<td>2Gbps</td>
+<td>2Gbps<br>≈ 250 MB/s</td>
 <td>¥43.74/月</td>
 <td>$6.08</td>
 <td>⚠️ 以链接页为准</td>
@@ -2699,7 +2857,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>20G SSD</td>
 <td>10TB</td>
-<td>5Gbps</td>
+<td>5Gbps<br>≈ 625 MB/s</td>
 <td>¥69.99/月</td>
 <td>$9.72</td>
 <td>⚠️ 以链接页为准</td>
@@ -2713,7 +2871,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>20G SSD</td>
 <td>3TB</td>
-<td>1.2Gbps</td>
+<td>1.2Gbps<br>≈ 150 MB/s</td>
 <td>¥82.49/月</td>
 <td>$11.46</td>
 <td>⚠️ 以链接页为准</td>
@@ -2727,7 +2885,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/1G</td>
 <td>20G SSD</td>
 <td>10TB</td>
-<td>2Gbps</td>
+<td>2Gbps<br>≈ 250 MB/s</td>
 <td>¥99.99/月</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -2741,7 +2899,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/8G</td>
 <td>60G SSD</td>
 <td>20TB</td>
-<td>5Gbps</td>
+<td>5Gbps<br>≈ 625 MB/s</td>
 <td>¥129.99/月</td>
 <td>$18.05</td>
 <td>⚠️ 以链接页为准</td>
@@ -2755,7 +2913,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G SSD</td>
 <td>6TB</td>
-<td>1.2Gbps</td>
+<td>1.2Gbps<br>≈ 150 MB/s</td>
 <td>¥149.99/月</td>
 <td>$20.83</td>
 <td>⚠️ 以链接页为准</td>
@@ -2769,7 +2927,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G SSD</td>
 <td>1TB</td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>¥149.99/月</td>
 <td>$20.83</td>
 <td>⚠️ 以链接页为准</td>
@@ -2797,7 +2955,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G SSD</td>
 <td>30TB</td>
-<td>2Gbps</td>
+<td>2Gbps<br>≈ 250 MB/s</td>
 <td>¥237.49/月</td>
 <td>$32.98</td>
 <td>⚠️ 以链接页为准</td>
@@ -2811,7 +2969,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>20G SSD</td>
 <td>15TB</td>
-<td>1.2Gbps</td>
+<td>1.2Gbps<br>≈ 150 MB/s</td>
 <td>¥287.49/月</td>
 <td>$39.93</td>
 <td>⚠️ 以链接页为准</td>
@@ -2839,7 +2997,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>8核/16G</td>
 <td>60G SSD</td>
 <td>50TB</td>
-<td>2.5Gbps</td>
+<td>2.5Gbps<br>≈ 312.5 MB/s</td>
 <td>¥788.88/月</td>
 <td>$109.57</td>
 <td>⚠️ 以链接页为准</td>
@@ -2865,7 +3023,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</h3>
 <p>狗云的产品线切得最细：KC（精品）/ MG（优化 BGP）/ GB（国际大带宽）/ ST（大硬盘）/ CLD（Cloudcone 机房）/ LA2（洛杉矶精品）。</p>
 <blockquote><strong>点评</strong>：狗云最实用的三档：<code>HK.MG.BGP.S</code>（¥25/月优化线）、<code>HK.KC.S</code>（¥40/月精品线，原生 IP）、<code>HK.MG.GB.XXXL</code>（¥100/月 3Gbps 12T，纯落地）。<strong>支持按小时计费</strong>，可以先开 1 小时测线路再决定买不买，这点比绝大多数商家友好。香港机房 NetLab 上游，回程 163/4837/CMI 直连。</blockquote>
-<div class="tw" data-tid="18"><table>
+<div class="tw" data-tid="20"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -2887,7 +3045,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/0.75G</td>
 <td>15G SSD</td>
 <td>500GB</td>
-<td>30M</td>
+<td>30M<br>≈ 3.75 MB/s</td>
 <td><strong>¥150/年</strong></td>
 <td>$1.74</td>
 <td>⚠️ 以链接页为准</td>
@@ -2901,7 +3059,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>25G SSD</td>
 <td>1024GB</td>
-<td>30M</td>
+<td>30M<br>≈ 3.75 MB/s</td>
 <td>¥276/年</td>
 <td>$3.19</td>
 <td>⚠️ 以链接页为准</td>
@@ -2915,7 +3073,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>500GB</td>
-<td>50M</td>
+<td>50M<br>≈ 6.25 MB/s</td>
 <td><strong>¥25/月（年付 ¥250）</strong></td>
 <td>$3.47</td>
 <td>⚠️ 以链接页为准</td>
@@ -2929,7 +3087,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>60G SSD</td>
 <td>3000GB</td>
-<td>1000M</td>
+<td>1000M<br>≈ 125 MB/s</td>
 <td>¥30/月</td>
 <td>$4.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -2943,7 +3101,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td><strong>250G</strong></td>
 <td>5000GB</td>
-<td>1000M</td>
+<td>1000M<br>≈ 125 MB/s</td>
 <td>¥30/月</td>
 <td>$4.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -2957,7 +3115,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>50G SSD</td>
 <td>2048GB</td>
-<td>30M</td>
+<td>30M<br>≈ 3.75 MB/s</td>
 <td>¥396/年</td>
 <td>$4.58</td>
 <td>⚠️ 以链接页为准</td>
@@ -2971,7 +3129,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>500GB</td>
-<td>50M</td>
+<td>50M<br>≈ 6.25 MB/s</td>
 <td>¥35/月（年付 ¥350）</td>
 <td>$4.86</td>
 <td>⚠️ 以链接页为准</td>
@@ -2985,7 +3143,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>250GB</td>
-<td>25M</td>
+<td>25M<br>≈ 3.12 MB/s</td>
 <td><strong>¥40/月（年付 ¥400）</strong></td>
 <td>$5.56</td>
 <td>⚠️ 以链接页为准</td>
@@ -2999,7 +3157,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>4000GB</td>
-<td>1500M</td>
+<td>1500M<br>≈ 187.5 MB/s</td>
 <td>¥40/月</td>
 <td>$5.56</td>
 <td>⚠️ 以链接页为准</td>
@@ -3013,7 +3171,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>1000GB</td>
-<td>75M</td>
+<td>75M<br>≈ 9.38 MB/s</td>
 <td>¥45/月（年付 ¥450）</td>
 <td>$6.25</td>
 <td>⚠️ 以链接页为准</td>
@@ -3027,7 +3185,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td><strong>500G</strong></td>
 <td>10000GB</td>
-<td>2000M</td>
+<td>2000M<br>≈ 250 MB/s</td>
 <td>¥55/月</td>
 <td>$7.64</td>
 <td>⚠️ 以链接页为准</td>
@@ -3041,7 +3199,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>80G SSD</td>
 <td>3072GB</td>
-<td>30M</td>
+<td>30M<br>≈ 3.75 MB/s</td>
 <td>¥780/年</td>
 <td>$9.03</td>
 <td>⚠️ 以链接页为准</td>
@@ -3055,7 +3213,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>60G SSD</td>
 <td>1500GB</td>
-<td>100M</td>
+<td>100M<br>≈ 12.5 MB/s</td>
 <td>¥65/月</td>
 <td>$9.03</td>
 <td>⚠️ 以链接页为准</td>
@@ -3069,7 +3227,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>1000GB</td>
-<td>75M</td>
+<td>75M<br>≈ 9.38 MB/s</td>
 <td>¥65/月</td>
 <td>$9.03</td>
 <td>⚠️ 以链接页为准</td>
@@ -3083,7 +3241,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G SSD</td>
 <td>500GB</td>
-<td>30M</td>
+<td>30M<br>≈ 3.75 MB/s</td>
 <td>¥70/月（年付 ¥700）</td>
 <td>$9.72</td>
 <td>⚠️ 以链接页为准</td>
@@ -3097,7 +3255,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>2000GB</td>
-<td>150M</td>
+<td>150M<br>≈ 18.75 MB/s</td>
 <td>¥80/月</td>
 <td>$11.11</td>
 <td>⚠️ 以链接页为准</td>
@@ -3111,7 +3269,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>60G SSD</td>
 <td>750GB</td>
-<td>35M</td>
+<td>35M<br>≈ 4.38 MB/s</td>
 <td>¥100/月（年付 ¥1000）</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -3125,7 +3283,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>8核/16G</td>
 <td>240G SSD</td>
 <td>12000GB</td>
-<td>3000M</td>
+<td>3000M<br>≈ 375 MB/s</td>
 <td>¥100/月</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -3139,7 +3297,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td><strong>1T</strong></td>
 <td>20000GB</td>
-<td>3500M</td>
+<td>3500M<br>≈ 437.5 MB/s</td>
 <td>¥100/月</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -3153,7 +3311,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/8G</td>
 <td>120G SSD</td>
 <td>3000GB</td>
-<td>200M</td>
+<td>200M<br>≈ 25 MB/s</td>
 <td>¥110/月</td>
 <td>$15.28</td>
 <td>⚠️ 以链接页为准</td>
@@ -3167,7 +3325,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G SSD</td>
 <td>1000GB</td>
-<td>40M</td>
+<td>40M<br>≈ 5 MB/s</td>
 <td>¥120/月</td>
 <td>$16.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -3181,7 +3339,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/8G</td>
 <td>120G SSD</td>
 <td>1500GB</td>
-<td>45M</td>
+<td>45M<br>≈ 5.62 MB/s</td>
 <td>¥170/月</td>
 <td>$23.61</td>
 <td>⚠️ 以链接页为准</td>
@@ -3195,7 +3353,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>1000GB</td>
-<td>500M</td>
+<td>500M<br>≈ 62.5 MB/s</td>
 <td>¥65/半年（年付 ¥125）</td>
 <td>—</td>
 <td>⚠️ 以链接页为准</td>
@@ -3209,7 +3367,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>1000GB</td>
-<td>500M</td>
+<td>500M<br>≈ 62.5 MB/s</td>
 <td>¥45/半年（年付 ¥80）</td>
 <td>—</td>
 <td>⚠️ 以链接页为准</td>
@@ -3220,7 +3378,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g19">9. OneTechCloud — 香港 1Gbps 大带宽</h3>
 <blockquote><strong>点评</strong>：香港 1Gbps 端口 + 600GB 流量 ¥66/月，适合需要瞬时大带宽（下大文件、跑 AI 拉模型）而不是天天挂机的场景。硬盘只有 20G，别想装太多东西。</blockquote>
-<div class="tw" data-tid="19"><table>
+<div class="tw" data-tid="21"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3242,7 +3400,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>600GB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td><strong>¥66/月</strong></td>
 <td>$9.17</td>
 <td>⚠️ 以链接页为准</td>
@@ -3256,7 +3414,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>30G SSD</td>
 <td>1200GB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>¥118/月</td>
 <td>$16.39</td>
 <td>⚠️ 以链接页为准</td>
@@ -3270,7 +3428,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>40G SSD</td>
 <td>2400GB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>¥228/月</td>
 <td>$31.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -3284,7 +3442,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>40G SSD</td>
 <td>4800GB</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>¥438/月</td>
 <td>$60.83</td>
 <td>⚠️ 以链接页为准</td>
@@ -3295,7 +3453,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</h3>
 <blockquote><strong>点评</strong>：CUBE 是给企业做香港办公节点的，性价比在这份清单里排末尾——同价位狗云能给 4 倍带宽和 3 倍流量。除非你要它家的合规发票和 SLA，否则跳过。</blockquote>
-<div class="tw" data-tid="20"><table>
+<div class="tw" data-tid="22"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3317,7 +3475,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/1G</td>
 <td>15G SSD</td>
 <td>400GB</td>
-<td>50M</td>
+<td>50M<br>≈ 6.25 MB/s</td>
 <td>¥79/月</td>
 <td>$10.97</td>
 <td>⚠️ 以链接页为准</td>
@@ -3331,7 +3489,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>30G SSD</td>
 <td>800GB</td>
-<td>100M</td>
+<td>100M<br>≈ 12.5 MB/s</td>
 <td>¥159/月</td>
 <td>$22.08</td>
 <td>⚠️ 以链接页为准</td>
@@ -3345,7 +3503,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>60G SSD</td>
 <td>1500GB</td>
-<td>100M</td>
+<td>100M<br>≈ 12.5 MB/s</td>
 <td>¥289/月</td>
 <td>$40.14</td>
 <td>⚠️ 以链接页为准</td>
@@ -3359,7 +3517,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/8G</td>
 <td>80G SSD</td>
 <td>2000GB</td>
-<td>200M</td>
+<td>200M<br>≈ 25 MB/s</td>
 <td>¥569/月</td>
 <td>$79.03</td>
 <td>⚠️ 以链接页为准</td>
@@ -3371,7 +3529,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g21">11. RackNerd — 年付白菜价之王</h3>
 <p>线路：普通国际线路（洛杉矶 DC01/DC02/DC03、圣何塞、西雅图、纽约、阿什本、芝加哥、达拉斯、亚特兰大、多伦多、阿姆斯特丹）。<strong>没有任何回国优化</strong>，晚高峰大概率卡。DC02 已整体迁到 DC03（DC03 实为租用 CCS 机房）。</p>
 <blockquote><strong>点评</strong>：RackNerd 现在最低 $15.98/年。<strong>唯一正确的买法</strong>：黑五 $15.98 的 1G 或 $27.98 的 2.5G，当落地机/中转/备份。想拿它当主力梯子就是自虐——晚高峰丢包能到两位数。续费同价，这点比 CloudCone 强。</blockquote>
-<div class="tw" data-tid="21"><table>
+<div class="tw" data-tid="23"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3393,7 +3551,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>3T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td><strong>$15.98/年</strong></td>
 <td>$1.33</td>
 <td>✅ 有货</td>
@@ -3407,7 +3565,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>30G NVMe</td>
 <td>1.5T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$18.89/年</td>
 <td>$1.57</td>
 <td>✅ 有货</td>
@@ -3421,7 +3579,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G SSD</td>
 <td>3T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$21.99/年</td>
 <td>$1.83</td>
 <td>✅ 有货</td>
@@ -3435,7 +3593,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/512M</td>
 <td>10G NVMe</td>
 <td>500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$23/年</td>
 <td>$1.92</td>
 <td>✅ 有货</td>
@@ -3449,7 +3607,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2.5G</td>
 <td>30G SSD</td>
 <td>6T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$27.98/年</td>
 <td>$2.33</td>
 <td>✅ 有货</td>
@@ -3463,7 +3621,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>35G SSD</td>
 <td>5T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$35.99/年</td>
 <td>$3.00</td>
 <td>✅ 有货</td>
@@ -3477,7 +3635,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>60G SSD</td>
 <td>10T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$47.98/年</td>
 <td>$4.00</td>
 <td>✅ 有货</td>
@@ -3491,7 +3649,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>3核/4G</td>
 <td>60G SSD</td>
 <td>7T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$59.99/年</td>
 <td>$5.00</td>
 <td>✅ 有货</td>
@@ -3505,7 +3663,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/6G</td>
 <td>85G SSD</td>
 <td>15T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$74.98/年</td>
 <td>$6.25</td>
 <td>✅ 有货</td>
@@ -3519,7 +3677,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/6G</td>
 <td>100G SSD</td>
 <td>12T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$89.99/年</td>
 <td>$7.50</td>
 <td>✅ 有货</td>
@@ -3533,7 +3691,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>6核/8G</td>
 <td>140G SSD</td>
 <td>20T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$94.98/年</td>
 <td>$7.92</td>
 <td>✅ 有货</td>
@@ -3547,7 +3705,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>7核/8G</td>
 <td>150G SSD</td>
 <td>20T</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$119.99/年</td>
 <td>$10.00</td>
 <td>✅ 有货</td>
@@ -3555,7 +3713,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>—</td>
 </tr>
 </tbody></table></div>
-<div class="tw" data-tid="22"><table>
+<div class="tw" data-tid="24"><table>
 <thead><tr>
 <th>系列</th>
 <th>线路</th>
@@ -3591,7 +3749,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g22">12. CloudCone — 和 RackNerd 同级，稍好一点</h3>
 <p>线路：洛杉矶 MC 机房，普通国际线路。同样是"便宜但晚高峰不稳"。</p>
 <blockquote><strong>点评</strong>：CloudCone 的核数给得比 RackNerd 猛（4G 档直接 7 核），但<strong>实测晚高峰 17:00 后开始间歇性掉线</strong>，这是它被吐槽最多的地方。$18.28/年的 1G 档和 $32.99 的 3核2G 是最值得看的两档。<strong>注意：CloudCone 续费会涨价，RackNerd 不涨</strong>——长期用选 RackNerd。</blockquote>
-<div class="tw" data-tid="23"><table>
+<div class="tw" data-tid="25"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3641,7 +3799,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>25G SSD</td>
 <td>4096G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td><strong>$18.28/年</strong></td>
 <td>$1.52</td>
 <td>⚠️ 以链接页为准</td>
@@ -3683,7 +3841,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>3核/2G</td>
 <td>40G SSD</td>
 <td>7168G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$32.99/年</td>
 <td>$2.75</td>
 <td>⚠️ 以链接页为准</td>
@@ -3711,7 +3869,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>7核/4G</td>
 <td>80G SSD</td>
 <td>10240G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$56.99/年</td>
 <td>$4.75</td>
 <td>⚠️ 以链接页为准</td>
@@ -3725,7 +3883,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>10核/8G</td>
 <td>170G SSD</td>
 <td>15360G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$116.99/年</td>
 <td>$9.75</td>
 <td>⚠️ 以链接页为准</td>
@@ -3737,7 +3895,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</h3>
 <p>线路：美国、英国、德国、荷兰、日本、香港、马来西亚等 16 个机房，均为国际线路（无回国优化）。<br>标准机房（流量减半）：512M 250G、1G 250G、2G 500G、4G 1000G，价格相同。</p>
 <blockquote><strong>点评</strong>：Evoxt 用的是 Ryzen + NVMe，<strong>单核性能是这份清单里最强的一档</strong>（跑编译、跑容器很爽）。但线路纯国际，回国延迟 180–250ms。适合当"能跑算力的落地机"，不适合当主力梯子。香港机房是它唯一有点希望的选项。</blockquote>
-<div class="tw" data-tid="24"><table>
+<div class="tw" data-tid="26"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3759,7 +3917,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/512M</td>
 <td>5G</td>
 <td>500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$2.99/月</td>
 <td>$2.99</td>
 <td>⚠️ 以链接页为准</td>
@@ -3773,7 +3931,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>10G</td>
 <td>750G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td><strong>$4.99/月</strong></td>
 <td>$4.99</td>
 <td>⚠️ 以链接页为准</td>
@@ -3787,7 +3945,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>20G</td>
 <td>1000G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$5.99/月</td>
 <td>$5.99</td>
 <td>⚠️ 以链接页为准</td>
@@ -3801,7 +3959,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G</td>
 <td>1500G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$6.95/月</td>
 <td>$6.95</td>
 <td>⚠️ 以链接页为准</td>
@@ -3815,7 +3973,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/4G</td>
 <td>30G</td>
 <td>2000G</td>
-<td>1Gbps</td>
+<td>1Gbps<br>≈ 125 MB/s</td>
 <td>$11.99/月</td>
 <td>$11.99</td>
 <td>⚠️ 以链接页为准</td>
@@ -3826,7 +3984,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g24">14. Hostwinds — 流量给得多</h3>
 <blockquote><strong>点评</strong>：老牌美国商家，稳定性比 RackNerd/CloudCone 好，但价格是月付制、年付无折扣。1G $4.99 这档流量 1T 够用。线路纯国际。</blockquote>
-<div class="tw" data-tid="25"><table>
+<div class="tw" data-tid="27"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3901,7 +4059,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g25">15. InterServer — 10Gbps 端口，按切片计价</h3>
 <blockquote><strong>点评</strong>：按"切片"卖的思路很清晰，$3/月拿 1核2G + 10Gbps 端口在业内属于不讲道理。缺点是<strong>价格锁定 3 年才给这个价</strong>（首期需预付），且纯国际线路。适合当大流量落地/下载机。</blockquote>
-<div class="tw" data-tid="26"><table>
+<div class="tw" data-tid="28"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3923,7 +4081,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/2G</td>
 <td>40G SSD</td>
 <td>2TB</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td><strong>$3.00/月</strong></td>
 <td>$3.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -3937,7 +4095,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/4G</td>
 <td>80G SSD</td>
 <td>4TB</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td>$6.00/月</td>
 <td>$6.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -3951,7 +4109,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/6G</td>
 <td>120G SSD</td>
 <td>6TB</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td>$9.00/月</td>
 <td>$9.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -3965,7 +4123,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/8G</td>
 <td>160G SSD</td>
 <td>8TB</td>
-<td>10Gbps</td>
+<td>10Gbps<br>≈ 1250 MB/s</td>
 <td>$12.00/月</td>
 <td>$12.00</td>
 <td>⚠️ 以链接页为准</td>
@@ -3977,7 +4135,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g26">16. 丽萨主机 — 原生 IP，解锁最全</h3>
 <p>线路：洛杉矶 4837（联通）/ 9929、香港 CMI。主打流媒体 + AI 解锁。</p>
 <blockquote><strong>点评</strong>：实测（2026-06-15 晚）洛杉矶 4837：全国平均延迟 187ms，丢包 &lt;2%，上海电信 163ms 0 丢包，苏州实测上传 635 / 下载 290 Mbps，Netflix/Disney+/ChatGPT/Claude/Gemini <strong>全部可用</strong>，IP 在 4 个数据库被标为家宽。<strong>这是这套清单里唯一能稳定跑 Gemini 的</strong>。要解锁、要用 AI，多花的钱值。</blockquote>
-<div class="tw" data-tid="27"><table>
+<div class="tw" data-tid="29"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -3999,7 +4157,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G NVMe</td>
 <td>3000GB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>¥68/月</td>
 <td>$9.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -4013,7 +4171,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>10G NVMe</td>
 <td>6000GB</td>
-<td>300Mbps</td>
+<td>300Mbps<br>≈ 37.5 MB/s</td>
 <td>¥68/月</td>
 <td>$9.44</td>
 <td>⚠️ 以链接页为准</td>
@@ -4027,7 +4185,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>20G NVMe</td>
 <td>10000GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>¥88/月</td>
 <td>$12.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -4041,7 +4199,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/1G</td>
 <td>20G NVMe</td>
 <td>1000GB</td>
-<td>30Mbps</td>
+<td>30Mbps<br>≈ 3.75 MB/s</td>
 <td>¥88/月</td>
 <td>$12.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -4055,7 +4213,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G NVMe</td>
 <td>8000GB</td>
-<td>500Mbps</td>
+<td>500Mbps<br>≈ 62.5 MB/s</td>
 <td>¥100/月</td>
 <td>$13.89</td>
 <td>⚠️ 以链接页为准</td>
@@ -4069,7 +4227,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>40G NVMe</td>
 <td>20000GB</td>
-<td>1000Mbps</td>
+<td>1000Mbps<br>≈ 125 MB/s</td>
 <td>¥188/月</td>
 <td>$26.11</td>
 <td>⚠️ 以链接页为准</td>
@@ -4083,7 +4241,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G NVMe</td>
 <td>2000GB</td>
-<td>50Mbps</td>
+<td>50Mbps<br>≈ 6.25 MB/s</td>
 <td>¥188/月</td>
 <td>$26.11</td>
 <td>⚠️ 以链接页为准</td>
@@ -4097,7 +4255,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/2G</td>
 <td>40G NVMe</td>
 <td><strong>不限</strong></td>
-<td>200Mbps</td>
+<td>200Mbps<br>≈ 25 MB/s</td>
 <td>¥198/月</td>
 <td>$27.50</td>
 <td>⚠️ 以链接页为准</td>
@@ -4111,7 +4269,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>4核/4G</td>
 <td>80G NVMe</td>
 <td>20000GB</td>
-<td>1000Mbps</td>
+<td>1000Mbps<br>≈ 125 MB/s</td>
 <td>¥300/月</td>
 <td>$41.67</td>
 <td>⚠️ 以链接页为准</td>
@@ -4122,7 +4280,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</h3>
 <blockquote><strong>点评</strong>：<strong>双向计费，而且是本文最狠的一家</strong>——上传+下载都算，IEPL 中转还要再乘 2 倍率，等于标称 2TB 实际只能跑 500GB 左右。卖点是住宅 IP/双 ISP 家宽，做 TikTok 号、直播、注册海外账号这类需要"看起来像真人"的场景。拿来当梯子是浪费钱。</blockquote>
-<div class="tw" data-tid="28"><table>
+<div class="tw" data-tid="30"><table>
 <thead><tr>
 <th>套餐</th>
 <th>机房</th>
@@ -4144,7 +4302,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>1核/512M</td>
 <td>10G SSD</td>
 <td>1TB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>¥51.97/月</td>
 <td>$7.22</td>
 <td>⚠️ 以链接页为准</td>
@@ -4158,7 +4316,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/512MB</td>
 <td>10G SSD</td>
 <td>2TB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>¥80.58/月</td>
 <td>$11.19</td>
 <td>⚠️ 以链接页为准</td>
@@ -4172,7 +4330,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/512MB</td>
 <td>10G SSD</td>
 <td>2TB</td>
-<td>100Mbps</td>
+<td>100Mbps<br>≈ 12.5 MB/s</td>
 <td>¥90.11/月</td>
 <td>$12.52</td>
 <td>⚠️ 以链接页为准</td>
@@ -4186,7 +4344,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>2核/512MB</td>
 <td>10G SSD</td>
 <td>2TB</td>
-<td>70Mbps</td>
+<td>70Mbps<br>≈ 8.75 MB/s</td>
 <td>¥90.11/月</td>
 <td>$12.52</td>
 <td>⚠️ 以链接页为准</td>
@@ -4198,7 +4356,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g28">18. Mkcloud — 真专线，官网起价最便宜的一档</h3>
 <p>线路：入口可选 八线动态 BGP / 电信 / 移动 / 联通 / 三线独享，出口香港、新加坡、日本、美国。</p>
 <blockquote><strong>点评</strong>：这是清单里<strong>唯一能直接当梯子用的真专线</strong>。官网首页标价（2026-11-26 抓取）：IXP 专线 <strong>¥158/月起</strong>、沪港 IPLC <strong>¥288/月起</strong>、广港 IEPL 与沪日 IPLC <strong>¥358/月起</strong>、沪美 IPLC <strong>¥428/月起</strong>、上海 CN2 <strong>¥4500/月起</strong>。全部<strong>独享独立 IPv4</strong>，可选流量计费或独享带宽计费、可选云服务器或独立物理机、配置可定制。  <strong>⚠️ ¥158 不是最终价</strong>：所有 <strong>IXP / 上云互联优化</strong> 款（深港 ¥158、沪日 ¥166、沪美 ¥266、沪日独享 IXP ¥1000）官方明文写着「仅允许云厂 BGP 网络连入…需要云厂 BGP 网络作为前置搭配使用」——你得另有一台<strong>国内云服务器</strong>（阿里云/腾讯云/华为云/百度云/火山云/UCloud 国内节点），家宽和手机直接连不上。搭梯子的话实际成本 = 专线费 + 前置机（轻量 1核2G 约 ¥30–60/月），加起来和 <strong>沪港 IPLC ¥288</strong>（运营商直连、不用前置）差不多，那就没必要绕这一圈。  <strong>买之前要知道</strong>：官网定位是「合规跨境电商专线」，需要<strong>实名认证</strong>、<strong>只支持支付宝</strong>，部分产品有<strong>省级白名单</strong>（只能在你选的省份用），开通后<strong>不支持更换地域</strong>，退款只认质量问题。</blockquote>
-<div class="tw" data-tid="29"><table>
+<div class="tw" data-tid="31"><table>
 <thead><tr>
 <th>产品（入口 → 出口）</th>
 <th>线路</th>
@@ -4314,7 +4472,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h2 class="group" id="g29"><span>三、海外大厂 / 避雷 / 速查</span></h2>
 <h3 class="merchant" id="g30">19. 大厂基线价对照</h3>
 <blockquote><strong>点评</strong>：大厂云的线路全是普通国际线路（Oracle 除外，它家日本/韩国偶尔有惊喜）。Vultr 的价值在于<strong>按小时计费 + 32 个节点随便换</strong>，用来测哪条线路对你家宽带最快。Hetzner 涨价后 CX23 €5.49 仍是欧洲最强性价比。<strong>Oracle 的免费额度已经从 4 OCPU/24G 砍到 2 OCPU/12G</strong>，网上那些"免费 24G 永久"的教程全部过期了。腾讯云香港明确写了不直连，别当梯子买。</blockquote>
-<div class="tw" data-tid="30"><table>
+<div class="tw" data-tid="32"><table>
 <thead><tr>
 <th>商家</th>
 <th>线路</th>
@@ -4408,7 +4566,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 </tbody></table></div>
 <hr>
 <h3 class="merchant" id="g31">20. 避雷清单（已验证有问题）</h3>
-<div class="tw" data-tid="31"><table>
+<div class="tw" data-tid="33"><table>
 <thead><tr>
 <th>商家</th>
 <th>线路</th>
@@ -4473,7 +4631,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <hr>
 <h3 class="merchant" id="g32">21. 按需求的速查结论</h3>
 <p><strong>最后提醒三条</strong><br>1. 这份清单里的价格全部是 <strong>2026-11-26 抓取</strong>的，黑五正日（11-27）和网络星期一（11-30）会再变一轮。<br>2. <strong>"有货"只是抓取那一刻的状态</strong>，DMIT Pro、HostDare CSSD0、搬瓦工低价档都是开卖即空的类型，看到有货立刻下单。<br>3. <strong>流量口径</strong>：官方明写<strong>双向</strong>的 6 家 = 搬瓦工 / HostDare / OneTechCloud / NewNB Cloud / Mkcloud（计量款）/ WePC；官方明写<strong>单向</strong>的 6 家 = Vultr / DigitalOcean / Hetzner / Linode / Oracle / 腾讯云轻量；<strong>官网压根没写方向</strong>的 10 家 = RackNerd / CloudCone / Evoxt / Hostwinds / InterServer / VMISS / AkileCloud / ByteVirt / CUBECLOUD / 丽萨主机——买这些按「标称 ÷ 2」算才安全。DMIT 分线：T1 单向最大值、Pro/EB 双向。</p>
-<div class="tw" data-tid="32"><table>
+<div class="tw" data-tid="34"><table>
 <thead><tr>
 <th>你的情况</th>
 <th>线路</th>
@@ -4563,7 +4721,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <h3 class="merchant" id="g33">附：库存核查（2026-11-26 实测）</h3>
 <p><strong>标 <code>✅ 有货</code> 的，是 2026-11-26 当天实测能打开下单表单的：</strong><br><strong>标 <code>⚠️ 以链接页为准</code> 的，是官网有 Cloudflare / 跳转页、抓不到实时库存，不等于没货：</strong><br><strong>库存随时会变，黑五期间尤其快。</strong> 判断方法——</p>
 <ul><li>看到 <code>✅ 有货</code>：11-26 实测能下单，但别隔一周才去买；</li><li>看到 <code>⚠️ 以链接页为准</code>：点进去自己看一眼，页面出现 <code>Add to Cart</code> / <code>Configure</code> / <code>立即购买</code> 就是有货，出现 <code>Out of Stock</code> / <code>暂无库存</code> 就是没了。</li></ul>
-<div class="tw" data-tid="33"><table>
+<div class="tw" data-tid="35"><table>
 <thead><tr>
 <th>商家</th>
 <th>实测结果</th>
@@ -4585,7 +4743,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 <td>见第 2 节，按 vpsoso 实时库存监控标注（香港有货、洛杉矶 AS3 / 东京全线缺）</td>
 </tr>
 </tbody></table></div>
-<div class="tw" data-tid="34"><table>
+<div class="tw" data-tid="36"><table>
 <thead><tr>
 <th>商家</th>
 <th>抓不到的原因</th>
@@ -4620,8 +4778,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
   <div class="drawer-in">
     <div class="drawer-h"><span>目录</span><span class="dclose" id="dclose">✕</span></div>
     <div class="drawer-list">
-<a class="lv2" href="#rec">推荐</a>
-      <a class="lv2" href="#g1">线路优先级（好 → 差）</a>
+<a class="lv2" href="#g0">线路优先级（好 → 差）</a>
+      <a class="lv2" href="#rec">推荐</a>
       <a class="lv2" href="#g2">怎么用这份清单</a>
       <a class="lv1" href="#g3">一、按线路选（先看这里）</a>
       <a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
@@ -4631,7 +4789,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
       <a class="lv2" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
       <a class="lv2" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
       <a class="lv1" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
-      <a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
+      <a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost — 两条产品线，KVM $99.99/年 起</a>
       <a class="lv2" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
       <a class="lv2" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
       <a class="lv2" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
