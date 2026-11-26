@@ -1,0 +1,4704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>高性价比 VPS 套餐清单 · 2026-11</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f5f7fb; --card:#fff; --line:#e6eaf2; --ink:#151d2e; --sub:#5b6b85;
+  --brand:#4f46e5; --brand-soft:#eef0ff;
+  --fire:#f97316; --fire-soft:#fff2e8;
+  --ok:#0f9d58; --ok-soft:#e8f6ee;
+  --warn:#c47d00; --warn-soft:#fff6e0;
+  --bad:#dc2626; --bad-soft:#fdecec;
+  --star:#2563eb; --star-soft:#e8f0fe;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+pre{background:#0f172a;color:#e2e8f0;padding:14px 16px;border-radius:8px;overflow-x:auto;margin:10px 0;font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.7}
+pre code{background:none;color:inherit;padding:0;border-radius:0;font:inherit}
+code{background:#eef1f7;padding:.1em .38em;border-radius:4px;font:13px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#374151}
+
+/* ---------- 顶部 ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{max-width:1680px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:700;font-size:15px;letter-spacing:.2px;white-space:nowrap}
+.logo em{font-style:normal;color:var(--brand)}
+.spacer{flex:1}
+.search{position:relative}
+.search input{
+  width:290px;padding:9px 14px 9px 34px;border:1px solid var(--line);border-radius:9px;
+  background:#fff;font-size:14px;color:var(--ink);outline:none;transition:.15s
+}
+.search input:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;fill:var(--sub)}
+.toggle{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--sub);cursor:pointer;user-select:none;white-space:nowrap}
+.toggle input{width:15px;height:15px;accent-color:var(--fire);cursor:pointer}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:1680px;margin:0 auto;padding:26px 28px 90px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:34px}
+nav{position:sticky;top:78px;align-self:start;max-height:calc(100vh - 104px);overflow:auto;padding-right:6px}
+nav::-webkit-scrollbar{width:6px}
+nav::-webkit-scrollbar-thumb{background:#d7dee9;border-radius:3px}
+nav .nlabel{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#93a1b6;margin:0 0 10px 10px;font-weight:600}
+nav a{display:block;padding:6px 10px;border-radius:7px;font-size:13.5px;color:var(--sub);border-left:2px solid transparent;transition:.12s;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+nav a:hover{background:#eef1f7;color:var(--ink);text-decoration:none}
+nav a.grp{font-weight:650;color:var(--ink);margin-top:12px;font-size:13px}
+nav a.cur{background:var(--brand-soft);color:var(--brand);border-left-color:var(--brand);font-weight:600}
+
+/* ---------- 正文 ---------- */
+main{min-width:0}
+.doc-title{font-size:31px;line-height:1.3;margin:2px 0 6px;letter-spacing:-.4px}
+.doc-title + p{margin-top:4px}
+h2.group{
+  font-size:20px;margin:46px 0 16px;padding-left:14px;position:relative;letter-spacing:-.2px;
+}
+h2.group::before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:4px;border-radius:2px;background:linear-gradient(180deg,var(--brand),#8b5cf6)}
+h2.group:first-of-type{margin-top:14px}
+h3.merchant{font-size:17.5px;margin:30px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--line);letter-spacing:-.1px}
+.ixp-req{color:#dc2626;font-weight:700}.rec-badge{display:inline-block;padding:1px 8px;border-radius:999px;background:#dc2626;color:#fff;font-size:11px;font-weight:700;line-height:1.7;vertical-align:middle;white-space:nowrap}
+tr.rec-row td{background:#fff1f2!important;border-top:1px solid #fecdd3;border-bottom:1px solid #fecdd3}
+tr.rec-row td:first-child{box-shadow:inset 3px 0 0 #dc2626}
+tr.rec-row:hover td{background:#ffe4e6!important}
+.toc-page{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px 20px;margin:20px 0 30px;box-shadow:0 1px 2px rgba(21,29,46,.04)}
+.toc-title{font-size:13px;font-weight:700;color:var(--sub);letter-spacing:.08em;margin-bottom:10px}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px 26px}
+.toc-grid a{display:block;padding:5px 8px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:13.5px;transition:background .15s}
+.toc-grid a:hover{background:var(--brand-soft);color:var(--brand)}
+.toc-grid a.lv1{grid-column:1/-1;font-weight:700;margin-top:12px;border-left:3px solid var(--brand);padding-left:10px;background:linear-gradient(90deg,var(--brand-soft),transparent 65%)}
+.toc-grid a.lv1:first-child{margin-top:0}
+.toc-grid a.lv2{padding-left:22px;color:var(--sub)}
+h4.step{font-size:16px;margin:26px 0 10px;color:var(--ink);font-weight:700;padding-left:10px;border-left:3px solid var(--brand);background:linear-gradient(90deg,var(--brand-soft),transparent 70%)}h4.step:first-of-type{margin-top:20px}h4.sub{font-size:14px;margin:22px 0 10px;color:var(--sub);font-weight:650}
+p{margin:10px 0}
+ul{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+hr{border:0;border-top:1px dashed var(--line);margin:38px 0}
+blockquote{
+  margin:14px 0;padding:13px 17px;border-radius:10px;font-size:14.2px;
+  background:linear-gradient(90deg,#fffaf3,#fffdf9);border:1px solid #fde9cf;border-left:3px solid var(--fire);
+  color:#5a4630
+}
+blockquote strong{color:#b45309}
+
+/* ---------- 表格 ---------- */
+.tw{overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0 4px;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.tw::-webkit-scrollbar{height:9px}
+.tw::-webkit-scrollbar-thumb{background:#d7dee9;border-radius:5px}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:13.3px}
+thead th{
+  position:sticky;top:0;z-index:2;background:#f8fafc;text-align:left;font-weight:650;color:#445068;
+  padding:10px 13px;white-space:nowrap;border-bottom:1px solid var(--line);font-size:12.5px;letter-spacing:.02em
+}
+tbody td{padding:10px 13px;border-bottom:1px solid #f1f4f9;vertical-align:top;line-height:1.6}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:#fbfcfe}
+tbody tr:hover td{background:#f4f7ff}
+td.name{font-weight:600;min-width:150px}
+td.name a{display:inline-flex;align-items:center;gap:3px}
+.ext{font-size:10px;opacity:.55;font-weight:400}
+strong{font-weight:650}
+td:first-child{color:var(--ink)}
+
+/* ---------- 标签 ---------- */
+.tag{display:inline-block;padding:1px 8px;border-radius:20px;font-size:12.3px;white-space:nowrap;font-weight:500}
+.tag.ok{background:var(--ok-soft);color:var(--ok)}
+.tag.warn{background:var(--warn-soft);color:var(--warn)}
+.tag.bad{background:var(--bad-soft);color:var(--bad)}
+.tag.fire{background:var(--fire-soft);color:#c2410c;font-weight:600}
+.tag.star{background:var(--star-soft);color:var(--star)}
+
+/* ---------- 交互 ---------- */
+#top{
+  position:fixed;right:26px;bottom:26px;width:42px;height:42px;border-radius:50%;
+  background:var(--card);border:1px solid var(--line);box-shadow:0 4px 14px rgba(16,24,40,.12);
+  display:none;align-items:center;justify-content:center;cursor:pointer;color:var(--sub);z-index:60
+}
+#top:hover{color:var(--brand);border-color:var(--brand)}
+.hide{display:none!important}
+.count{font-size:12.5px;color:#93a1b6;margin-left:4px}
+.rec-hero{border:1px solid #fecdd3;border-left:4px solid var(--bad);background:linear-gradient(135deg,#fff1f2,#fffafa);border-radius:12px;padding:15px 20px;margin:18px 0 24px}
+.rec-hero-h{font-size:15px;font-weight:800;color:var(--bad);margin-bottom:5px}
+.rec-hero-b{font-size:14.5px;line-height:1.78;color:var(--ink)}
+.rec-link{color:inherit;text-decoration:none;border-bottom:2px solid rgba(220,38,38,.3);transition:.15s}
+.rec-link:hover{border-bottom-color:var(--bad);text-decoration:none;background:#fff5f6}
+.rec-arrow{display:inline-block;margin-left:4px;font-weight:700;color:var(--bad)}
+.rec-hero-b strong{color:var(--bad);font-weight:700}
+@media(max-width:1100px){
+  .wrap{grid-template-columns:minmax(0,1fr);padding:20px 16px 80px}
+  nav{display:none}
+  .search input{width:180px}
+  .bar{padding:10px 16px;gap:10px}
+  .doc-title{font-size:24px}
+}
+.mtoc{display:none;box-sizing:border-box;max-width:100%}
+.mnav{display:none;align-items:center;gap:5px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.mnav:hover{border-color:var(--brand);color:var(--brand)}
+.drawer{position:fixed;inset:0;z-index:300;background:rgba(15,23,42,.42);opacity:0;pointer-events:none;transition:opacity .18s}
+.drawer.open{opacity:1;pointer-events:auto}
+.drawer-in{position:absolute;left:0;top:0;bottom:0;width:min(85vw,330px);background:#fff;overflow-y:auto;padding:14px 6px 44px;box-shadow:3px 0 24px rgba(21,29,46,.18);transform:translateX(-102%);transition:transform .22s cubic-bezier(.4,0,.2,1)}
+.drawer.open .drawer-in{transform:none}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:2px 14px 12px;margin-bottom:6px;border-bottom:1px solid var(--line);font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.1em}
+.dclose{cursor:pointer;font-size:14px;color:var(--sub);padding:2px 7px;border-radius:6px;line-height:1.4}
+.dclose:hover{background:#f1f5f9;color:var(--ink)}
+.drawer-list a{display:block;padding:9px 14px;border-radius:7px;color:var(--ink);font-size:14px;text-decoration:none}
+.drawer-list a:active{background:var(--brand-soft)}
+.drawer-list a.lv1{font-weight:700;margin-top:8px;border-left:3px solid var(--brand);padding-left:12px;background:linear-gradient(90deg,var(--brand-soft),transparent 70%)}
+.drawer-list a.lv1:first-child{margin-top:0}
+.drawer-list a.lv2{padding-left:26px;color:var(--sub);font-size:13.5px}
+@media(max-width:760px){
+  html,body{max-width:100%}
+  .wrap,main{min-width:0}
+  .mnav{display:none}
+  .toc-page{display:none}
+  .bar{justify-content:space-between;padding:9px 14px}
+  .mtoc{display:flex;gap:6px;overflow-x:auto;padding:0 14px 9px;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
+  .mtoc::-webkit-scrollbar{display:none}
+  .mtoc a{flex:0 0 auto;white-space:nowrap;font-size:12.5px;line-height:1.35;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--sub);text-decoration:none;border-bottom:1px solid var(--line)}
+  .mtoc a.lv1{font-weight:700;background:var(--brand-soft);border-color:#dfe3ff;color:var(--brand)}
+  .mtoc a.cur{background:var(--brand-soft);border-color:var(--brand);color:var(--brand);font-weight:700}
+  .mtoc .all{position:sticky;right:-1px;flex:0 0 auto;white-space:nowrap;font:inherit;font-size:12.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1px solid var(--brand);background:var(--brand);color:#fff;cursor:pointer;box-shadow:-9px 0 12px 2px #fff}
+  .mtoc{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 78px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 78px),transparent 100%)}
+  .toc-page{display:none}
+  .wrap{width:100%;max-width:100%}
+  main{width:100%;min-width:0;max-width:100%}
+  .tw{width:100%;max-width:100%}
+  .bar{flex-wrap:wrap;gap:8px 10px;padding:9px 12px}
+  .logo{font-size:13px}
+  .spacer{display:none}
+  .toggle{order:2;font-size:12px}
+  .search{order:3;flex:1 1 100%}
+  .search input{width:100%;font-size:13px;padding:8px 12px 8px 32px}
+  .wrap{padding:16px 12px 68px;gap:22px}
+  .doc-title{font-size:18px;letter-spacing:0;line-height:1.4}
+  .tw{border-radius:10px}
+  .toc-page{padding:12px 14px 14px;margin:14px 0 22px}
+  .toc-grid{grid-template-columns:1fr}
+  .toc-grid a.lv1{margin-top:9px}
+  h2.group{font-size:17px;padding-left:10px}
+  h3.merchant{font-size:15px}
+  table{min-width:700px;font-size:12.4px}
+  td,th{padding:7px 9px}
+  blockquote{padding:10px 13px;margin:12px 0;font-size:13.5px}
+  pre{font-size:11.5px;padding:11px 12px}
+  ul{padding-left:19px}
+  .rec-hero{padding:13px 15px;margin:14px 0 20px}
+  .rec-hero-b{font-size:13.5px}
+  #top{right:12px;bottom:12px;width:38px;height:38px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo">VPS 选型清单 <em>2026·11</em></div>
+    <button class="mnav" id="mnav" aria-label="打开目录">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M3 5h18v2.4H3zm0 5.8h18v2.4H3zM3 16.6h18V19H3z"/></svg>
+      目录
+    </button>
+    <div class="spacer"></div>
+  </div>
+  <div class="mtoc" id="mtoc"><a class="lv2" href="#rec">推荐</a>
+    <a class="lv2" href="#g1">线路优先级（好 → 差）</a>
+    <a class="lv2" href="#g2">怎么用这份清单</a>
+    <a class="lv1" href="#g3">一、按线路选</a>
+    <a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
+    <a class="lv2" href="#g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></a>
+    <a class="lv2" href="#g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</a>
+    <a class="lv2" href="#g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</a>
+    <a class="lv2" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
+    <a class="lv2" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
+    <a class="lv1" href="#g10">二、按商家看</a>
+    <a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost</a>
+    <a class="lv2" href="#g12">2. DMIT</a>
+    <a class="lv2" href="#g13">3. HostDare</a>
+    <a class="lv2" href="#g14">4. ByteVirt</a>
+    <a class="lv2" href="#g15">5. DIYVM</a>
+    <a class="lv2" href="#g16">6. VMISS</a>
+    <a class="lv2" href="#g17">7. AkileCloud</a>
+    <a class="lv2" href="#g18">8. 狗云 DogYun</a>
+    <a class="lv2" href="#g19">9. OneTechCloud</a>
+    <a class="lv2" href="#g20">10. CUBECLOUD</a>
+    <a class="lv2" href="#g21">11. RackNerd</a>
+    <a class="lv2" href="#g22">12. CloudCone</a>
+    <a class="lv2" href="#g23">13. Evoxt</a>
+    <a class="lv2" href="#g24">14. Hostwinds</a>
+    <a class="lv2" href="#g25">15. InterServer</a>
+    <a class="lv2" href="#g26">16. 丽萨主机</a>
+    <a class="lv2" href="#g27">17. WePC</a>
+    <a class="lv2" href="#g28">18. Mkcloud</a>
+    <a class="lv1" href="#g29">三、海外大厂 / 避雷 / 速查</a>
+    <a class="lv2" href="#g30">19. 大厂基线价对照</a>
+    <a class="lv2" href="#g31">20. 避雷清单（已验证有问题）</a>
+    <a class="lv2" href="#g32">21. 按需求的速查结论</a>
+    <a class="lv2" href="#g33">附：库存核查（2026-11-26 实测）</a>
+    <a class="lv2" href="#g34">附：图例与购买链接说明</a>
+    <button class="all" id="mall" type="button">目录</button></div>
+</header>
+
+<div class="wrap">
+  <nav id="toc">
+    <p class="nlabel">目录</p>
+    <a class="" href="#rec">推荐</a>
+    <a class="" href="#g1">线路优先级（好 → 差）</a>
+    <a class="" href="#g2">怎么用这份清单</a>
+    <a class="grp" href="#g3">一、按线路选（先看这里）</a>
+    <a class="" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
+    <a class="" href="#g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路）</a>
+    <a class="" href="#g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</a>
+    <a class="" href="#g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</a>
+    <a class="" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
+    <a class="" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
+    <a class="grp" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
+    <a class="" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
+    <a class="" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
+    <a class="" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
+    <a class="" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
+    <a class="" href="#g15">5. DIYVM — 香港 CN2 GIA 不限流量</a>
+    <a class="" href="#g16">6. VMISS — 加拿大商家，线路切得最细</a>
+    <a class="" href="#g17">7. AkileCloud — 大带宽大流量，价格屠夫</a>
+    <a class="" href="#g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</a>
+    <a class="" href="#g19">9. OneTechCloud — 香港 1Gbps 大带宽</a>
+    <a class="" href="#g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</a>
+    <a class="" href="#g21">11. RackNerd — 年付白菜价之王</a>
+    <a class="" href="#g22">12. CloudCone — 和 RackNerd 同级，稍好一点</a>
+    <a class="" href="#g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</a>
+    <a class="" href="#g24">14. Hostwinds — 流量给得多</a>
+    <a class="" href="#g25">15. InterServer — 10Gbps 端口，按切片计价</a>
+    <a class="" href="#g26">16. 丽萨主机 — 原生 IP，解锁最全</a>
+    <a class="" href="#g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</a>
+    <a class="" href="#g28">18. Mkcloud — 真专线，官网起价最便宜的一档</a>
+    <a class="grp" href="#g29">三、海外大厂 / 避雷 / 速查</a>
+    <a class="" href="#g30">19. 大厂基线价对照</a>
+    <a class="" href="#g31">20. 避雷清单（已验证有问题）</a>
+    <a class="" href="#g32">21. 按需求的速查结论</a>
+    <a class="" href="#g33">附：库存核查（2026-11-26 实测）</a>
+    <a class="" href="#g34">附：图例与购买链接说明</a>
+  </nav>
+  <main id="main">
+<h1 class="doc-title">高性价比 VPS 套餐清单（科学上网向）</h1>
+<p>数据核实日期：<strong>2026-11-26</strong>　｜　币种：下表「价格」列保留原标价，「≈USD/月」是折算后便于横向比（CAD≈5.2 CNY、USD≈7.2 CNY，季付÷3、年付÷12）</p>
+<div class="rec-hero" id="rec"><div class="rec-hero-h">推荐</div>
+<div class="rec-hero-b"><a class="rec-link" href="#g5"><strong>推荐使用 CN2 GIA 线路</strong><span class="rec-arrow">↓</span></a>，性价比较高 —— 它是晚高峰最稳的常规线路（香港 12–45ms、美西 150–190ms，丢包 &lt;1%），$10–40/月就能买到真 GIA。比 IEPL 专线便宜一个数量级，比普通国际 BGP 稳得多，属于「加钱不多、体验跨度最大」的一档。预算再低就往下看 9929 / CMIN2，不想折腾就直接上专线。</div></div>
+<h3 class="merchant" id="g1">线路优先级（好 → 差）</h3>
+<p><strong>一句话排序</strong>：IPLC / IEPL 专线　<strong>&gt;</strong>　三网回程优化（CN2 GIA / AS9929 / CMIN2）　<strong>&gt;</strong>　单网精品线　<strong>&gt;</strong>　优质普通直连（AS4837 / CMI）　<strong>&gt;</strong>　普通国际绕路（163 骨干网 / NTT / Cogent）</p>
+<p>决定晚高峰稳不稳、绕不绕路的是线路档位，跟配置和带宽大小无关。往下越便宜越飘，往上越贵越稳。</p>
+<div class="tw" data-tid="1"><table>
+<thead><tr>
+<th>档</th>
+<th>线路档次</th>
+<th>包含什么</th>
+<th>大陆延迟</th>
+<th>晚高峰</th>
+<th>月付档</th>
+<th>适合谁</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">①</td>
+<td><strong>专线 IPLC / IEPL</strong></td>
+<td>运营商内网跨境，不走国际出口</td>
+<td>10–40ms</td>
+<td>几乎不掉</td>
+<td>¥40–300+</td>
+<td>主力机、直播、要长期稳定</td>
+</tr>
+<tr>
+<td class="name">②</td>
+<td><strong>三网回程优化</strong></td>
+<td>CN2 GIA（电信 AS4809）、AS9929（联通）、CMIN2（移动），三张网都接</td>
+<td>12–45ms（香港）<br>150–190ms（美西）</td>
+<td>稳，丢包 &lt;1%</td>
+<td>$10–40</td>
+<td>主力梯子首选</td>
+</tr>
+<tr>
+<td class="name">③</td>
+<td><strong>单网精品线</strong></td>
+<td>只优化一张网：CN2 GT、香港 BGP 精品、日本 IIJ / 软银</td>
+<td>30–80ms</td>
+<td>对得上就稳，对不上就绕</td>
+<td>$3–15</td>
+<td>宽带和线路对得上的</td>
+</tr>
+<tr>
+<td class="name">④</td>
+<td><strong>优质普通直连</strong></td>
+<td>AS4837（联通 169）、CMI（移动）等直连，但没有精细优化</td>
+<td>130–200ms</td>
+<td>高峰会抖</td>
+<td>$1–8</td>
+<td>联通/移动用户、低预算</td>
+</tr>
+<tr>
+<td class="name">⑤</td>
+<td><strong>普通国际绕路</strong></td>
+<td>163 骨干网、NTT、Cogent、Telia 这类公共出口</td>
+<td>180–300ms</td>
+<td>高峰卡顿明显</td>
+<td>$1–5</td>
+<td>下载、跑脚本、备份机</td>
+</tr>
+<tr>
+<td class="name">—</td>
+<td><strong>住宅 IP / 原生 IP</strong></td>
+<td>卖的是 IP 属性，不参与上面的排位</td>
+<td>—</td>
+<td>—</td>
+<td>$8–15</td>
+<td>流媒体、直播、要干净 IP</td>
+</tr>
+</tbody></table></div>
+<p><strong>怎么用这条排序</strong></p>
+<ul><li>① 专线：只有 Mkcloud。<strong>¥158 那款 IXP 要自备一台国内云服务器当前置</strong>（家宽连不上），不想多买机器就直接看广港 IEPL ¥358 或沪港 IPLC ¥288 —— 这两种运营商直连款，家宽和手机能直接连。</li><li>预算够、要长期用：② 里香港 GIA 是「真优化」的入口，再往下就得赌运营商对不对得上了。</li><li>预算 $5–20：③ 或 ④。联通/移动用户走 9929 / CMIN2 / 4837，往往比电信用户挤普通国际线舒服得多。</li><li>⑤ 只能当备份或下载机；住宅 IP 是「解锁维度」不是「线路档次」，买它通常还得另配一台线路机中转。</li></ul>
+<hr>
+<div class="toc-page">
+<div class="toc-title">目录</div>
+<div class="toc-grid">
+<a class="lv2" href="#rec">推荐</a>
+<a class="lv2" href="#g1">线路优先级（好 → 差）</a>
+<a class="lv2" href="#g2">怎么用这份清单</a>
+<a class="lv1" href="#g3">一、按线路选（先看这里）</a>
+<a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
+<a class="lv2" href="#g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></a>
+<a class="lv2" href="#g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</a>
+<a class="lv2" href="#g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</a>
+<a class="lv2" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
+<a class="lv2" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
+<a class="lv1" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
+<a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
+<a class="lv2" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
+<a class="lv2" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
+<a class="lv2" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
+<a class="lv2" href="#g15">5. DIYVM — 香港 CN2 GIA 不限流量</a>
+<a class="lv2" href="#g16">6. VMISS — 加拿大商家，线路切得最细</a>
+<a class="lv2" href="#g17">7. AkileCloud — 大带宽大流量，价格屠夫</a>
+<a class="lv2" href="#g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</a>
+<a class="lv2" href="#g19">9. OneTechCloud — 香港 1Gbps 大带宽</a>
+<a class="lv2" href="#g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</a>
+<a class="lv2" href="#g21">11. RackNerd — 年付白菜价之王</a>
+<a class="lv2" href="#g22">12. CloudCone — 和 RackNerd 同级，稍好一点</a>
+<a class="lv2" href="#g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</a>
+<a class="lv2" href="#g24">14. Hostwinds — 流量给得多</a>
+<a class="lv2" href="#g25">15. InterServer — 10Gbps 端口，按切片计价</a>
+<a class="lv2" href="#g26">16. 丽萨主机 — 原生 IP，解锁最全</a>
+<a class="lv2" href="#g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</a>
+<a class="lv2" href="#g28">18. Mkcloud — 真专线，官网起价最便宜的一档</a>
+<a class="lv1" href="#g29">三、海外大厂 / 避雷 / 速查</a>
+<a class="lv2" href="#g30">19. 大厂基线价对照</a>
+<a class="lv2" href="#g31">20. 避雷清单（已验证有问题）</a>
+<a class="lv2" href="#g32">21. 按需求的速查结论</a>
+<a class="lv2" href="#g33">附：库存核查（2026-11-26 实测）</a>
+<a class="lv2" href="#g34">附：图例与购买链接说明</a>
+</div></div>
+<h3 class="merchant" id="g2">怎么用这份清单</h3>
+<p>1. <strong>先看「一、按线路选」</strong>——每张表就是一个线路档次，从最好往下排；表里只放<strong>有货且值得买</strong>的套餐，同一家最多列 2 款，有货的排在前面。<br>2. <strong>再看「二、按商家看」</strong>——同一家的所有套餐合在一张表里，机房在第二列，按价格从低到高。<br>3. <strong>图例</strong>　<code>✅ 有货</code>＝2026-11-26 实测能下单　<code>⚠️ 以链接页为准</code>＝官网有 Cloudflare/跳转页，抓不到实时库存，点链接自己确认（不等于没货）　<code>❌ 缺货</code>＝实测 Out of Stock，已从汇总表剔除<br>4. <strong>流量计费</strong>　<code>双向</code>＝上传+下载合并计额度，跑代理时标称 1TB 实际能用约 500GB；<code>单向</code>＝只计出站，标称值就是可用值；<code>未明确</code>＝官网产品页+TOS+AUP 都没写方向，按「标称÷2」预留</p>
+<hr>
+<h2 class="group" id="g3"><span>一、按线路选（先看这里）</span></h2>
+<h3 class="merchant" id="g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</h3>
+<p>纯内网出境，晚高峰也不受国际出口影响；缺点是贵、按带宽卖，适合当主力的少数人。</p>
+<blockquote><strong>这一组只有 Mkcloud</strong>，独享独立 IPv4，可选流量计费或独享带宽计费。</blockquote>
+<h4 class="sub">两种计费方式，买错多花钱</h4>
+<div class="tw" data-tid="2"><table>
+<thead><tr>
+<th></th>
+<th><strong>流量计费</strong>（共享带宽）</th>
+<th><strong>独享带宽</strong>（带宽计费）</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">你买的是</td>
+<td>一个月<strong>多少 TB</strong></td>
+<td>一条<strong>多少 Mbps</strong></td>
+</tr>
+<tr>
+<td class="name">标称速度是什么意思</td>
+<td>200M–1Gbps，是<strong>端口峰值上限</strong>，不保证跑得到</td>
+<td>5M–5G，是<strong>保证速率</strong>，任何时候都跑得满</td>
+</tr>
+<tr>
+<td class="name">会被别人挤吗</td>
+<td><strong>会</strong>。同线路所有人共用一个池子，晚高峰可能只剩标称的三分之一</td>
+<td><strong>不会</strong>。这条通道只划给你一个人</td>
+</tr>
+<tr>
+<td class="name">流量怎么算</td>
+<td><strong>双向</strong>——上传+下载都扣。官方原文：「月流量＝月度上行流量＋月度下行流量」。当梯子用时，<strong>2TB 只有约 1TB 实际下载量</strong></td>
+<td><strong>不限量</strong>，不存在扣额度</td>
+</tr>
+<tr>
+<td class="name">用超了</td>
+<td><strong>停机</strong>，等下月重置或另买流量包</td>
+<td>永远不会超</td>
+</tr>
+<tr>
+<td class="name">起步价</td>
+<td>IXP 款 <strong>¥158/月（2TB）</strong><br>运营商直连款 <strong>¥288/月（1TB）</strong></td>
+<td>¥600/月（5M）</td>
+</tr>
+<tr>
+<td class="name"><strong>还要另花什么钱</strong></td>
+<td><strong>IXP 款必须再买一台国内云服务器当前置</strong>——官方只允许云厂 BGP 网段连入，你得有阿里云/腾讯云/百度云/华为云/火山云/UCloud 的国内节点（最便宜 1核2G 约 ¥30–60/月），家宽和手机才间接连得上。<strong>运营商直连款不用</strong>，开通即用</td>
+<td>不需要额外设备</td>
+</tr>
+<tr>
+<td class="name">起步总成本</td>
+<td>IXP 款 ≈ ¥190–220/月<br>运营商直连款 = 标价</td>
+<td>¥600/月</td>
+</tr>
+<tr>
+<td class="name">谁该买</td>
+<td><strong>当梯子就买这个</strong></td>
+<td>24 小时恒速跑满的业务、直播推流</td>
+</tr>
+</tbody></table></div>
+<blockquote>表里所有「¥xx/TB」都是<strong>按标称流量算的</strong>，双向计之后实际单价翻倍。但各家一起翻，横向比价结论不变。  同一条线路通常<strong>两种计费都卖</strong>，可以互相换算着挑。流量款超量后 Mkcloud 支持<strong>另买流量包</strong>或补差价升档，不是只能等下月。</blockquote>
+<blockquote><strong>但入口分两种，买错要多花钱</strong>：标 ⚠️ 需前置机的是<strong>云厂 BGP 互联款（IXP）</strong>，官方明文只允许阿里云/腾讯云/百度云/华为云/火山云等国内云节点连入，你家宽和手机都连不上，必须先买一台国内云服务器做前置；标 ✅ 直连的是<strong>运营商入口款（IPLC/IEPL）</strong>，开通后你所在省的家宽和手机能直接连。</blockquote>
+<div class="tw" data-tid="3"><table>
+<thead><tr>
+<th>商家</th>
+<th>产品（入口 → 出口）</th>
+<th>线路</th>
+<th>端内延迟<br>（入口→出口）</th>
+<th>计费</th>
+<th>最低档</th>
+<th>全部档位</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">Mkcloud</td>
+<td>深港 IXP（深圳上云 → 香港 BGP）<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>1–2ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥158</strong>/月<br>2TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪日 IXP（上海上云 → 日本 BGP）<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>25–28ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥166</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪美 IXP（上海上云 → 美国 BGP）<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>124–134ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥266</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪港 IPLC（上海电信 → 香港 BGP）<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>21ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥288</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>广港 IEPL（广州 BGP 八线 → 香港 BGP）<br>✅ 家宽/手机可直连</td>
+<td>IEPL</td>
+<td>1–2ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥358</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪日 IPLC（上海电信 → 日本 BGP）<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>25–28ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥358</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪美 IPLC（上海电信 → 美国 BGP）<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>124–134ms</td>
+<td>流量计费 · 双向</td>
+<td><strong>¥428</strong>/月<br>1TB 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪日独享（上海电信 → 日本 BGP）<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>25–28ms</td>
+<td>带宽计费 · 不限量</td>
+<td><strong>¥600</strong>/月<br>5M 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+<tr>
+<td class="name">Mkcloud</td>
+<td>沪日独享（上海上云 → 日本 BGP）<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>25–28ms</td>
+<td>带宽计费 · 不限量</td>
+<td><strong>¥1000</strong>/月<br>20M 档</td>
+<td><a href="https://www.mkcloud.net/" target="_blank" rel="noopener"><strong>前往查看</strong><span class="ext">↗</span></a> ↗</td>
+</tr>
+</tbody></table></div>
+<blockquote>上表 9 条产品<strong>全部有货</strong>。配置随档位递增：深港 / 沪日 / 沪美 IXP 从 <strong>2核4G/40G</strong> 起，运营商直连款从 <strong>1核2G/20G</strong> 起，独享款从 <strong>2核4G/40G</strong> 起。档位和总价以官网产品页为准。</blockquote>
+<h4 class="sub">专线怎么接成梯子</h4>
+<p>专线跟普通 VPS 的结构不一样，买之前先分清你拿到的是什么：</p>
+<div class="tw" data-tid="4"><table>
+<thead><tr>
+<th>形态</th>
+<th>你拿到什么</th>
+<th>怎么接</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><strong>单端专线</strong></td>
+<td>一台境外机，但入口走国内 BGP，给的是<strong>国内入口 IP</strong></td>
+<td>客户端直连入口 IP → 商家内网 → 境外出口</td>
+</tr>
+<tr>
+<td class="name"><strong>双端专线</strong></td>
+<td>国内中转 + 境外落地两台</td>
+<td>自己在中转机上配端口转发 / iptables DNAT</td>
+</tr>
+<tr>
+<td class="name"><strong>纯内网</strong></td>
+<td>只有境外机，国内段自己解决</td>
+<td>自己再搭国内中转（成本不会比双端低）</td>
+</tr>
+</tbody></table></div>
+<h4 class="sub">先搞清一件事：要不要额外买台前置机</h4>
+<p>Mkcloud 的专线入口分两种，这是最容易踩的坑：</p>
+<div class="tw" data-tid="5"><table>
+<thead><tr>
+<th>接入方式</th>
+<th>对应产品</th>
+<th>你还需要有什么</th>
+<th>谁能连</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><strong>云厂 BGP 互联（IXP）</strong></td>
+<td>深港 IXP ¥158、沪日 IXP ¥166、沪美 IXP ¥266、沪日独享 IXP ¥1000 起</td>
+<td><strong>必须自备一台国内云服务器</strong>（阿里云/腾讯云/百度云/华为云/火山云/UCloud 的国内节点），在里面装个转发，家宽连那台机器</td>
+<td>只能从云厂 BGP 网段发起，家宽、手机都连不上</td>
+</tr>
+<tr>
+<td class="name"><strong>运营商直连（IPLC / IEPL）</strong></td>
+<td>沪港 IPLC ¥288、广港 IEPL ¥358、沪日 IPLC ¥358、沪美 IPLC ¥428、沪日独享（电信）¥600 起</td>
+<td>不需要，开通即用</td>
+<td>你所在省的家宽和手机（下单时选定省份白名单）</td>
+</tr>
+</tbody></table></div>
+<p>官方原文（深圳上云产品页）：</p>
+<blockquote>该产品为云厂BGP网络优化入口，仅允许云厂BGP网络连入（阿里云国内全网、腾讯云国内全网、百度云国内全网、火山云华南、华为云华南等），需要云厂BGP网络作为前置搭配使用。</blockquote>
+<p>所以 <strong>¥158 那个不是落地价</strong>：加一台最便宜的国内轻量（1核2G 约 ¥30–60/月），实际 ≈ ¥190–220/月，<br>直接和沪港 IPLC ¥288 比就没什么优势了。除非你本来就有一台国内云服务器闲着。</p>
+<h4 class="sub step">步骤 1 · 买完先确认入口 IP 是不是国内的</h4>
+<pre><code>ping &lt;入口IP&gt;                 # 国内 IP 段、延迟 &lt;20ms 才对
+traceroute &lt;入口IP&gt;           # 前几跳不该出现境外节点
+curl -s https://ipinfo.io     # 出口显示香港，说明落地在港、入口在国内</code></pre>
+<p>ping 直接就是 50ms+ 的香港公网地址，说明你买的是普通香港 VPS，没走专线。</p>
+<h4 class="sub step">步骤 2 · 系统准备 + 开 BBR（Debian 12）</h4>
+<pre><code>apt update && apt -y install curl socat
+echo "net.core.default_qdisc=fq" &gt;&gt; /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" &gt;&gt; /etc/sysctl.conf
+sysctl -p</code></pre>
+<h4 class="sub step">步骤 3 · 装代理（二选一）</h4>
+<pre><code># 面板型，适合新手
+bash &lt;(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+
+# 纯内核型，VLESS + Reality，抗封锁好
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install</code></pre>
+<h4 class="sub step">步骤 4 · 客户端填入口 IP（不是境外 IP）</h4>
+<p>端口用商家给的那个。填错了就等于没走专线。</p>
+<p><strong>唯一的瓶颈是带宽</strong>：独享带宽款买 100M 就一直跑 100M、不设流量额度；计量款是<strong>双向合计</strong>（月流量 = 上行 + 下行），跑代理消耗约 1:2。</p>
+<hr>
+<h3 class="merchant" id="g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></h3>
+<blockquote>电信 AS4809 全程直连，联通移动回程也好；价格是普通线路的 5–10 倍。</blockquote>
+<div class="tw" data-tid="6"><table>
+<thead><tr>
+<th>商家</th>
+<th>套餐</th>
+<th>线路</th>
+<th>配置</th>
+<th>流量 / 带宽</th>
+<th>价格（原标价）</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>为什么选它</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">HostDare</td>
+<td><a href="https://lumovps.com/go/hostdare-5b2bcc/" target="_blank" rel="noopener">CSSD2（CN2 GIA）<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>1000GB @ 60Mbps</td>
+<td>$115.99/年</td>
+<td>$9.67</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>—</td>
+</tr>
+<tr class="rec-row">
+<td class="name">搬瓦工</td>
+<td><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=88" target="_blank" rel="noopener">SPECIAL 40G KVM PROMO V5<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>3核/2G</td>
+<td>2T @ 2.5Gbps</td>
+<td><strong>$299.99/年</strong>（约 $25/月）<br>季付 $90/季</td>
+<td>$25.00</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td><span class="rec-badge">本清单首选</span> 入门 GIA 唯一理性选择</td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td><a href="https://www.dmit.io/cart.php?a=add&amp;pid=265" target="_blank" rel="noopener">HKG.AS3.Pro.TINY<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>500GB@1Gbps</td>
+<td><strong>$39.90/月</strong></td>
+<td>$39.90</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>15ms 级真 GIA，预算够就上</td>
+</tr>
+<tr>
+<td class="name">搬瓦工</td>
+<td><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=89" target="_blank" rel="noopener">SPECIAL 80G KVM PROMO V5<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>3T @ 2.5Gbps</td>
+<td><strong>$549.99/年</strong>（约 $45.8/月）<br>月付 $57/月</td>
+<td>$45.83</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>跑得动中转+代理</td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td><a href="https://www.dmit.io/cart.php?a=add&amp;pid=58" target="_blank" rel="noopener">LAX.AN5.Pro.MINI<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>5000GB@10Gbps</td>
+<td><strong>$79.90/月</strong></td>
+<td>$79.90</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>洛杉矶目前唯一在售的优化线，建站向</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=7" target="_blank" rel="noopener"><strong>US.LA.CN2.Basic</strong><span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>1C/1G</td>
+<td>300GB @ 200Mbps</td>
+<td><strong>6 CAD/月</strong></td>
+<td>$4.33</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>6 加元一个月真 GIA</td>
+</tr>
+<tr>
+<td class="name">ByteVirt</td>
+<td><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-512-KVM-CN2 GIA-LA<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>1核/512M</td>
+<td>500GB @ 100Mbps</td>
+<td><strong>$66/年</strong></td>
+<td>$5.50</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>500M 内存的 GIA，极致低门槛</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/141?ref=16666" target="_blank" rel="noopener"><strong>HK.KC.S</strong><span class="ext">↗</span></a></td>
+<td>香港精品 CN2</td>
+<td>1核/1G</td>
+<td>250GB @ 25M</td>
+<td><strong>¥40/月（年付 ¥400）</strong></td>
+<td>$5.56</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>香港精品线最低价</td>
+</tr>
+<tr>
+<td class="name">DIYVM</td>
+<td><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-2G<span class="ext">↗</span></a></td>
+<td>CN2</td>
+<td>2核/2G</td>
+<td><strong>不限</strong> @ 5Mbps</td>
+<td>¥50/月</td>
+<td>$6.94</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>唯一"不限流+CN2"组合</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=8" target="_blank" rel="noopener">US.LA.CN2.Core<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>1C/1G</td>
+<td>600GB @ 200Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/136?ref=16666" target="_blank" rel="noopener">HK.KC.M<span class="ext">↗</span></a></td>
+<td>香港精品 CN2</td>
+<td>2核/2G</td>
+<td>500GB @ 30M</td>
+<td>¥70/月（年付 ¥700）</td>
+<td>$9.72</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>原生 IP</td>
+</tr>
+<tr>
+<td class="name">ByteVirt</td>
+<td><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-1024-KVM-CN2 GIA-LA<span class="ext">↗</span></a></td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>1TB @ 300Mbps</td>
+<td>$12/月</td>
+<td>$12.00</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">DIYVM</td>
+<td><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-4G<span class="ext">↗</span></a></td>
+<td>CN2</td>
+<td>4核/4G</td>
+<td>不限 @ 5Mbps</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3 class="merchant" id="g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</h3>
+<blockquote>联通 AS9929 或移动 CMIN2 回程，电信走 163；比 GIA 便宜一半，晚高峰略逊。</blockquote>
+<div class="tw" data-tid="7"><table>
+<thead><tr>
+<th>商家</th>
+<th>套餐</th>
+<th>线路</th>
+<th>配置</th>
+<th>流量 / 带宽</th>
+<th>价格（原标价）</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>为什么选它</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">HostDare</td>
+<td><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=172" target="_blank" rel="noopener"><strong>ASSD3（9929）</strong><span class="ext">↗</span></a></td>
+<td>9929</td>
+<td>3核/4G</td>
+<td>3000GB @ —</td>
+<td>$14.99/月</td>
+<td>$14.99</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>9929 大流量性价比档</td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td><a href="https://www.dmit.io/cart.php?a=add&amp;pid=209" target="_blank" rel="noopener">HKG.AS3.EB.WEE<span class="ext">↗</span></a></td>
+<td>9929·CMIN2</td>
+<td>1核/1G</td>
+<td>500GB@500Mbps</td>
+<td><strong>$24.90/月</strong></td>
+<td>$24.90</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>香港目前最便宜的在售款</td>
+</tr>
+<tr>
+<td class="name">HostDare</td>
+<td><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=179" target="_blank" rel="noopener"><strong>CAMD3（CMIN2）</strong><span class="ext">↗</span></a></td>
+<td>CMIN2</td>
+<td>3核/4G</td>
+<td>3000GB @ —</td>
+<td>$105.99/季</td>
+<td>$35.33</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>移动用户可选</td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td><a href="https://www.dmit.io/cart.php?a=add&amp;pid=210" target="_blank" rel="noopener">HKG.AS3.EB.TINY<span class="ext">↗</span></a></td>
+<td>9929·CMIN2</td>
+<td>1核/1G</td>
+<td>800GB@1Gbps</td>
+<td><strong>$39.90/月</strong></td>
+<td>$39.90</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>与 Pro TINY 同价，流量多 60%</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=57" target="_blank" rel="noopener"><strong>US.LA.9929.Basic</strong><span class="ext">↗</span></a></td>
+<td>9929</td>
+<td>1C/1G</td>
+<td>500GB @ 200Mbps</td>
+<td><strong>6 CAD/月</strong></td>
+<td>$4.33</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>联通用户最低门槛</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=58" target="_blank" rel="noopener">US.LA.9929.Core<span class="ext">↗</span></a></td>
+<td>9929</td>
+<td>1C/1G</td>
+<td>1000GB @ 200Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">丽萨主机</td>
+<td><a href="https://lumovps.com/go/丽萨主机-9bf2c5/" target="_blank" rel="noopener">基础版<span class="ext">↗</span></a></td>
+<td>9929</td>
+<td>1核/1G</td>
+<td>6000GB @ 300Mbps</td>
+<td>¥68/月</td>
+<td>$9.44</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">丽萨主机</td>
+<td><a href="https://lumovps.com/go/丽萨主机-0e94d2/" target="_blank" rel="noopener">进阶版<span class="ext">↗</span></a></td>
+<td>9929</td>
+<td>2核/2G</td>
+<td>10000GB @ 500Mbps</td>
+<td>¥88/月</td>
+<td>$12.22</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3 class="merchant" id="g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</h3>
+<blockquote>物理距离近，延迟 20–50ms；线路不保证对大陆优化，便宜大碗，晚高峰可能绕。</blockquote>
+<div class="tw" data-tid="8"><table>
+<thead><tr>
+<th>商家</th>
+<th>套餐</th>
+<th>线路</th>
+<th>配置</th>
+<th>流量 / 带宽</th>
+<th>价格（原标价）</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>为什么选它</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">ByteVirt</td>
+<td><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener"><strong>VPS-512-KVM-Lite-HK</strong><span class="ext">↗</span></a></td>
+<td>香港 BGP</td>
+<td>1核/512M</td>
+<td>1.5TB @ 500Mbps</td>
+<td><strong>$12/年</strong></td>
+<td>$1.00</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>一年不到一百块的香港</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/83?ref=16666" target="_blank" rel="noopener"><strong>HK.MINI</strong><span class="ext">↗</span></a></td>
+<td>香港优化</td>
+<td>1核/0.75G</td>
+<td>500GB @ 30M</td>
+<td><strong>¥150/年</strong></td>
+<td>$1.74</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>一年 150 的香港优化线</td>
+</tr>
+<tr>
+<td class="name">AkileCloud</td>
+<td><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>JPHyper-Lite</strong><span class="ext">↗</span></a></td>
+<td>日本 BGP</td>
+<td>1核/2G</td>
+<td>1TB @ 2.5Gbps</td>
+<td><strong>¥14.99/月</strong></td>
+<td>$2.08</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>全场最便宜的 2核2G 日本</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/39?ref=16666" target="_blank" rel="noopener">HK.SMALL<span class="ext">↗</span></a></td>
+<td>香港优化</td>
+<td>1核/1G</td>
+<td>1024GB @ 30M</td>
+<td>¥276/年</td>
+<td>$3.19</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">AkileCloud</td>
+<td><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>HKLite-Mini</strong><span class="ext">↗</span></a></td>
+<td>香港 BGP</td>
+<td>1核/1G</td>
+<td>2.5TB @ 1Gbps</td>
+<td><strong>¥24.99/月</strong></td>
+<td>$3.47</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>香港大流量入门首选</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=50" target="_blank" rel="noopener">CN.HK.BGP.Basic<span class="ext">↗</span></a></td>
+<td>香港 BGP</td>
+<td>1C/1G</td>
+<td>300GB @ 100Mbps</td>
+<td>5 CAD/月</td>
+<td>$3.61</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>便宜香港落地</td>
+</tr>
+<tr>
+<td class="name">VMISS</td>
+<td><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=67" target="_blank" rel="noopener"><strong>JP.TKY.IIJ.Basic</strong><span class="ext">↗</span></a></td>
+<td>IIJ</td>
+<td>1C/1G</td>
+<td>500GB @ 500Mbps</td>
+<td><strong>5 CAD/月</strong></td>
+<td>$3.61</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>IIJ 带宽给到 500M 还只要 5 加元</td>
+</tr>
+<tr>
+<td class="name">OneTechCloud</td>
+<td><a href="https://www.onetechcloud.com/aff/XRONKQPQ" target="_blank" rel="noopener"><strong>1G 档</strong><span class="ext">↗</span></a></td>
+<td>香港 BGP 优化</td>
+<td>1核/1G</td>
+<td>600GB @ 1Gbps</td>
+<td><strong>¥66/月</strong></td>
+<td>$9.17</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>1Gbps 端口不常见</td>
+</tr>
+</tbody></table></div>
+<h3 class="merchant" id="g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</h3>
+<blockquote>纯国际出口，白天够用、晚上 8–11 点掉速是老问题；适合备用、下载、非实时用途。</blockquote>
+<div class="tw" data-tid="9"><table>
+<thead><tr>
+<th>商家</th>
+<th>套餐</th>
+<th>线路</th>
+<th>配置</th>
+<th>流量 / 带宽</th>
+<th>价格（原标价）</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>为什么选它</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">RackNerd</td>
+<td><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=968" target="_blank" rel="noopener"><strong>1G KVM</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>3T @ 1Gbps</td>
+<td><strong>$15.98/年</strong></td>
+<td>$1.33</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>一年 115 块，纯落地/中转</td>
+</tr>
+<tr>
+<td class="name">RackNerd</td>
+<td><a href="https://lumovps.com/go/racknerd/" target="_blank" rel="noopener">Ryzen 1GB<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>1.5T @ 1Gbps</td>
+<td>$18.89/年</td>
+<td>$1.57</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td><a href="https://www.dmit.io/cart.php?a=add&amp;pid=197" target="_blank" rel="noopener">HKG.AS3.T1.WEE<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>1000GB@4Gbps</td>
+<td><strong>$36.90/年</strong></td>
+<td>$3.07</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>年付 ≈$3/月，最便宜的香港落地</td>
+</tr>
+<tr>
+<td class="name">CloudCone</td>
+<td><a href="https://app.cloudcone.com.cn/vps/423/create?token=halloween-25-ssd-vps-1&amp;ref=6345" target="_blank" rel="noopener">1G 促销<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>4T</td>
+<td>$14.24/年</td>
+<td>$1.19</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>蹲到就买</td>
+</tr>
+<tr>
+<td class="name">CloudCone</td>
+<td><a href="https://app.cloudcone.com.cn/vps/423/create?token=halloween-25-ssd-vps-1&amp;ref=6345" target="_blank" rel="noopener">1G 常规<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>3T</td>
+<td>$16.99/年</td>
+<td>$1.42</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">AkileCloud</td>
+<td><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>LAXLite-Mini</strong><span class="ext">↗</span></a></td>
+<td>美国 BGP</td>
+<td>1核/2G</td>
+<td>2TB @ 5Gbps</td>
+<td><strong>¥15.99/月</strong></td>
+<td>$2.22</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>5Gbps 端口，$2 出头</td>
+</tr>
+<tr>
+<td class="name">ByteVirt</td>
+<td><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-2048-KVM-US<span class="ext">↗</span></a></td>
+<td>美国 BGP</td>
+<td>2核/2G</td>
+<td>5TB @ 600Mbps</td>
+<td>$2.50/月</td>
+<td>$2.50</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>2.5 美元 2核2G，纯落地神器</td>
+</tr>
+<tr>
+<td class="name">InterServer</td>
+<td><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener"><strong>1 Slice</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>2TB @ 10Gbps</td>
+<td><strong>$3.00/月</strong></td>
+<td>$3.00</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>3 美元 1核2G + 10G 端口</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/95?ref=16666" target="_blank" rel="noopener">HK.MG.GB.XM<span class="ext">↗</span></a></td>
+<td>香港国际</td>
+<td>2核/4G</td>
+<td>3000GB @ 1000M</td>
+<td>¥30/月</td>
+<td>$4.17</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>1Gbps 端口 30 块</td>
+</tr>
+<tr>
+<td class="name">狗云</td>
+<td><a href="https://vm.dogyun.com/server/create/150?ref=16666" target="_blank" rel="noopener">HK.ST.S<span class="ext">↗</span></a></td>
+<td>香港大硬盘</td>
+<td>1核/1G</td>
+<td>5000GB @ 1000M</td>
+<td>¥30/月</td>
+<td>$4.17</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>硬盘党</td>
+</tr>
+<tr>
+<td class="name">Evoxt</td>
+<td><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener"><strong>1G</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>750G @ 1Gbps</td>
+<td><strong>$4.99/月</strong></td>
+<td>$4.99</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">Hostwinds</td>
+<td><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">1G<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>1T</td>
+<td>$4.99/月</td>
+<td>$4.99</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">Evoxt</td>
+<td><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener">2G<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>1000G @ 1Gbps</td>
+<td>$5.99/月</td>
+<td>$5.99</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>1 美元差价换 1G 内存</td>
+</tr>
+<tr>
+<td class="name">InterServer</td>
+<td><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener">2 Slices<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/4G</td>
+<td>4TB @ 10Gbps</td>
+<td>$6.00/月</td>
+<td>$6.00</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">丽萨主机</td>
+<td><a href="https://lumovps.com/go/丽萨主机-8c1ffe/" target="_blank" rel="noopener">基础版<span class="ext">↗</span></a></td>
+<td>4837</td>
+<td>1核/1G</td>
+<td>3000GB @ 300Mbps</td>
+<td>¥68/月</td>
+<td>$9.44</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">AkileCloud</td>
+<td><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=2&amp;nodeId=37&amp;planId=1010&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">LAXLite-Standard<span class="ext">↗</span></a></td>
+<td>美国 BGP</td>
+<td>2核/4G</td>
+<td>10TB @ 5Gbps</td>
+<td>¥69.99/月</td>
+<td>$9.72</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">Hostwinds</td>
+<td><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">2G<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>2T</td>
+<td>$9.99/月</td>
+<td>$9.99</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">丽萨主机</td>
+<td><a href="https://lumovps.com/go/丽萨主机-0ea9d6/" target="_blank" rel="noopener">进阶版<span class="ext">↗</span></a></td>
+<td>4837</td>
+<td>2核/2G</td>
+<td>8000GB @ 500Mbps</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h3 class="merchant" id="g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</h3>
+<blockquote>机房 IP 被 Netflix / TikTok 认出来时的替代品，价格按 IP 稀缺度走，速度一般。</blockquote>
+<div class="tw" data-tid="10"><table>
+<thead><tr>
+<th>商家</th>
+<th>套餐</th>
+<th>线路</th>
+<th>配置</th>
+<th>流量 / 带宽</th>
+<th>价格（原标价）</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>为什么选它</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">WePC</td>
+<td><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">英国原生住宅 · TikTok<span class="ext">↗</span></a></td>
+<td>原生住宅 IP</td>
+<td>1核/512M</td>
+<td>1TB @ 100Mbps</td>
+<td>¥51.97/月</td>
+<td>$7.22</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>特定用途</td>
+</tr>
+<tr>
+<td class="name">WePC</td>
+<td><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">美国洛杉矶双 ISP 家宽 · 直播<span class="ext">↗</span></a></td>
+<td>原生住宅 IP</td>
+<td>2核/512MB</td>
+<td>2TB @ 100Mbps</td>
+<td>¥80.58/月</td>
+<td>$11.19</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<h4 class="sub">关于 CN2 GT（本清单无符合项）</h4>
+<p>CN2 GT（AS4809 的 Global Transit 档）是搬瓦工早期的 DC3 线路，现在搬瓦工全系已切 CN2 GIA，其余做 GT 的商家也基本停售，所以这里没有可列的表。如果你在别处看到「CN2 GT 便宜货」，大概率是把普通 163 线路包装成 GT 卖——认准 <strong>GIA</strong> 三个字母再掏钱。</p>
+<hr>
+<h2 class="group" id="g10"><span>二、按商家看（同一家的所有套餐，按价格排序）</span></h2>
+<h3 class="merchant" id="g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</h3>
+<p>线路：洛杉矶 CN2 GIA（电信回程 AS4809 直连）、香港 CN2 GIA、东京/大阪 CN2 GIA、新加坡 CN2 GIA。<br>搬瓦工全线走 CN2 GIA，是目前国内用户基数最大的一家，缺点是<strong>便宜档都已缺货</strong>。</p>
+<blockquote><strong>点评</strong>：搬瓦工当前在售最低 $299.99/年。黑五历年只是补货不发新券，别指望更便宜。真正值钱的只有 <strong>40G 年付 $299.99</strong> 这一档；香港/东京的价格已经脱离"科学上网"的性价比区间，那是给企业做跨境办公用的。在售共 52 款，<strong>全系双向计费</strong>——KiwiVM 里入站出站一起扣，代理场景 1TB 只能当 500GB 用。</blockquote>
+<div class="tw" data-tid="11"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=88" target="_blank" rel="noopener">SPECIAL 40G KVM PROMO V5<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>3核/2G</td>
+<td>40G SSD</td>
+<td>2T</td>
+<td>2.5Gbps</td>
+<td><strong>$299.99/年</strong>（约 $25/月）<br>季付 $90/季</td>
+<td>$25.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>🔥 入门 GIA 唯一理性选择</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=89" target="_blank" rel="noopener">SPECIAL 80G KVM PROMO V5<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>3T</td>
+<td>2.5Gbps</td>
+<td><strong>$549.99/年</strong>（约 $45.8/月）<br>月付 $57/月</td>
+<td>$45.83</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 跑得动中转+代理</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=134" target="_blank" rel="noopener">SG SPECIAL 40G<span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>500G</td>
+<td>1Gbps</td>
+<td>$50/月</td>
+<td>$50.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 亚洲 GIA 里最便宜的搬瓦工</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=90" target="_blank" rel="noopener">SPECIAL 160G KVM PROMO V5<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>6核/8G</td>
+<td>160G SSD</td>
+<td>5T</td>
+<td>5Gbps</td>
+<td>$86.99/月</td>
+<td>$86.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=135" target="_blank" rel="noopener">SG SPECIAL 80G<span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>1T</td>
+<td>1Gbps</td>
+<td>$87/月</td>
+<td>$87.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=95&amp;billingcycle=monthly&amp;configoption[13]=42" target="_blank" rel="noopener">HK SPECIAL 40G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>500G</td>
+<td>1Gbps</td>
+<td>$89.99/月</td>
+<td>$89.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>— 贵，但延迟 15ms 级</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=108" target="_blank" rel="noopener">JP SPECIAL 40G<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>500G</td>
+<td>1Gbps</td>
+<td>$90/月</td>
+<td>$90.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=96&amp;billingcycle=monthly&amp;configoption[13]=42" target="_blank" rel="noopener">HK SPECIAL 80G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>1T</td>
+<td>1Gbps</td>
+<td>$155.99/月</td>
+<td>$155.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=109" target="_blank" rel="noopener">JP SPECIAL 80G<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>1T</td>
+<td>1Gbps</td>
+<td>$156/月</td>
+<td>$156.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=91" target="_blank" rel="noopener">320G 档<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>8核/16G</td>
+<td>320G SSD</td>
+<td>8T</td>
+<td>10Gbps</td>
+<td>$160/月</td>
+<td>$160.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=136" target="_blank" rel="noopener">SG SPECIAL 160G<span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>CN2 GIA</td>
+<td>6核/8G</td>
+<td>160G SSD</td>
+<td>2T</td>
+<td>1Gbps</td>
+<td>$166/月</td>
+<td>$166.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=92" target="_blank" rel="noopener">640G 档<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>10核/32G</td>
+<td>640G SSD</td>
+<td>10T</td>
+<td>10Gbps</td>
+<td>$290/月</td>
+<td>$290.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh81.net/aff.php?aff=63199&amp;pid=97&amp;billingcycle=monthly&amp;configoption[13]=42" target="_blank" rel="noopener">HK SPECIAL 160G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>6核/8G</td>
+<td>160G SSD</td>
+<td>2T</td>
+<td>1Gbps</td>
+<td>$299.99/月</td>
+<td>$299.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bwh89.net/aff.php?aff=63199&amp;pid=110" target="_blank" rel="noopener">JP SPECIAL 160G<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>6核/8G</td>
+<td>160G SSD</td>
+<td>2T</td>
+<td>1Gbps</td>
+<td>$300/月</td>
+<td>$300.00</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name">SPECIAL 20G KVM PROMO V5</td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>2核/1G</td>
+<td>20G SSD</td>
+<td>1T</td>
+<td>2.5Gbps</td>
+<td>$49.99/季（$169.99/年）</td>
+<td>$16.66</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</h3>
+<p>线路分三档，<strong>买之前务必确认买的是哪一档</strong>：</p>
+<ul><li><strong>Pro (Premium)</strong>：CN2 GIA AS23764，真优化。香港实测 广州约 12ms / 上海约 31ms / 北京约 45ms，晚高峰单线程仍能跑满</li><li><strong>EB (Eyeball)</strong>：Tier1 + CMIN2 尽力优化，香港 EB 仍在 Beta</li><li><strong>T1 (Tier1)</strong>：普通国际线路，<strong>不保证 IP 可用</strong>，最便宜但别当主力</li><li><strong>线路写在哪</strong>：DMIT 把线路挂在<a href="https://www.dmit.io/pages/pricing" target="_blank" rel="noopener">定价页<span class="ext">↗</span></a>的 <strong>Network Series</strong> 筛选（Premium / Eyeball / Tier 1）上，购物车配置页只列配置、不重复标线路。所以看代号即可——<code>Pro</code> = Premium = CN2 GIA，<code>EB</code> = Eyeball，<code>T1</code> = Tier 1</li></ul>
+<blockquote><strong>点评</strong>：DMIT 是"交钱就给你真 GIA"的代表，Pro 系列几乎从不掺水，代价是常年缺货。<strong>2026-11-26 实测库存：只有香港全线有货</strong>——<code>HKG.AS3.EB.WEE $24.90/月</code> 是入门最划算的一档，<code>HKG.AS3.Pro.TINY $39.90/月</code> 是真 GIA 的地板价，<code>HKG.AS3.T1.WEE $36.90/年</code> 折合每月 3 美元可以当纯落地。洛杉矶和东京的小额款<strong>全部缺货</strong>，洛杉矶只剩 AN5 的建站款在卖，东京一个都没补上，想买只能蹲补货。  <strong>关于链接</strong>：DMIT 官网对爬虫有 Cloudflare 拦截，公开页面拿不到 cart 直链。表里每一行的链接都是通过 <a href="https://vpsoso.com/vps/dmit" target="_blank" rel="noopener">vpsoso 的 DMIT 库存监控<span class="ext">↗</span></a> 反查出的<strong>真实 pid</strong>（格式 <code>cart.php?a=add&amp;pid=NNN</code>），点进去就是该套餐的加购页，不是首页。</blockquote>
+<div class="tw" data-tid="12"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=197" target="_blank" rel="noopener">HKG.AS3.T1.WEE<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>20G</td>
+<td>1000GB@4Gbps</td>
+<td>—</td>
+<td><strong>$36.90/年</strong></td>
+<td>$3.07</td>
+<td>✅ 有货</td>
+<td>单向最大值</td>
+<td>🔥 年付 ≈$3/月，最便宜的香港落地</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=209" target="_blank" rel="noopener">HKG.AS3.EB.WEE<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>9929·CMIN2</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>500GB@500Mbps</td>
+<td>—</td>
+<td><strong>$24.90/月</strong></td>
+<td>$24.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>🔥 香港目前最便宜的在售款</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=265" target="_blank" rel="noopener">HKG.AS3.Pro.TINY<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>500GB@1Gbps</td>
+<td>—</td>
+<td><strong>$39.90/月</strong></td>
+<td>$39.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 真 GIA，珠三角约 12ms</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=210" target="_blank" rel="noopener">HKG.AS3.EB.TINY<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>9929·CMIN2</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>800GB@1Gbps</td>
+<td>—</td>
+<td><strong>$39.90/月</strong></td>
+<td>$39.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 与 Pro TINY 同价，流量多 60%</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=58" target="_blank" rel="noopener">LAX.AN5.Pro.MINI<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>80G</td>
+<td>5000GB@10Gbps</td>
+<td>—</td>
+<td><strong>$79.90/月</strong></td>
+<td>$79.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 洛杉矶目前唯一在售的优化线，建站向</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=266" target="_blank" rel="noopener">HKG.AS3.Pro.STARTER<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>1核/2G</td>
+<td>40G SSD</td>
+<td>1000GB@1Gbps</td>
+<td>—</td>
+<td><strong>$79.90/月</strong></td>
+<td>$79.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=211" target="_blank" rel="noopener">HKG.AS3.EB.STARTER<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>9929·CMIN2</td>
+<td>1核/2G</td>
+<td>40G SSD</td>
+<td>1500GB@1Gbps</td>
+<td>—</td>
+<td><strong>$79.90/月</strong></td>
+<td>$79.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=81" target="_blank" rel="noopener">LAX.AN5.Pro.MICRO<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>4核/4G</td>
+<td>160G</td>
+<td>7000GB@10Gbps</td>
+<td>—</td>
+<td><strong>$110.90/月</strong></td>
+<td>$110.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=267" target="_blank" rel="noopener">HKG.AS3.Pro.MINI<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2 GIA</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>1500GB@1Gbps</td>
+<td>—</td>
+<td><strong>$126.90/月</strong></td>
+<td>$126.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=212" target="_blank" rel="noopener">HKG.AS3.EB.MINI<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>9929·CMIN2</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>2200GB@1Gbps</td>
+<td>—</td>
+<td><strong>$126.90/月</strong></td>
+<td>$126.90</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=270" target="_blank" rel="noopener">LAX.AS3.T1.WEE<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>20G</td>
+<td>1000GB@4Gbps</td>
+<td>—</td>
+<td>$36.90/年</td>
+<td>$3.07</td>
+<td>❌ 缺货</td>
+<td>单向最大值</td>
+<td>年付 ≈$3/月，T1 线路别当主力</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=228" target="_blank" rel="noopener">TYO.AS3.T1.WEE<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>20G</td>
+<td>1000GB@4Gbps</td>
+<td>—</td>
+<td>$36.90/年</td>
+<td>$3.07</td>
+<td>❌ 缺货</td>
+<td>单向最大值</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=253" target="_blank" rel="noopener">LAX.AS3.Pro.TINY<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>1核/2G</td>
+<td>20G SSD</td>
+<td>1000GB@1Gbps</td>
+<td>—</td>
+<td>$10.90/月</td>
+<td>$10.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>全市场最便宜的真 GIA，可惜全线缺货</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=259" target="_blank" rel="noopener">LAX.AS3.EB.TINY<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929·CMIN2</td>
+<td>1核/2G</td>
+<td>20G SSD</td>
+<td>1500GB@2Gbps</td>
+<td>—</td>
+<td>$10.90/月</td>
+<td>$10.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>9929+CMIN2，同价流量比 Pro 多 50%</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=254" target="_blank" rel="noopener">LAX.AS3.Pro.Pocket<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>1500GB@4Gbps</td>
+<td>—</td>
+<td>$16.90/月</td>
+<td>$16.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=260" target="_blank" rel="noopener">LAX.AS3.EB.Pocket<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929·CMIN2</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>3000GB@4Gbps</td>
+<td>—</td>
+<td>$16.90/月</td>
+<td>$16.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=138" target="_blank" rel="noopener">TYO.AS3.Pro.TINY<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>500GB@1Gbps</td>
+<td>—</td>
+<td>$21.90/月</td>
+<td>$21.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>亚洲 GIA 性价比第一，现在抢不到</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=255" target="_blank" rel="noopener">LAX.AS3.Pro.STARTER<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>80G SSD</td>
+<td>3000GB@10Gbps</td>
+<td>—</td>
+<td>$34.90/月</td>
+<td>$34.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=261" target="_blank" rel="noopener">LAX.AS3.EB.STARTER<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929·CMIN2</td>
+<td>2核/2G</td>
+<td>80G SSD</td>
+<td>5000GB@10Gbps</td>
+<td>—</td>
+<td>$34.90/月</td>
+<td>$34.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=139" target="_blank" rel="noopener">TYO.AS3.Pro.STARTER<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>1核/2G</td>
+<td>40G SSD</td>
+<td>1000GB@1Gbps</td>
+<td>—</td>
+<td>$45.90/月</td>
+<td>$45.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.dmit.io/cart.php?a=add&amp;pid=140" target="_blank" rel="noopener">TYO.AS3.Pro.MINI<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>CN2 GIA</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>2000GB@1Gbps</td>
+<td>—</td>
+<td>$89.90/月</td>
+<td>$89.90</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</h3>
+<p>线路：CSSD 系列 = CN2 GIA（AS4809）、ASSD 系列 = 联通 9929（AMD 平台）、CAMD = CMIN2。</p>
+<blockquote><strong>点评</strong>：HostDare 的 CSSD0（$40.99/年 GIA）是唯一敢把 GIA 卖到两百多块一年的，所以<strong>开卖即空</strong>，蹲点。带宽只有 30–80Mbps，别指望跑 4K 多线程。9929 系列（ASSD）带宽和流量给得大方，联通用户晚高峰比 GIA 稍差但价格低一个量级。</blockquote>
+<div class="tw" data-tid="13"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-5b2bcc/" target="_blank" rel="noopener">CSSD2（CN2 GIA）<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>50G NVMe</td>
+<td>1000GB</td>
+<td>60Mbps</td>
+<td>$115.99/年</td>
+<td>$9.67</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=172" target="_blank" rel="noopener"><strong>ASSD3（9929）</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>9929</td>
+<td>3核/4G</td>
+<td>100G NVMe</td>
+<td>3000GB</td>
+<td>—</td>
+<td>$14.99/月</td>
+<td>$14.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>🔥 9929 大流量性价比档</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=173" target="_blank" rel="noopener">ASSD4（9929）<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>9929</td>
+<td>4核/8G</td>
+<td>200G NVMe</td>
+<td>5000GB</td>
+<td>—</td>
+<td>$28.99/月</td>
+<td>$28.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-b2f5a8/" target="_blank" rel="noopener">CSSD3（CN2 GIA）<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>3核/4G</td>
+<td>100G NVMe</td>
+<td>1500GB</td>
+<td>80Mbps</td>
+<td>$90.99/季</td>
+<td>$30.33</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=179" target="_blank" rel="noopener"><strong>CAMD3（CMIN2）</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CMIN2</td>
+<td>3核/4G</td>
+<td>100G NVMe</td>
+<td>3000GB</td>
+<td>—</td>
+<td>$105.99/季</td>
+<td>$35.33</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>⭐ 移动用户可选</td>
+</tr>
+<tr>
+<td class="name"><a href="https://bill.hostdare.com/aff.php?aff=4810&amp;pid=174" target="_blank" rel="noopener">ASSD5（9929）<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>9929</td>
+<td>5核/16G</td>
+<td>400G NVMe</td>
+<td>10000GB</td>
+<td>—</td>
+<td>$52.99/月</td>
+<td>$52.99</td>
+<td>✅ 有货</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-5c540d/" target="_blank" rel="noopener"><strong>CSSD0（CN2 GIA）</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>1核/768M</td>
+<td>10G NVMe</td>
+<td>250GB</td>
+<td>30Mbps</td>
+<td>$40.99/年</td>
+<td>$3.42</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>🔥 全网最便宜的 GIA 年付</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-419f2f/" target="_blank" rel="noopener">CKVM1<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>1核/756M</td>
+<td>35G</td>
+<td>600GB</td>
+<td>50Mbps</td>
+<td>$49.99/年</td>
+<td>$4.17</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-f3e05b/" target="_blank" rel="noopener">CSSD1（CN2 GIA）<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>25G NVMe</td>
+<td>500GB</td>
+<td>50Mbps</td>
+<td>$60.99/年</td>
+<td>$5.08</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostdare-165559/" target="_blank" rel="noopener">CKVM2<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>2核/1.5G</td>
+<td>75G</td>
+<td>1000GB</td>
+<td>60Mbps</td>
+<td>$76.99/年</td>
+<td>$6.42</td>
+<td>❌ 缺货</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</h3>
+<blockquote><strong>点评</strong>：实测（2026 年）洛杉矶 CN2 GIA 三网回程<strong>全部走电信 CN2</strong>，全国平均延迟 163ms（电信 157 / 联通 175 / 移动 158），丢包约 0.5%，苏州实测上传 379 / 下载 509 Mbps，Netflix + Disney+ 双解锁，ChatGPT/Claude 可用（Gemini 不可用）。原生 IP。<strong>香港 LITE $12/年</strong> 是这套里最离谱的价格，缺点是 5G 硬盘太小、LITE 线路不保证回国优化。</blockquote>
+<div class="tw" data-tid="14"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener"><strong>VPS-512-KVM-Lite-HK</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 BGP</td>
+<td>1核/512M</td>
+<td>5G NVMe</td>
+<td>1.5TB</td>
+<td>500Mbps</td>
+<td><strong>$12/年</strong></td>
+<td>$1.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 一年不到一百块的香港</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-2048-KVM-US<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>美国 BGP</td>
+<td>2核/2G</td>
+<td>20G SSD</td>
+<td>5TB</td>
+<td>600Mbps</td>
+<td>$2.50/月</td>
+<td>$2.50</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 2.5 美元 2核2G，纯落地神器</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-512-KVM-CN2 GIA-LA<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>1核/512M</td>
+<td>15G SSD</td>
+<td>500GB</td>
+<td>100Mbps</td>
+<td><strong>$66/年</strong></td>
+<td>$5.50</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 500M 内存的 GIA，极致低门槛</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-1024-KVM-CN2 GIA-LA<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>1TB</td>
+<td>300Mbps</td>
+<td>$12/月</td>
+<td>$12.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/bytevirt/" target="_blank" rel="noopener">VPS-2048-KVM-CN2 GIA-LA<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>2TB</td>
+<td>500Mbps</td>
+<td>$24/月</td>
+<td>$24.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g15">5. DIYVM — 香港 CN2 GIA 不限流量</h3>
+<blockquote><strong>点评</strong>：5Mbps 带宽是关键限制——够 2–3 人日常刷网页和 1080p，跑不了 4K 多开。但<strong>不计量</strong>意味着再也不用算着流量用，挂机党优选。三网回程 CN2。</blockquote>
+<div class="tw" data-tid="15"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-2G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2</td>
+<td>2核/2G</td>
+<td>50G NVMe</td>
+<td><strong>不限</strong></td>
+<td>5Mbps</td>
+<td>¥50/月</td>
+<td>$6.94</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>🔥 唯一"不限流+CN2"组合</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-4G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2</td>
+<td>4核/4G</td>
+<td>60G NVMe</td>
+<td>不限</td>
+<td>5Mbps</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-8G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2</td>
+<td>4核/8G</td>
+<td>70G NVMe</td>
+<td>不限</td>
+<td>10Mbps</td>
+<td>¥200/月</td>
+<td>$27.78</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/diyvm/" target="_blank" rel="noopener">香港云-32G<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>CN2</td>
+<td>8核/32G</td>
+<td>100G NVMe</td>
+<td>不限</td>
+<td>15Mbps</td>
+<td>¥800/月</td>
+<td>$111.11</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g16">6. VMISS — 加拿大商家，线路切得最细</h3>
+<p>三网档今年<strong>全线涨价</strong>，TRI 涨 60%+，9929 涨 20–27%，CN2 GIA 持平（说明 GIA 档被压着不能涨）。</p>
+<blockquote><strong>点评</strong>：VMISS 今年把三个三网档调成同价（6 CAD），等于告诉你"选哪个都行、但都别指望更低价格"。<strong>TRI 系列彻底劝退</strong>（涨 60% 还砍了赠送 IPv6）。真正还值得买的只有两个：<code>US.LA.9929.Basic</code>（联通用户 6 加元）和 <code>JP.TKY.IIJ.Basic</code>（500Mbps 大带宽 5 加元）。香港 STD 那套官网价比聚合站标价高 2.4 倍，以官网为准。</blockquote>
+<div class="tw" data-tid="16"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=50" target="_blank" rel="noopener">CN.HK.BGP.Basic<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>300GB</td>
+<td>100Mbps</td>
+<td>5 CAD/月</td>
+<td>$3.61</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐ 便宜香港落地</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=67" target="_blank" rel="noopener"><strong>JP.TKY.IIJ.Basic</strong><span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>IIJ</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>500GB</td>
+<td>500Mbps</td>
+<td><strong>5 CAD/月</strong></td>
+<td>$3.61</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 IIJ 带宽给到 500M 还只要 5 加元</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=57" target="_blank" rel="noopener"><strong>US.LA.9929.Basic</strong><span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>500GB</td>
+<td>200Mbps</td>
+<td><strong>6 CAD/月</strong></td>
+<td>$4.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 联通用户最低门槛</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=7" target="_blank" rel="noopener"><strong>US.LA.CN2.Basic</strong><span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>300GB</td>
+<td>200Mbps</td>
+<td><strong>6 CAD/月</strong></td>
+<td>$4.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 6 加元一个月真 GIA</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=32" target="_blank" rel="noopener">US.LA.TRI.Basic<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>三网优化</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>500GB</td>
+<td>200Mbps</td>
+<td>8 CAD/月</td>
+<td>$5.78</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>— 涨太多</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=53" target="_blank" rel="noopener">CN.HK.BGP.Core<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1C/1G</td>
+<td>15G</td>
+<td>600GB</td>
+<td>100Mbps</td>
+<td>10 CAD/月</td>
+<td>$7.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=68" target="_blank" rel="noopener">JP.TKY.IIJ.Core<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>IIJ</td>
+<td>1C/1G</td>
+<td>15G</td>
+<td>800GB</td>
+<td>500Mbps</td>
+<td>10 CAD/月</td>
+<td>$7.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=58" target="_blank" rel="noopener">US.LA.9929.Core<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>1C/1G</td>
+<td>15G</td>
+<td>1000GB</td>
+<td>200Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=8" target="_blank" rel="noopener">US.LA.CN2.Core<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>1C/1G</td>
+<td>15G</td>
+<td>600GB</td>
+<td>200Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=90" target="_blank" rel="noopener">CN.HK.STD.Basic<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>300GB</td>
+<td>100Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>— 涨得离谱</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=101" target="_blank" rel="noopener">JP.TKY.STD.Basic<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>东京优化</td>
+<td>1C/1G</td>
+<td>10G</td>
+<td>400GB</td>
+<td>100Mbps</td>
+<td>12 CAD/月</td>
+<td>$8.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=33" target="_blank" rel="noopener">US.LA.TRI.Core<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>三网优化</td>
+<td>1C/2G</td>
+<td>15G</td>
+<td>1000GB</td>
+<td>200Mbps</td>
+<td>16 CAD/月</td>
+<td>$11.56</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=54" target="_blank" rel="noopener">CN.HK.BGP.Pro<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1C/2G</td>
+<td>20G</td>
+<td>1000GB</td>
+<td>150Mbps</td>
+<td>16 CAD/月</td>
+<td>$11.56</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=69" target="_blank" rel="noopener">JP.TKY.IIJ.Pro<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>IIJ</td>
+<td>1C/2G</td>
+<td>20G</td>
+<td>1500GB</td>
+<td>750Mbps</td>
+<td>16 CAD/月</td>
+<td>$11.56</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 这档最香</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=59" target="_blank" rel="noopener">US.LA.9929.Pro<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>1C/2G</td>
+<td>20G</td>
+<td>1500GB</td>
+<td>300Mbps</td>
+<td>20 CAD/月</td>
+<td>$14.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=9" target="_blank" rel="noopener">US.LA.CN2.Pro<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>1C/2G</td>
+<td>20G</td>
+<td>1000GB</td>
+<td>500Mbps</td>
+<td>20 CAD/月</td>
+<td>$14.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=91" target="_blank" rel="noopener">CN.HK.STD.Core<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1C/1G</td>
+<td>15G</td>
+<td>600GB</td>
+<td>100Mbps</td>
+<td>24 CAD/月</td>
+<td>$17.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=102" target="_blank" rel="noopener">JP.TKY.STD.Core<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>东京优化</td>
+<td>1C/2G</td>
+<td>15G</td>
+<td>800GB</td>
+<td>100Mbps</td>
+<td>24 CAD/月</td>
+<td>$17.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=34" target="_blank" rel="noopener">US.LA.TRI.Pro<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>三网优化</td>
+<td>1C/3G</td>
+<td>20G</td>
+<td>1500GB</td>
+<td>300Mbps</td>
+<td>26 CAD/月</td>
+<td>$18.78</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=55" target="_blank" rel="noopener">CN.HK.BGP.Elite<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>1600GB</td>
+<td>150Mbps</td>
+<td>30 CAD/月</td>
+<td>$21.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=70" target="_blank" rel="noopener">JP.TKY.IIJ.Elite<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>IIJ</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>2500GB</td>
+<td>750Mbps</td>
+<td>30 CAD/月</td>
+<td>$21.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=60" target="_blank" rel="noopener">US.LA.9929.Elite<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>2500GB</td>
+<td>500Mbps</td>
+<td>38 CAD/月</td>
+<td>$27.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=10" target="_blank" rel="noopener">US.LA.CN2.Elite<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>1600GB</td>
+<td>500Mbps</td>
+<td>38 CAD/月</td>
+<td>$27.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=92" target="_blank" rel="noopener">CN.HK.STD.Pro<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1C/2G</td>
+<td>20G</td>
+<td>1000GB</td>
+<td>100Mbps</td>
+<td>38 CAD/月</td>
+<td>$27.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=103" target="_blank" rel="noopener">JP.TKY.STD.Pro<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>东京优化</td>
+<td>1C/3G</td>
+<td>20G</td>
+<td>1200GB</td>
+<td>200Mbps</td>
+<td>38 CAD/月</td>
+<td>$27.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=35" target="_blank" rel="noopener">US.LA.TRI.Elite<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>三网优化</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>2500GB</td>
+<td>300Mbps</td>
+<td>50 CAD/月</td>
+<td>$36.11</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=56" target="_blank" rel="noopener">CN.HK.BGP.Ultra<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>3000GB</td>
+<td>200Mbps</td>
+<td>60 CAD/月</td>
+<td>$43.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=71" target="_blank" rel="noopener">JP.TKY.IIJ.Ultra<span class="ext">↗</span></a></td>
+<td>东京</td>
+<td>IIJ</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>4000GB</td>
+<td>1000Mbps</td>
+<td>60 CAD/月</td>
+<td>$43.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=61" target="_blank" rel="noopener">US.LA.9929.Ultra<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>4000GB</td>
+<td>500Mbps</td>
+<td>75 CAD/月</td>
+<td>$54.17</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=11" target="_blank" rel="noopener">US.LA.CN2.Ultra<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>2800GB</td>
+<td>1000Mbps</td>
+<td>75 CAD/月</td>
+<td>$54.17</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=93" target="_blank" rel="noopener">CN.HK.STD.Elite<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>2C/4G</td>
+<td>40G</td>
+<td>1600GB</td>
+<td>100Mbps</td>
+<td>75 CAD/月</td>
+<td>$54.17</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=36" target="_blank" rel="noopener">US.LA.TRI.Ultra<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>三网优化</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>4000GB</td>
+<td>500Mbps</td>
+<td>98 CAD/月</td>
+<td>$70.78</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.vmiss.com/aff.php?aff=4624&amp;pid=94" target="_blank" rel="noopener">CN.HK.STD.Ultra<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>4C/8G</td>
+<td>80G</td>
+<td>3000GB</td>
+<td>100Mbps</td>
+<td>150 CAD/月</td>
+<td>$108.33</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g17">7. AkileCloud — 大带宽大流量，价格屠夫</h3>
+<p>线路：香港（NetLab 上游，BGP 回程）、日本、新加坡、美国洛杉矶。<strong>特色是带宽夸张</strong>（2.5–5Gbps），代价是线路不保证回国优化。</p>
+<blockquote><strong>点评</strong>：Akile 是这套清单里<strong>单位价格买到带宽/流量最多</strong>的一家，2.5–5Gbps 端口 ¥15–40/月真的离谱。代价：LITE 系列走的是 BGP/国际线路，<strong>晚高峰国内直连速度不保证</strong>，适合配合中转或当落地机。香港 HKLite-Mini ¥24.99 是甜点档；JPHyper-Lite ¥14.99 是全场最低价的 2核2G。</blockquote>
+<div class="tw" data-tid="17"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>JPHyper-Lite</strong><span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>日本 BGP</td>
+<td>1核/2G</td>
+<td>10G SSD</td>
+<td>1TB</td>
+<td>2.5Gbps</td>
+<td><strong>¥14.99/月</strong></td>
+<td>$2.08</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 全场最便宜的 2核2G 日本</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>LAXLite-Mini</strong><span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>美国 BGP</td>
+<td>1核/2G</td>
+<td>10G SSD</td>
+<td>2TB</td>
+<td>5Gbps</td>
+<td><strong>¥15.99/月</strong></td>
+<td>$2.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 5Gbps 端口，$2 出头</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener"><strong>HKLite-Mini</strong><span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1核/1G</td>
+<td>10G SSD</td>
+<td>2.5TB</td>
+<td>1Gbps</td>
+<td><strong>¥24.99/月</strong></td>
+<td>$3.47</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 香港大流量入门首选</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener">SGLite-Mini<span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>新加坡 BGP</td>
+<td>1核/1G</td>
+<td>5G SSD</td>
+<td>1TB</td>
+<td>1Gbps</td>
+<td>¥24.99/月</td>
+<td>$3.47</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/akile/" target="_blank" rel="noopener">HKLite-Pre-Mini<span class="ext">↗</span></a></td>
+<td>新加坡</td>
+<td>香港 BGP</td>
+<td>2核/4G</td>
+<td>30G SSD</td>
+<td>2.5TB</td>
+<td>5Gbps</td>
+<td>¥39.99/月</td>
+<td>$5.55</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 2核4G 香港只要 40</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=1&amp;planId=812&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKLite-Starter<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1核/1G</td>
+<td>10G SSD</td>
+<td>5TB</td>
+<td>2Gbps</td>
+<td>¥43.74/月</td>
+<td>$6.08</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=2&amp;nodeId=37&amp;planId=1010&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">LAXLite-Standard<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>美国 BGP</td>
+<td>2核/4G</td>
+<td>20G SSD</td>
+<td>10TB</td>
+<td>5Gbps</td>
+<td>¥69.99/月</td>
+<td>$9.72</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=4&amp;planId=925&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKS-Pro<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>1核/2G</td>
+<td>20G SSD</td>
+<td>3TB</td>
+<td>1.2Gbps</td>
+<td>¥82.49/月</td>
+<td>$11.46</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=1&amp;planId=813&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKLite-Standard<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>2核/1G</td>
+<td>20G SSD</td>
+<td>10TB</td>
+<td>2Gbps</td>
+<td>¥99.99/月</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=2&amp;nodeId=37&amp;planId=1011&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">LAXLite-Pro<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>美国 BGP</td>
+<td>4核/8G</td>
+<td>60G SSD</td>
+<td>20TB</td>
+<td>5Gbps</td>
+<td>¥129.99/月</td>
+<td>$18.05</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=4&amp;planId=926&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKS-Max<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>2核/2G</td>
+<td>20G SSD</td>
+<td>6TB</td>
+<td>1.2Gbps</td>
+<td>¥149.99/月</td>
+<td>$20.83</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=2&amp;nodeId=32&amp;planId=985&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">LAXPremium-Starter<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>CN2 GIA</td>
+<td>2核/2G</td>
+<td>20G SSD</td>
+<td>1TB</td>
+<td>200Mbps</td>
+<td>¥149.99/月</td>
+<td>$20.83</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>— 溢价买 GIA，不如买 DMIT</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=bandwidth&amp;areaId=3&amp;nodeId=1&amp;planId=882&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKLite-100M独享<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP 独享</td>
+<td>2核/2G</td>
+<td>20G</td>
+<td>—</td>
+<td>100Mbps 独享</td>
+<td>¥199/月</td>
+<td>$27.64</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=1&amp;planId=814&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKLite-Pro<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>2核/2G</td>
+<td>20G SSD</td>
+<td>30TB</td>
+<td>2Gbps</td>
+<td>¥237.49/月</td>
+<td>$32.98</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=4&amp;planId=927&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKS-Ultra<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>4核/4G</td>
+<td>20G SSD</td>
+<td>15TB</td>
+<td>1.2Gbps</td>
+<td>¥287.49/月</td>
+<td>$39.93</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=bandwidth&amp;areaId=3&amp;nodeId=1&amp;planId=879&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKLite-300M独享<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP 独享</td>
+<td>4核/4G</td>
+<td>20G</td>
+<td>—</td>
+<td>300Mbps 独享</td>
+<td>¥549/月</td>
+<td>$76.25</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=traffic&amp;areaId=3&amp;nodeId=4&amp;planId=927&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKS-UltraPlus<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP</td>
+<td>8核/16G</td>
+<td>60G SSD</td>
+<td>50TB</td>
+<td>2.5Gbps</td>
+<td>¥788.88/月</td>
+<td>$109.57</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://akile.ai/shop/server?type=bandwidth&amp;areaId=3&amp;nodeId=4&amp;planId=928&amp;aff_code=c9ea6be5-4dcd-4d1c-93dd-81c2b43d30e6" target="_blank" rel="noopener">HKS-500M独享<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 BGP 独享</td>
+<td>8核/8G</td>
+<td>20G</td>
+<td>—</td>
+<td>500Mbps 独享</td>
+<td>¥2499.99/月</td>
+<td>$347.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</h3>
+<p>狗云的产品线切得最细：KC（精品）/ MG（优化 BGP）/ GB（国际大带宽）/ ST（大硬盘）/ CLD（Cloudcone 机房）/ LA2（洛杉矶精品）。</p>
+<blockquote><strong>点评</strong>：狗云最实用的三档：<code>HK.MG.BGP.S</code>（¥25/月优化线）、<code>HK.KC.S</code>（¥40/月精品线，原生 IP）、<code>HK.MG.GB.XXXL</code>（¥100/月 3Gbps 12T，纯落地）。<strong>支持按小时计费</strong>，可以先开 1 小时测线路再决定买不买，这点比绝大多数商家友好。香港机房 NetLab 上游，回程 163/4837/CMI 直连。</blockquote>
+<div class="tw" data-tid="18"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/83?ref=16666" target="_blank" rel="noopener"><strong>HK.MINI</strong><span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1核/0.75G</td>
+<td>15G SSD</td>
+<td>500GB</td>
+<td>30M</td>
+<td><strong>¥150/年</strong></td>
+<td>$1.74</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 一年 150 的香港优化线</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/39?ref=16666" target="_blank" rel="noopener">HK.SMALL<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1核/1G</td>
+<td>25G SSD</td>
+<td>1024GB</td>
+<td>30M</td>
+<td>¥276/年</td>
+<td>$3.19</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/100?ref=16666" target="_blank" rel="noopener"><strong>HK.MG.BGP.S</strong><span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化 BGP</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>500GB</td>
+<td>50M</td>
+<td><strong>¥25/月（年付 ¥250）</strong></td>
+<td>$3.47</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 优化线 25 块一个月</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/95?ref=16666" target="_blank" rel="noopener">HK.MG.GB.XM<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港国际</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>3000GB</td>
+<td>1000M</td>
+<td>¥30/月</td>
+<td>$4.17</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 1Gbps 端口 30 块</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/150?ref=16666" target="_blank" rel="noopener">HK.ST.S<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港大硬盘</td>
+<td>1核/1G</td>
+<td><strong>250G</strong></td>
+<td>5000GB</td>
+<td>1000M</td>
+<td>¥30/月</td>
+<td>$4.17</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐ 硬盘党</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/40?ref=16666" target="_blank" rel="noopener">HK.MEDIUM<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>1核/2G</td>
+<td>50G SSD</td>
+<td>2048GB</td>
+<td>30M</td>
+<td>¥396/年</td>
+<td>$4.58</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/24?ref=16666" target="_blank" rel="noopener">LA2.S<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>洛杉矶精品</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>500GB</td>
+<td>50M</td>
+<td>¥35/月（年付 ¥350）</td>
+<td>$4.86</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐ 比 KC 稍贵</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/141?ref=16666" target="_blank" rel="noopener"><strong>HK.KC.S</strong><span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港精品 CN2</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>250GB</td>
+<td>25M</td>
+<td><strong>¥40/月（年付 ¥400）</strong></td>
+<td>$5.56</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 香港精品线最低价</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/109?ref=16666" target="_blank" rel="noopener">HK.MG.GB.L<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港国际</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>4000GB</td>
+<td>1500M</td>
+<td>¥40/月</td>
+<td>$5.56</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/101?ref=16666" target="_blank" rel="noopener">HK.MG.BGP.M<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化 BGP</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>1000GB</td>
+<td>75M</td>
+<td>¥45/月（年付 ¥450）</td>
+<td>$6.25</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 性价比拐点</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/151?ref=16666" target="_blank" rel="noopener">HK.ST.M<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港大硬盘</td>
+<td>2核/2G</td>
+<td><strong>500G</strong></td>
+<td>10000GB</td>
+<td>2000M</td>
+<td>¥55/月</td>
+<td>$7.64</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/41?ref=16666" target="_blank" rel="noopener">HK.LARGE<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化</td>
+<td>2核/4G</td>
+<td>80G SSD</td>
+<td>3072GB</td>
+<td>30M</td>
+<td>¥780/年</td>
+<td>$9.03</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/102?ref=16666" target="_blank" rel="noopener">HK.MG.BGP.XM<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化 BGP</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>1500GB</td>
+<td>100M</td>
+<td>¥65/月</td>
+<td>$9.03</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/154?ref=16666" target="_blank" rel="noopener">LA2.M<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>洛杉矶精品</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>1000GB</td>
+<td>75M</td>
+<td>¥65/月</td>
+<td>$9.03</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/136?ref=16666" target="_blank" rel="noopener">HK.KC.M<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港精品 CN2</td>
+<td>2核/2G</td>
+<td>40G SSD</td>
+<td>500GB</td>
+<td>30M</td>
+<td>¥70/月（年付 ¥700）</td>
+<td>$9.72</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐ 原生 IP</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/114?ref=16666" target="_blank" rel="noopener">HK.MG.BGP.L<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化 BGP</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>2000GB</td>
+<td>150M</td>
+<td>¥80/月</td>
+<td>$11.11</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/137?ref=16666" target="_blank" rel="noopener">HK.KC.XM<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港精品 CN2</td>
+<td>2核/4G</td>
+<td>60G SSD</td>
+<td>750GB</td>
+<td>35M</td>
+<td>¥100/月（年付 ¥1000）</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/122?ref=16666" target="_blank" rel="noopener">HK.MG.GB.XXXL<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港国际</td>
+<td>8核/16G</td>
+<td>240G SSD</td>
+<td>12000GB</td>
+<td>3000M</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 3Gbps+12T 只要 100</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/152?ref=16666" target="_blank" rel="noopener">HK.ST.L<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港大硬盘</td>
+<td>4核/4G</td>
+<td><strong>1T</strong></td>
+<td>20000GB</td>
+<td>3500M</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 1T 硬盘 + 20T 流量</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/115?ref=16666" target="_blank" rel="noopener">HK.MG.BGP.XL<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港优化 BGP</td>
+<td>4核/8G</td>
+<td>120G SSD</td>
+<td>3000GB</td>
+<td>200M</td>
+<td>¥110/月</td>
+<td>$15.28</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/138?ref=16666" target="_blank" rel="noopener">HK.KC.L<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港精品 CN2</td>
+<td>4核/4G</td>
+<td>80G SSD</td>
+<td>1000GB</td>
+<td>40M</td>
+<td>¥120/月</td>
+<td>$16.67</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/139?ref=16666" target="_blank" rel="noopener">HK.KC.XL<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港精品 CN2</td>
+<td>4核/8G</td>
+<td>120G SSD</td>
+<td>1500GB</td>
+<td>45M</td>
+<td>¥170/月</td>
+<td>$23.61</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/93?ref=16666" target="_blank" rel="noopener">HK.MG.GB.S<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港国际</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>1000GB</td>
+<td>500M</td>
+<td>¥65/半年（年付 ¥125）</td>
+<td>—</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐ 纯落地用</td>
+</tr>
+<tr>
+<td class="name"><a href="https://vm.dogyun.com/server/create/96?ref=16666" target="_blank" rel="noopener">HK.MG.IPV6<span class="ext">↗</span></a></td>
+<td>香港</td>
+<td>香港 IPv6</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>1000GB</td>
+<td>500M</td>
+<td>¥45/半年（年付 ¥80）</td>
+<td>—</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>🔥 年付 80，但只给 v6</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g19">9. OneTechCloud — 香港 1Gbps 大带宽</h3>
+<blockquote><strong>点评</strong>：香港 1Gbps 端口 + 600GB 流量 ¥66/月，适合需要瞬时大带宽（下大文件、跑 AI 拉模型）而不是天天挂机的场景。硬盘只有 20G，别想装太多东西。</blockquote>
+<div class="tw" data-tid="19"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://www.onetechcloud.com/aff/XRONKQPQ" target="_blank" rel="noopener"><strong>1G 档</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 BGP 优化</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>600GB</td>
+<td>1Gbps</td>
+<td><strong>¥66/月</strong></td>
+<td>$9.17</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐ 1Gbps 端口不常见</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.onetechcloud.com/aff/XRONKQPQ" target="_blank" rel="noopener">2G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 BGP 优化</td>
+<td>2核/2G</td>
+<td>30G SSD</td>
+<td>1200GB</td>
+<td>1Gbps</td>
+<td>¥118/月</td>
+<td>$16.39</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.onetechcloud.com/aff/XRONKQPQ" target="_blank" rel="noopener">4G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 BGP 优化</td>
+<td>4核/4G</td>
+<td>40G SSD</td>
+<td>2400GB</td>
+<td>1Gbps</td>
+<td>¥228/月</td>
+<td>$31.67</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.onetechcloud.com/aff/XRONKQPQ" target="_blank" rel="noopener">4G 大流量<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 BGP 优化</td>
+<td>4核/4G</td>
+<td>40G SSD</td>
+<td>4800GB</td>
+<td>1Gbps</td>
+<td>¥438/月</td>
+<td>$60.83</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</h3>
+<blockquote><strong>点评</strong>：CUBE 是给企业做香港办公节点的，性价比在这份清单里排末尾——同价位狗云能给 4 倍带宽和 3 倍流量。除非你要它家的合规发票和 SLA，否则跳过。</blockquote>
+<div class="tw" data-tid="20"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://www.cubecloud.net/aff.php?aff=2173&amp;gid=11" target="_blank" rel="noopener">1G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 CN2</td>
+<td>2核/1G</td>
+<td>15G SSD</td>
+<td>400GB</td>
+<td>50M</td>
+<td>¥79/月</td>
+<td>$10.97</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.cubecloud.net/aff.php?aff=2173&amp;gid=11" target="_blank" rel="noopener">2G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 CN2</td>
+<td>2核/2G</td>
+<td>30G SSD</td>
+<td>800GB</td>
+<td>100M</td>
+<td>¥159/月</td>
+<td>$22.08</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.cubecloud.net/aff.php?aff=2173&amp;gid=11" target="_blank" rel="noopener">4G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 CN2</td>
+<td>4核/4G</td>
+<td>60G SSD</td>
+<td>1500GB</td>
+<td>100M</td>
+<td>¥289/月</td>
+<td>$40.14</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.cubecloud.net/aff.php?aff=2173&amp;gid=11" target="_blank" rel="noopener">8G 档<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>香港 CN2</td>
+<td>4核/8G</td>
+<td>80G SSD</td>
+<td>2000GB</td>
+<td>200M</td>
+<td>¥569/月</td>
+<td>$79.03</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g21">11. RackNerd — 年付白菜价之王</h3>
+<p>线路：普通国际线路（洛杉矶 DC01/DC02/DC03、圣何塞、西雅图、纽约、阿什本、芝加哥、达拉斯、亚特兰大、多伦多、阿姆斯特丹）。<strong>没有任何回国优化</strong>，晚高峰大概率卡。DC02 已整体迁到 DC03（DC03 实为租用 CCS 机房）。</p>
+<blockquote><strong>点评</strong>：RackNerd 现在最低 $15.98/年。<strong>唯一正确的买法</strong>：黑五 $15.98 的 1G 或 $27.98 的 2.5G，当落地机/中转/备份。想拿它当主力梯子就是自虐——晚高峰丢包能到两位数。续费同价，这点比 CloudCone 强。</blockquote>
+<div class="tw" data-tid="21"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=968" target="_blank" rel="noopener"><strong>1G KVM</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>3T</td>
+<td>1Gbps</td>
+<td><strong>$15.98/年</strong></td>
+<td>$1.33</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>🔥 一年 115 块，纯落地/中转</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/racknerd/" target="_blank" rel="noopener">Ryzen 1GB<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>30G NVMe</td>
+<td>1.5T</td>
+<td>1Gbps</td>
+<td>$18.89/年</td>
+<td>$1.57</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=952" target="_blank" rel="noopener">1G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>20G SSD</td>
+<td>3T</td>
+<td>1Gbps</td>
+<td>$21.99/年</td>
+<td>$1.83</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=500" target="_blank" rel="noopener">512M NVMe<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/512M</td>
+<td>10G NVMe</td>
+<td>500G</td>
+<td>1Gbps</td>
+<td>$23/年</td>
+<td>$1.92</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>— 内存太小</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=969" target="_blank" rel="noopener">2.5G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/2.5G</td>
+<td>30G SSD</td>
+<td>6T</td>
+<td>1Gbps</td>
+<td>$27.98/年</td>
+<td>$2.33</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>🔥 流量翻倍只多 12 刀</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=953" target="_blank" rel="noopener">2G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/2G</td>
+<td>35G SSD</td>
+<td>5T</td>
+<td>1Gbps</td>
+<td>$35.99/年</td>
+<td>$3.00</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=970" target="_blank" rel="noopener">4G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>4核/4G</td>
+<td>60G SSD</td>
+<td>10T</td>
+<td>1Gbps</td>
+<td>$47.98/年</td>
+<td>$4.00</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=954" target="_blank" rel="noopener">4G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>3核/4G</td>
+<td>60G SSD</td>
+<td>7T</td>
+<td>1Gbps</td>
+<td>$59.99/年</td>
+<td>$5.00</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=971" target="_blank" rel="noopener">6G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>6核/6G</td>
+<td>85G SSD</td>
+<td>15T</td>
+<td>1Gbps</td>
+<td>$74.98/年</td>
+<td>$6.25</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=955" target="_blank" rel="noopener">6G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>6核/6G</td>
+<td>100G SSD</td>
+<td>12T</td>
+<td>1Gbps</td>
+<td>$89.99/年</td>
+<td>$7.50</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=972" target="_blank" rel="noopener">8G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>6核/8G</td>
+<td>140G SSD</td>
+<td>20T</td>
+<td>1Gbps</td>
+<td>$94.98/年</td>
+<td>$7.92</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=956" target="_blank" rel="noopener">8G KVM<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>7核/8G</td>
+<td>150G SSD</td>
+<td>20T</td>
+<td>1Gbps</td>
+<td>$119.99/年</td>
+<td>$10.00</td>
+<td>✅ 有货</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<div class="tw" data-tid="22"><table>
+<thead><tr>
+<th>系列</th>
+<th>线路</th>
+<th>价格区间</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=20" target="_blank" rel="noopener">KVM 月付<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>$17.99–$55.99/月</td>
+<td>比年付贵 10 倍，别买</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=501" target="_blank" rel="noopener">Ryzen 月付<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>$17.99–$55.99/月</td>
+<td>同上</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/aff.php?aff=2358&amp;pid=293" target="_blank" rel="noopener">Windows VPS<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>$27.59–$89.59/月</td>
+<td>含授权，绕开</td>
+</tr>
+<tr>
+<td class="name"><a href="https://my.racknerd.com/" target="_blank" rel="noopener">独立服务器<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>$509–$4334</td>
+<td>E3-1230v3 起</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g22">12. CloudCone — 和 RackNerd 同级，稍好一点</h3>
+<p>线路：洛杉矶 MC 机房，普通国际线路。同样是"便宜但晚高峰不稳"。</p>
+<blockquote><strong>点评</strong>：CloudCone 的核数给得比 RackNerd 猛（4G 档直接 7 核），但<strong>实测晚高峰 17:00 后开始间歇性掉线</strong>，这是它被吐槽最多的地方。$18.28/年的 1G 档和 $32.99 的 3核2G 是最值得看的两档。<strong>注意：CloudCone 续费会涨价，RackNerd 不涨</strong>——长期用选 RackNerd。</blockquote>
+<div class="tw" data-tid="23"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/423/create?token=halloween-25-ssd-vps-1&amp;ref=6345" target="_blank" rel="noopener">1G 促销<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>55G SSD</td>
+<td>4T</td>
+<td>—</td>
+<td>$14.24/年</td>
+<td>$1.19</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 蹲到就买</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/423/create?token=halloween-25-ssd-vps-1&amp;ref=6345" target="_blank" rel="noopener">1G 常规<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>14G SSD</td>
+<td>3T</td>
+<td>—</td>
+<td>$16.99/年</td>
+<td>$1.42</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/522/create?token=bday26-vps-1&amp;ref=6345" target="_blank" rel="noopener"><strong>1G</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>25G SSD</td>
+<td>4096G</td>
+<td>1Gbps</td>
+<td><strong>$18.28/年</strong></td>
+<td>$1.52</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/536/create?token=frankenstein-26-ssd-vps-1&amp;ref=6345" target="_blank" rel="noopener">1.25G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/1.25G</td>
+<td>30G SSD</td>
+<td>4096G</td>
+<td>—</td>
+<td>$20.25/年</td>
+<td>$1.69</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/424/create?token=halloween-25-ssd-vps-2&amp;ref=6345" target="_blank" rel="noopener">2G 常规<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>3核/2G</td>
+<td>29G SSD</td>
+<td>4T</td>
+<td>—</td>
+<td>$23.5/年</td>
+<td>$1.96</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/523/create?token=bday26-vps-2&amp;ref=6345" target="_blank" rel="noopener">2G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>3核/2G</td>
+<td>40G SSD</td>
+<td>7168G</td>
+<td>1Gbps</td>
+<td>$32.99/年</td>
+<td>$2.75</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 3 核 2G 只要 33 刀</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/537/create?token=frankenstein-26-ssd-vps-2&amp;ref=6345" target="_blank" rel="noopener">2.5G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>4核/2.5G</td>
+<td>50G SSD</td>
+<td>7168G</td>
+<td>—</td>
+<td>$37/年</td>
+<td>$3.08</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/524/create?token=bday26-vps-3&amp;ref=6345" target="_blank" rel="noopener">4G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>7核/4G</td>
+<td>80G SSD</td>
+<td>10240G</td>
+<td>1Gbps</td>
+<td>$56.99/年</td>
+<td>$4.75</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 7 核 4G，离谱</td>
+</tr>
+<tr>
+<td class="name"><a href="https://app.cloudcone.com.cn/vps/525/create?token=bday26-vps-4&amp;ref=6345" target="_blank" rel="noopener">8G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>10核/8G</td>
+<td>170G SSD</td>
+<td>15360G</td>
+<td>1Gbps</td>
+<td>$116.99/年</td>
+<td>$9.75</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</h3>
+<p>线路：美国、英国、德国、荷兰、日本、香港、马来西亚等 16 个机房，均为国际线路（无回国优化）。<br>标准机房（流量减半）：512M 250G、1G 250G、2G 500G、4G 1000G，价格相同。</p>
+<blockquote><strong>点评</strong>：Evoxt 用的是 Ryzen + NVMe，<strong>单核性能是这份清单里最强的一档</strong>（跑编译、跑容器很爽）。但线路纯国际，回国延迟 180–250ms。适合当"能跑算力的落地机"，不适合当主力梯子。香港机房是它唯一有点希望的选项。</blockquote>
+<div class="tw" data-tid="24"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener">512M<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/512M</td>
+<td>5G</td>
+<td>500G</td>
+<td>1Gbps</td>
+<td>$2.99/月</td>
+<td>$2.99</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>— 内存太小</td>
+</tr>
+<tr>
+<td class="name"><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener"><strong>1G</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>10G</td>
+<td>750G</td>
+<td>1Gbps</td>
+<td><strong>$4.99/月</strong></td>
+<td>$4.99</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener">2G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>20G</td>
+<td>1000G</td>
+<td>1Gbps</td>
+<td>$5.99/月</td>
+<td>$5.99</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 1 美元差价换 1G 内存</td>
+</tr>
+<tr>
+<td class="name"><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener">2G/2核<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/2G</td>
+<td>20G</td>
+<td>1500G</td>
+<td>1Gbps</td>
+<td>$6.95/月</td>
+<td>$6.95</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://console.evoxt.com/aff.php?aff=5475" target="_blank" rel="noopener">4G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/4G</td>
+<td>30G</td>
+<td>2000G</td>
+<td>1Gbps</td>
+<td>$11.99/月</td>
+<td>$11.99</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g24">14. Hostwinds — 流量给得多</h3>
+<blockquote><strong>点评</strong>：老牌美国商家，稳定性比 RackNerd/CloudCone 好，但价格是月付制、年付无折扣。1G $4.99 这档流量 1T 够用。线路纯国际。</blockquote>
+<div class="tw" data-tid="25"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">1G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/1G</td>
+<td>30G</td>
+<td>1T</td>
+<td>—</td>
+<td>$4.99/月</td>
+<td>$4.99</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">2G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>50G</td>
+<td>2T</td>
+<td>—</td>
+<td>$9.99/月</td>
+<td>$9.99</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">4G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/4G</td>
+<td>75G</td>
+<td>2T</td>
+<td>—</td>
+<td>$18.99/月</td>
+<td>$18.99</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/hostwinds/" target="_blank" rel="noopener">8G<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>4核/8G</td>
+<td>150G</td>
+<td>3T</td>
+<td>—</td>
+<td>$38.99/月</td>
+<td>$38.99</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong></td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g25">15. InterServer — 10Gbps 端口，按切片计价</h3>
+<blockquote><strong>点评</strong>：按"切片"卖的思路很清晰，$3/月拿 1核2G + 10Gbps 端口在业内属于不讲道理。缺点是<strong>价格锁定 3 年才给这个价</strong>（首期需预付），且纯国际线路。适合当大流量落地/下载机。</blockquote>
+<div class="tw" data-tid="26"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener"><strong>1 Slice</strong><span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/2G</td>
+<td>40G SSD</td>
+<td>2TB</td>
+<td>10Gbps</td>
+<td><strong>$3.00/月</strong></td>
+<td>$3.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 3 美元 1核2G + 10G 端口</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener">2 Slices<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>1核/4G</td>
+<td>80G SSD</td>
+<td>4TB</td>
+<td>10Gbps</td>
+<td>$6.00/月</td>
+<td>$6.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener">3 Slices<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/6G</td>
+<td>120G SSD</td>
+<td>6TB</td>
+<td>10Gbps</td>
+<td>$9.00/月</td>
+<td>$9.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>🔥 9 美元 2核6G</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/interserver/" target="_blank" rel="noopener">4 Slices<span class="ext">↗</span></a></td>
+<td>—</td>
+<td>国际 BGP</td>
+<td>2核/8G</td>
+<td>160G SSD</td>
+<td>8TB</td>
+<td>10Gbps</td>
+<td>$12.00/月</td>
+<td>$12.00</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g26">16. 丽萨主机 — 原生 IP，解锁最全</h3>
+<p>线路：洛杉矶 4837（联通）/ 9929、香港 CMI。主打流媒体 + AI 解锁。</p>
+<blockquote><strong>点评</strong>：实测（2026-06-15 晚）洛杉矶 4837：全国平均延迟 187ms，丢包 &lt;2%，上海电信 163ms 0 丢包，苏州实测上传 635 / 下载 290 Mbps，Netflix/Disney+/ChatGPT/Claude/Gemini <strong>全部可用</strong>，IP 在 4 个数据库被标为家宽。<strong>这是这套清单里唯一能稳定跑 Gemini 的</strong>。要解锁、要用 AI，多花的钱值。</blockquote>
+<div class="tw" data-tid="27"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-8c1ffe/" target="_blank" rel="noopener">基础版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>4837</td>
+<td>1核/1G</td>
+<td>20G NVMe</td>
+<td>3000GB</td>
+<td>300Mbps</td>
+<td>¥68/月</td>
+<td>$9.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-9bf2c5/" target="_blank" rel="noopener">基础版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>1核/1G</td>
+<td>10G NVMe</td>
+<td>6000GB</td>
+<td>300Mbps</td>
+<td>¥68/月</td>
+<td>$9.44</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-0e94d2/" target="_blank" rel="noopener">进阶版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>2核/2G</td>
+<td>20G NVMe</td>
+<td>10000GB</td>
+<td>500Mbps</td>
+<td>¥88/月</td>
+<td>$12.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-0e94d2/" target="_blank" rel="noopener">基础版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>香港 CMI</td>
+<td>1核/1G</td>
+<td>20G NVMe</td>
+<td>1000GB</td>
+<td>30Mbps</td>
+<td>¥88/月</td>
+<td>$12.22</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>— 贵在原生 IP</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-0ea9d6/" target="_blank" rel="noopener">进阶版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>4837</td>
+<td>2核/2G</td>
+<td>40G NVMe</td>
+<td>8000GB</td>
+<td>500Mbps</td>
+<td>¥100/月</td>
+<td>$13.89</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>⭐</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-b2202e/" target="_blank" rel="noopener">豪华版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>9929</td>
+<td>4核/4G</td>
+<td>40G NVMe</td>
+<td>20000GB</td>
+<td>1000Mbps</td>
+<td>¥188/月</td>
+<td>$26.11</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-b2202e/" target="_blank" rel="noopener">进阶版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>香港 CMI</td>
+<td>2核/2G</td>
+<td>40G NVMe</td>
+<td>2000GB</td>
+<td>50Mbps</td>
+<td>¥188/月</td>
+<td>$26.11</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-1a04c5/" target="_blank" rel="noopener">不限流量 Lite<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>4837</td>
+<td>2核/2G</td>
+<td>40G NVMe</td>
+<td><strong>不限</strong></td>
+<td>200Mbps</td>
+<td>¥198/月</td>
+<td>$27.50</td>
+<td>⚠️ 以链接页为准</td>
+<td>不限流量</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/丽萨主机-bddfca/" target="_blank" rel="noopener">豪华版<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>4837</td>
+<td>4核/4G</td>
+<td>80G NVMe</td>
+<td>20000GB</td>
+<td>1000Mbps</td>
+<td>¥300/月</td>
+<td>$41.67</td>
+<td>⚠️ 以链接页为准</td>
+<td>未明确</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</h3>
+<blockquote><strong>点评</strong>：<strong>双向计费，而且是本文最狠的一家</strong>——上传+下载都算，IEPL 中转还要再乘 2 倍率，等于标称 2TB 实际只能跑 500GB 左右。卖点是住宅 IP/双 ISP 家宽，做 TikTok 号、直播、注册海外账号这类需要"看起来像真人"的场景。拿来当梯子是浪费钱。</blockquote>
+<div class="tw" data-tid="28"><table>
+<thead><tr>
+<th>套餐</th>
+<th>机房</th>
+<th>线路</th>
+<th>CPU/内存</th>
+<th>硬盘</th>
+<th>流量</th>
+<th>带宽</th>
+<th>价格</th>
+<th>≈USD/月</th>
+<th>有货</th>
+<th>计费</th>
+<th>性价比</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">英国原生住宅 · TikTok<span class="ext">↗</span></a></td>
+<td>英国</td>
+<td>原生住宅 IP</td>
+<td>1核/512M</td>
+<td>10G SSD</td>
+<td>1TB</td>
+<td>100Mbps</td>
+<td>¥51.97/月</td>
+<td>$7.22</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong> ⚠️</td>
+<td>— 特定用途</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">美国洛杉矶双 ISP 家宽 · 直播<span class="ext">↗</span></a></td>
+<td>洛杉矶</td>
+<td>原生住宅 IP</td>
+<td>2核/512MB</td>
+<td>10G SSD</td>
+<td>2TB</td>
+<td>100Mbps</td>
+<td>¥80.58/月</td>
+<td>$11.19</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong> ⚠️</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">日本原生 · TikTok<span class="ext">↗</span></a></td>
+<td>日本</td>
+<td>原生住宅 IP</td>
+<td>2核/512MB</td>
+<td>10G SSD</td>
+<td>2TB</td>
+<td>100Mbps</td>
+<td>¥90.11/月</td>
+<td>$12.52</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong> ⚠️</td>
+<td>—</td>
+</tr>
+<tr>
+<td class="name"><a href="https://lumovps.com/go/wepc-dd5de7/" target="_blank" rel="noopener">台湾原生 · TikTok 直播<span class="ext">↗</span></a></td>
+<td>台湾</td>
+<td>原生住宅 IP</td>
+<td>2核/512MB</td>
+<td>10G SSD</td>
+<td>2TB</td>
+<td>70Mbps</td>
+<td>¥90.11/月</td>
+<td>$12.52</td>
+<td>⚠️ 以链接页为准</td>
+<td><strong>双向</strong> ⚠️</td>
+<td>—</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g28">18. Mkcloud — 真专线，官网起价最便宜的一档</h3>
+<p>线路：入口可选 八线动态 BGP / 电信 / 移动 / 联通 / 三线独享，出口香港、新加坡、日本、美国。</p>
+<blockquote><strong>点评</strong>：这是清单里<strong>唯一能直接当梯子用的真专线</strong>。官网首页标价（2026-11-26 抓取）：IXP 专线 <strong>¥158/月起</strong>、沪港 IPLC <strong>¥288/月起</strong>、广港 IEPL 与沪日 IPLC <strong>¥358/月起</strong>、沪美 IPLC <strong>¥428/月起</strong>、上海 CN2 <strong>¥4500/月起</strong>。全部<strong>独享独立 IPv4</strong>，可选流量计费或独享带宽计费、可选云服务器或独立物理机、配置可定制。  <strong>⚠️ ¥158 不是最终价</strong>：所有 <strong>IXP / 上云互联优化</strong> 款（深港 ¥158、沪日 ¥166、沪美 ¥266、沪日独享 IXP ¥1000）官方明文写着「仅允许云厂 BGP 网络连入…需要云厂 BGP 网络作为前置搭配使用」——你得另有一台<strong>国内云服务器</strong>（阿里云/腾讯云/华为云/百度云/火山云/UCloud 国内节点），家宽和手机直接连不上。搭梯子的话实际成本 = 专线费 + 前置机（轻量 1核2G 约 ¥30–60/月），加起来和 <strong>沪港 IPLC ¥288</strong>（运营商直连、不用前置）差不多，那就没必要绕这一圈。  <strong>买之前要知道</strong>：官网定位是「合规跨境电商专线」，需要<strong>实名认证</strong>、<strong>只支持支付宝</strong>，部分产品有<strong>省级白名单</strong>（只能在你选的省份用），开通后<strong>不支持更换地域</strong>，退款只认质量问题。</blockquote>
+<div class="tw" data-tid="29"><table>
+<thead><tr>
+<th>产品（入口 → 出口）</th>
+<th>线路</th>
+<th>端内延迟</th>
+<th>配置</th>
+<th>流量 / 带宽档位</th>
+<th>月费（与左列逐项对应）</th>
+<th>有货</th>
+<th>计费方式</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">深港 IXP　深圳上云 → 香港 BGP<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>1–2ms</td>
+<td>2核4G/40G 起</td>
+<td>2TB / 4TB / 6TB / 10TB / 20TB / 30TB / 50TB / 100TB</td>
+<td>¥158 / 258 / 378 / 826 / 1639 / 2458 / 3588 / 7168</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪日 IXP　上海上云 → 日本 BGP<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>25–28ms</td>
+<td>2核4G/40G 起</td>
+<td>1TB / 2TB / 3TB / 6TB / 10TB / 20TB / 30TB / 50TB</td>
+<td>¥166 / 268 / 358 / 688 / 1125 / 2150 / 3165 / 5222</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪美 IXP　上海上云 → 美国 BGP<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>124–134ms</td>
+<td>2核4G/40G 起</td>
+<td>1TB / 2TB / 3TB / 6TB / 10TB / 20TB / 30TB / 50TB</td>
+<td>¥266 / 430 / 615 / 1166 / 1945 / 3686 / 5529 / 9216</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪港 IPLC　上海电信 → 香港 BGP<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>21ms</td>
+<td>1核2G/20G 起</td>
+<td>1TB / 2TB / 4TB / 6TB / 10TB / 20TB</td>
+<td>¥288 / 428 / 696 / 988 / 1536 / 3072</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">广港 IEPL　广州 BGP 八线 → 香港 BGP<br>✅ 家宽/手机可直连</td>
+<td>IEPL</td>
+<td>1–2ms</td>
+<td>1核2G/20G 起</td>
+<td>1TB / 2TB / 4TB / 6TB / 10TB / 20TB</td>
+<td>¥358 / 568 / 998 / 1388 / 2288 / 4500</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪日 IPLC　上海电信 → 日本 BGP<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>25–28ms</td>
+<td>1核2G/20G 起</td>
+<td>1TB / 2TB / 4TB / 6TB / 10TB / 20TB</td>
+<td>¥358 / 568 / 998 / 1388 / 2288 / 4500</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪美 IPLC　上海电信 → 美国 BGP<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>124–134ms</td>
+<td>1核2G/20G 起</td>
+<td>1TB / 2TB / 4TB / 6TB / 10TB / 20TB</td>
+<td>¥428 / 698 / 1258 / 1758 / 2888 / 5666</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>流量计费（共享）<br>双向计，超量停机</td>
+</tr>
+<tr>
+<td class="name">沪日独享（电信）　上海电信 → 日本 BGP<br>✅ 家宽/手机可直连</td>
+<td>IPLC</td>
+<td>25–28ms</td>
+<td>2核4G/40G 起</td>
+<td>5M / 10M / 20M / 50M / 100M / 200M / 300M</td>
+<td>¥600 / 800 / 1560 / 3500 / 6000 / 12000 / 18000</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>带宽计费（独享）<br>不限量，速率保证</td>
+</tr>
+<tr>
+<td class="name">沪日独享（IXP）　上海上云 → 日本 BGP<br>⚠️ <span class="ixp-req">需自备云前置机</span></td>
+<td>IEPL</td>
+<td>25–28ms</td>
+<td>2核4G/40G 起</td>
+<td>20M / 50M / 100M / 200M / 500M / 1G</td>
+<td>¥1000 / 2250 / 3700 / 7000 / 17500 / 35000</td>
+<td><span class="tag ok">✅ 有货</span></td>
+<td>带宽计费（独享）<br>不限量，1G 档赠独立服务器</td>
+</tr>
+<tr>
+<td class="name">上海 CN2</td>
+<td>CN2</td>
+<td>—</td>
+<td>可定制</td>
+<td>按带宽峰值</td>
+<td>¥4500 起</td>
+<td><span class="tag warn">⚠️ 以链接页为准</span></td>
+<td>企业级，与个人无关</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2 class="group" id="g29"><span>三、海外大厂 / 避雷 / 速查</span></h2>
+<h3 class="merchant" id="g30">19. 大厂基线价对照</h3>
+<blockquote><strong>点评</strong>：大厂云的线路全是普通国际线路（Oracle 除外，它家日本/韩国偶尔有惊喜）。Vultr 的价值在于<strong>按小时计费 + 32 个节点随便换</strong>，用来测哪条线路对你家宽带最快。Hetzner 涨价后 CX23 €5.49 仍是欧洲最强性价比。<strong>Oracle 的免费额度已经从 4 OCPU/24G 砍到 2 OCPU/12G</strong>，网上那些"免费 24G 永久"的教程全部过期了。腾讯云香港明确写了不直连，别当梯子买。</blockquote>
+<div class="tw" data-tid="30"><table>
+<thead><tr>
+<th>商家</th>
+<th>线路</th>
+<th>入门配置</th>
+<th>价格</th>
+<th>有货</th>
+<th>流量口径</th>
+<th>说明</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><a href="https://www.vultr.com/pricing/" target="_blank" rel="noopener"><strong>Vultr</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/1G/25G</td>
+<td><strong>$5/月</strong>（$2.5 档仅 IPv6/512M）</td>
+<td><span class="tag ok">✅ 32 节点</span></td>
+<td><strong>单向</strong></td>
+<td>按小时计费，随时销毁，最适合临时测试</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.vultr.com/pricing/" target="_blank" rel="noopener">Vultr<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>1核/2G/55G</td>
+<td>$10/月</td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>2T 流量</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.vultr.com/pricing/" target="_blank" rel="noopener">Vultr<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>2核/4G/80G</td>
+<td>$20/月</td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>3T 流量</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.digitalocean.com/pricing/droplets" target="_blank" rel="noopener"><strong>DigitalOcean</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>s-1vcpu-512mb-10gb</td>
+<td><strong>$4/月</strong></td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>最便宜的大厂入门</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.linode.com/pricing/" target="_blank" rel="noopener"><strong>Linode (Akamai)</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>Nanode 1GB</td>
+<td><strong>$5/月</strong></td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>老牌，文档最好，额度按账号池共享</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.hetzner.com/cloud" target="_blank" rel="noopener"><strong>Hetzner</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>2核/4G/40G</td>
+<td><strong>€5.49/月</strong></td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>欧洲性价比之王，<strong>2026-06-15 已涨价</strong></td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.hetzner.com/cloud" target="_blank" rel="noopener">Hetzner<span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>2核/4G/80G NVMe</td>
+<td>€16.99/月</td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong></td>
+<td>涨价后的价格</td>
+</tr>
+<tr>
+<td class="name"><a href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener"><strong>Oracle Always Free</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>Ampere A1 <strong>2 OCPU/12G</strong></td>
+<td><strong>免费</strong></td>
+<td><span class="tag warn">⚠️ 已被砍</span></td>
+<td><strong>单向</strong></td>
+<td>每月 10TB 出站免费；从 4 OCPU/24G 砍到 2 OCPU/12G，最多 2 台；韩国春川 AD 开不了 A1</td>
+</tr>
+<tr>
+<td class="name"><a href="https://cloud.tencent.com/act" target="_blank" rel="noopener"><strong>腾讯云香港轻量</strong><span class="ext">↗</span></a></td>
+<td>国际 BGP</td>
+<td>锐驰型</td>
+<td><strong>¥40/月起</strong></td>
+<td><span class="tag ok">✅</span></td>
+<td><strong>单向</strong>（仅出流）</td>
+<td>200Mbps 不限流量，但官方注明"香港到内地非直连"</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g31">20. 避雷清单（已验证有问题）</h3>
+<div class="tw" data-tid="31"><table>
+<thead><tr>
+<th>商家</th>
+<th>线路</th>
+<th>问题</th>
+<th>严重程度</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">Hytron（香港）</td>
+<td>国际 BGP</td>
+<td>转型只做上游，工单不回，散客无人管</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td class="name">FxTransit（新加坡）</td>
+<td>国际 BGP</td>
+<td>实际改卖日本，与宣传不符</td>
+<td>🟠 中</td>
+</tr>
+<tr>
+<td class="name">VollCloud（香港 CMI/CMIN2）</td>
+<td>国际 BGP</td>
+<td>跨境限制后线路质量严重下滑</td>
+<td>🟠 中</td>
+</tr>
+<tr>
+<td class="name">star-horizon.net</td>
+<td>国际 BGP</td>
+<td><strong>卷款跑路</strong></td>
+<td>🔴 极高</td>
+</tr>
+<tr>
+<td class="name">企鹅小屋</td>
+<td>国际 BGP</td>
+<td>服务口碑崩坏</td>
+<td>🔴 高</td>
+</tr>
+<tr>
+<td class="name">水墨云</td>
+<td>国际 BGP</td>
+<td>不让退充值款</td>
+<td>🟠 中</td>
+</tr>
+<tr>
+<td class="name">搬瓦工 20G 系列</td>
+<td>国际 BGP</td>
+<td>已缺货，旧教程里的 $49.99 现在买不到</td>
+<td>🟡 信息差</td>
+</tr>
+<tr>
+<td class="name">RackNerd $10 档</td>
+<td>国际 BGP</td>
+<td>已缺货，现最低 $15.98</td>
+<td>🟡 信息差</td>
+</tr>
+<tr>
+<td class="name">netcup</td>
+<td>国际 BGP</td>
+<td>官方宣布 2026 黑五不做活动</td>
+<td>🟡 信息差</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g32">21. 按需求的速查结论</h3>
+<p><strong>最后提醒三条</strong><br>1. 这份清单里的价格全部是 <strong>2026-11-26 抓取</strong>的，黑五正日（11-27）和网络星期一（11-30）会再变一轮。<br>2. <strong>"有货"只是抓取那一刻的状态</strong>，DMIT Pro、HostDare CSSD0、搬瓦工低价档都是开卖即空的类型，看到有货立刻下单。<br>3. <strong>流量口径</strong>：官方明写<strong>双向</strong>的 6 家 = 搬瓦工 / HostDare / OneTechCloud / NewNB Cloud / Mkcloud（计量款）/ WePC；官方明写<strong>单向</strong>的 6 家 = Vultr / DigitalOcean / Hetzner / Linode / Oracle / 腾讯云轻量；<strong>官网压根没写方向</strong>的 10 家 = RackNerd / CloudCone / Evoxt / Hostwinds / InterServer / VMISS / AkileCloud / ByteVirt / CUBECLOUD / 丽萨主机——买这些按「标称 ÷ 2」算才安全。DMIT 分线：T1 单向最大值、Pro/EB 双向。</p>
+<div class="tw" data-tid="32"><table>
+<thead><tr>
+<th>你的情况</th>
+<th>线路</th>
+<th>买这个</th>
+<th>理由</th>
+</tr></thead><tbody>
+<tr>
+<td class="name"><strong>预算 ¥200/年以内，只要能用</strong></td>
+<td>国际 BGP</td>
+<td>RackNerd 黑五 1G $15.98/年<br>CloudCone 1G $18.28/年</td>
+<td>一年一百多，晚高峰卡就卡</td>
+</tr>
+<tr>
+<td class="name"><strong>预算 ¥500/年，要晚高峰稳</strong></td>
+<td>国际 BGP</td>
+<td>HostDare CSSD0 $40.99/年（GIA）<br>ByteVirt 512M GIA $66/年</td>
+<td>真 GIA，蹲补货</td>
+</tr>
+<tr>
+<td class="name"><strong>预算 ¥1000/年，要最稳</strong></td>
+<td>国际 BGP</td>
+<td>DMIT LAX.Pro TINY $10.90/月</td>
+<td>缺货要蹲，但线路从不掺水</td>
+</tr>
+<tr>
+<td class="name"><strong>联通宽带</strong></td>
+<td>国际 BGP</td>
+<td>VMISS 9929.Basic 6 CAD/月<br>HostDare ASSD3 $14.99/月</td>
+<td>9929 对联通最友好</td>
+</tr>
+<tr>
+<td class="name"><strong>移动宽带</strong></td>
+<td>国际 BGP</td>
+<td>HostDare CAMD3（CMIN2）<br>Akile 香港</td>
+<td>CMIN2 对移动最优</td>
+</tr>
+<tr>
+<td class="name"><strong>电信宽带</strong></td>
+<td>国际 BGP</td>
+<td>DMIT Pro 系列 / 搬瓦工 40G</td>
+<td>CN2 GIA 是电信唯一解</td>
+</tr>
+<tr>
+<td class="name"><strong>香港低延迟（12–45ms）</strong></td>
+<td>国际 BGP</td>
+<td>DMIT HKG.Pro TINY $39.90/月<br>狗云 HK.KC.S ¥40/月</td>
+<td>前者真 GIA，后者精品线</td>
+</tr>
+<tr>
+<td class="name"><strong>日本节点</strong></td>
+<td>国际 BGP</td>
+<td>DMIT TYO.Pro TINY $21.90/月<br>Akile JPHyper-Lite ¥14.99/月</td>
+<td>前者 GIA，后者白菜</td>
+</tr>
+<tr>
+<td class="name"><strong>不限流量 / 挂机</strong></td>
+<td>国际 BGP</td>
+<td>DIYVM 香港云-2G ¥50/月<br>丽萨不限流量 Lite ¥198/月</td>
+<td>再也不用算流量</td>
+</tr>
+<tr>
+<td class="name"><strong>要解流媒体 + AI</strong></td>
+<td>国际 BGP</td>
+<td>丽萨主机 洛杉矶 4837 ¥68/月</td>
+<td>唯一能跑 Gemini 的</td>
+</tr>
+<tr>
+<td class="name"><strong>做 TikTok / 要住宅 IP</strong></td>
+<td>国际 BGP</td>
+<td>WePC ¥51.97/月 起</td>
+<td>注意双向流量</td>
+</tr>
+<tr>
+<td class="name"><strong>绝对要稳，不怕贵</strong></td>
+<td>IEPL / IPLC 专线</td>
+<td>Mkcloud 广港 IEPL ¥358/月<br>Mkcloud IXP 专线 ¥158/月</td>
+<td>不过墙，晚高峰跑满</td>
+</tr>
+<tr>
+<td class="name"><strong>先测线路再决定</strong></td>
+<td>国际 BGP</td>
+<td>Vultr $5/月（按小时计费）<br>狗云（按小时计费）</td>
+<td>测完就销毁</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h3 class="merchant" id="g33">附：库存核查（2026-11-26 实测）</h3>
+<p><strong>标 <code>✅ 有货</code> 的，是 2026-11-26 当天实测能打开下单表单的：</strong><br><strong>标 <code>⚠️ 以链接页为准</code> 的，是官网有 Cloudflare / 跳转页、抓不到实时库存，不等于没货：</strong><br><strong>库存随时会变，黑五期间尤其快。</strong> 判断方法——</p>
+<ul><li>看到 <code>✅ 有货</code>：11-26 实测能下单，但别隔一周才去买；</li><li>看到 <code>⚠️ 以链接页为准</code>：点进去自己看一眼，页面出现 <code>Add to Cart</code> / <code>Configure</code> / <code>立即购买</code> 就是有货，出现 <code>Out of Stock</code> / <code>暂无库存</code> 就是没了。</li></ul>
+<div class="tw" data-tid="33"><table>
+<thead><tr>
+<th>商家</th>
+<th>实测结果</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">搬瓦工</td>
+<td>14 款全部可下单（Billing Cycle 下拉正常）</td>
+</tr>
+<tr>
+<td class="name">RackNerd</td>
+<td>14 款全部可下单（Configure 页正常）</td>
+</tr>
+<tr>
+<td class="name">HostDare</td>
+<td>ASSD3/4/5、CAMD3、CSSD2、CSSD3 可下单；<strong>CSSD0、CSSD1、CKVM1、CKVM2、CKVM3 全是 Out of Stock</strong></td>
+</tr>
+<tr>
+<td class="name">DMIT</td>
+<td>见第 2 节，按 vpsoso 实时库存监控标注（香港有货、洛杉矶 AS3 / 东京全线缺）</td>
+</tr>
+</tbody></table></div>
+<div class="tw" data-tid="34"><table>
+<thead><tr>
+<th>商家</th>
+<th>抓不到的原因</th>
+</tr></thead><tbody>
+<tr>
+<td class="name">VMISS、DMIT、WePC、InterServer</td>
+<td>Cloudflare 人机验证，无头浏览器也卡在"请稍候…"</td>
+</tr>
+<tr>
+<td class="name">狗云 DogYun</td>
+<td>产品页必须先登录才显示库存</td>
+</tr>
+<tr>
+<td class="name">AkileCloud</td>
+<td>单页应用，一页里混着 65 个套餐卡片，<code>售罄</code> 标记无法定位到具体哪一款</td>
+</tr>
+<tr>
+<td class="name">CloudCone</td>
+<td>下单页依赖 JS 会话状态，静态判断会误报</td>
+</tr>
+<tr>
+<td class="name">ByteVirt、DIYVM、OneTechCloud、CUBECLOUD、丽萨主机、Mkcloud、Evoxt、Hostwinds</td>
+<td>链接只能到分类页 / 活动页 / 跳转页，页面上没有单款库存信息</td>
+</tr>
+</tbody></table></div>
+<h3 class="merchant" id="g34">附：图例与购买链接说明</h3>
+<p><strong>有货</strong>　✅ 有货（11-26 实测能下单）　⚠️ 以链接页为准（抓不到实时库存，不等于没货）　❌ 缺货（实测 Out of Stock）<br><strong>流量计费</strong>　<strong>双向</strong>＝上传+下载合并计入额度，跑代理时标称 1TB 实际只能跑约 500GB；<strong>单向</strong>＝只计出站，标称值就是可用值；<strong>未明确</strong>＝官网产品页 + TOS + AUP 通读后没有写计量方向，按"标称÷2"预留<br><strong>性价比</strong>　🔥 该家最值得买的一档　⭐ 可以考虑　— 一般，凑单/特定用途才选<br><strong>价格</strong>　黑五期间浮动，以本文标注日期为准<br><strong>购买链接</strong>　<strong>点套餐名直接跳转下单页</strong>。链接是聚合站（vps69 / vpslu / vmiss / vpsdeck / maobuni）表格里的原始购买地址，带 <code>aff=</code> 的是推广链接——<strong>你付的价格和不带 AFF 完全一样</strong>，站长拿返佣。不想给返佣就把 URL 里的 <code>aff=xxxx</code> 删掉，或直接进官网找同名套餐。<strong>DMIT 例外</strong>：DMIT 官网有 Cloudflare 反爬，源站拿不到直链，本清单里它的 21 行链接是通过 <a href="https://vpsoso.com/vps/dmit" target="_blank" rel="noopener">vpsoso 库存监控<span class="ext">↗</span></a> 反查出的真实 <code>pid</code>（格式 <code>cart.php?a=add&amp;pid=NNN</code>），点进去就是对应套餐的加购页，无返佣参数。</p>
+  </main>
+</div>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-in">
+    <div class="drawer-h"><span>目录</span><span class="dclose" id="dclose">✕</span></div>
+    <div class="drawer-list">
+<a class="lv2" href="#rec">推荐</a>
+      <a class="lv2" href="#g1">线路优先级（好 → 差）</a>
+      <a class="lv2" href="#g2">怎么用这份清单</a>
+      <a class="lv1" href="#g3">一、按线路选（先看这里）</a>
+      <a class="lv2" href="#g4">1. IEPL / IPLC 专线（不过墙，最稳，按带宽计费）</a>
+      <a class="lv2" href="#g5">2. CN2 GIA（电信顶级回程，晚高峰最稳的常规线路） <span class="rec-badge">推荐</span></a>
+      <a class="lv2" href="#g6">3. 9929 / CMIN2 / 三网优化（联通+移动顶级，性价比区）</a>
+      <a class="lv2" href="#g7">4. 香港 / 日本 / 新加坡本地线路（延迟最低，但绕路看运气）</a>
+      <a class="lv2" href="#g8">5. 国际 BGP 普通线路（最便宜，晚高峰会卡）</a>
+      <a class="lv2" href="#g9">6. 住宅 IP / 流媒体专用（解锁优先，不追求速度）</a>
+      <a class="lv1" href="#g10">二、按商家看（同一家的所有套餐，按价格排序）</a>
+      <a class="lv2" href="#g11">1. 搬瓦工 BandwagonHost — CN2 GIA 的行业标杆</a>
+      <a class="lv2" href="#g12">2. DMIT — Pro 系列 CN2 GIA（AS23764），三条线分档最清楚</a>
+      <a class="lv2" href="#g13">3. HostDare — 搬瓦工/ DMIT 的平价替代</a>
+      <a class="lv2" href="#g14">4. ByteVirt — 洛杉矶 CN2 GIA + 香港超低价 LITE</a>
+      <a class="lv2" href="#g15">5. DIYVM — 香港 CN2 GIA 不限流量</a>
+      <a class="lv2" href="#g16">6. VMISS — 加拿大商家，线路切得最细</a>
+      <a class="lv2" href="#g17">7. AkileCloud — 大带宽大流量，价格屠夫</a>
+      <a class="lv2" href="#g18">8. 狗云 DogYun — 按小时计费，国人运维，8 套产品线</a>
+      <a class="lv2" href="#g19">9. OneTechCloud — 香港 1Gbps 大带宽</a>
+      <a class="lv2" href="#g20">10. CUBECLOUD — 香港 CN2 高配，价格硬</a>
+      <a class="lv2" href="#g21">11. RackNerd — 年付白菜价之王</a>
+      <a class="lv2" href="#g22">12. CloudCone — 和 RackNerd 同级，稍好一点</a>
+      <a class="lv2" href="#g23">13. Evoxt — 马来西亚商家，Ryzen + 1Gbps</a>
+      <a class="lv2" href="#g24">14. Hostwinds — 流量给得多</a>
+      <a class="lv2" href="#g25">15. InterServer — 10Gbps 端口，按切片计价</a>
+      <a class="lv2" href="#g26">16. 丽萨主机 — 原生 IP，解锁最全</a>
+      <a class="lv2" href="#g27">17. WePC — 住宅 IP，TikTok 直播专用（注意：双向流量）</a>
+      <a class="lv2" href="#g28">18. Mkcloud — 真专线，官网起价最便宜的一档</a>
+      <a class="lv1" href="#g29">三、海外大厂 / 避雷 / 速查</a>
+      <a class="lv2" href="#g30">19. 大厂基线价对照</a>
+      <a class="lv2" href="#g31">20. 避雷清单（已验证有问题）</a>
+      <a class="lv2" href="#g32">21. 按需求的速查结论</a>
+      <a class="lv2" href="#g33">附：库存核查（2026-11-26 实测）</a>
+      <a class="lv2" href="#g34">附：图例与购买链接说明</a>
+    </div>
+  </div>
+</div>
+
+<div id="top" title="回到顶部">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 5l7 7h-4v7h-6v-7H5z"/></svg>
+</div>
+
+<script>
+// 目录高亮
+const links = [...document.querySelectorAll('#toc a')];
+const mlinks = [...document.querySelectorAll('#mtoc a')];
+const secs = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const io = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if(e.isIntersecting){
+      links.forEach(l => l.classList.toggle('cur', l.getAttribute('href') === '#' + e.target.id));
+      mlinks.forEach(l => l.classList.toggle('cur', l.getAttribute('href') === '#' + e.target.id));
+      const mc = mlinks.find(l => l.getAttribute('href') === '#' + e.target.id);
+      if(mc && mc.scrollIntoView) mc.scrollIntoView({block:'nearest', inline:'center'});
+      const cur = links.find(l => l.getAttribute('href') === '#' + e.target.id);
+      if(cur) cur.scrollIntoView({block:'nearest'});
+    }
+  });
+}, {rootMargin: '-114px 0px -72% 0px'});
+secs.forEach(s => io.observe(s));
+
+const topBtn = document.getElementById('top');
+addEventListener('scroll', () => { topBtn.style.display = scrollY > 600 ? 'flex' : 'none'; });
+topBtn.onclick = () => scrollTo({top:0});
+
+(function(){
+  var btn = document.getElementById('mnav');
+  var mall = document.getElementById('mall');
+  var dr = document.getElementById('drawer');
+  if(!dr) return;
+  function open(){ dr.classList.add('open'); document.documentElement.style.overflow='hidden'; }
+  function close(){ dr.classList.remove('open'); document.documentElement.style.overflow=''; }
+  if(btn) btn.addEventListener('click', function(e){ e.stopPropagation(); open(); });
+  if(mall) mall.addEventListener('click', function(e){ e.stopPropagation(); open(); });
+  dr.addEventListener('click', function(e){ if(e.target === dr || e.target.id === 'dclose') close(); });
+  dr.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>
